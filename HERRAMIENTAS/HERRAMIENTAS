@@ -1,0 +1,2517 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+
+
+
+
+
+<!--
+<item>
+<title>[COLOR gold]*^Test de Scripts/Dependencias Instalados^*[/COLOR]</title>
+<link>http://88.20.125.135:8001/1:0:19:750F:420:1:C00000:0:0:0:</link>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<item>
+<title>[COLOR gold]$doregex[coloreando]*^Test de Scripts/Dependencias Instalados^*[/COLOR]</title>
+<link>$doregex[link_inteligente]1:0:19:750F:420:$doregex[id]C00000:0:0:0:</link>
+<regex>
+<name>link_inteligente</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,xbmc
+def GetLSProData(page_data,Cookie_Jar,m,url='$doregex[id]'):#cPrLItsLTfakl
+
+  if '1' in url:
+    return '$doregex[finallink]'
+  else:
+    return ''
+]]></expres>
+<page></page>
+</regex> 
+ <regex>
+<name>finallink</name>
+<expres>(.*?)CRISTALAZUL</expres>
+<page>https://pastebin.com/raw/uC9BgVZF</page>
+<setcookie>beget=begetok</setcookie>
+</regex> 
+<regex>
+<name>id</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ addon = xbmcaddon.Addon('plugin.video.cristalazul')
+ return addon.getSetting('Password')
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>colores</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ addon = xbmcaddon.Addon('plugin.video.cristalazul')
+ return addon.getSetting('ColoreandoPrincipal')
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>coloreando</name>
+<expres>$pyFunction:('$doregex[colores]').replace('Predeterminado','').replace('[COLOR lightskyblue]lightskyblue[/COLOR]','[COLOR lightskyblue]').replace('[COLOR aliceblue]aliceblue[/COLOR]','[COLOR aliceblue]').replace('[COLOR antiquewhite]antiquewhite[/COLOR]','[COLOR antiquewhite]').replace('[COLOR aqua]aqua[/COLOR]','[COLOR aqua]').replace('[COLOR aquamarine]aquamarine[/COLOR]','[COLOR aquamarine]').replace('[COLOR azure]azure[/COLOR]','[COLOR azure]').replace('[COLOR beige]beige[/COLOR]','[COLOR beige]').replace('[COLOR bisque]bisque[/COLOR]','[COLOR bisque]').replace('[COLOR black]black[/COLOR]','[COLOR black]').replace('[COLOR blanchedalmond]blanchedalmond[/COLOR]','[COLOR blanchedalmond]').replace('[COLOR blue]blue[/COLOR]','[COLOR blue]').replace('[COLOR blueviolet]blueviolet[/COLOR]','[COLOR blueviolet]').replace('[COLOR brown]brown[/COLOR]','[COLOR brown]').replace('[COLOR burlywood]burlywood[/COLOR]','[COLOR burlywood]').replace('[COLOR cadetblue]cadetblue[/COLOR]','[COLOR cadetblue]').replace('[COLOR chartreuse]chartreuse[/COLOR]','[COLOR chartreuse]').replace('[COLOR chocolate]chocolate[/COLOR]','[COLOR chocolate]').replace('[COLOR coral]coral[/COLOR]','[COLOR coral]').replace('[COLOR cornflowerblue]cornflowerblue[/COLOR]','[COLOR cornflowerblue]').replace('[COLOR crimson]crimson[/COLOR]','[COLOR crimson]').replace('[COLOR cyan]cyan[/COLOR]','[COLOR cyan]').replace('[COLOR darkblue]darkblue[/COLOR]','[COLOR darkblue]').replace('[COLOR darkcyan]darkcyan[/COLOR]','[COLOR darkcyan]').replace('[COLOR darkgoldenrod]darkgoldenrod[/COLOR]','[COLOR darkgoldenrod]').replace('[COLOR darkgray]darkgray[/COLOR]','[COLOR darkgray]').replace('[COLOR darkgreen]darkgreen[/COLOR]','[COLOR darkgreen]').replace('[COLOR darkgrey]darkgrey[/COLOR]','[COLOR darkgrey]').replace('[COLOR darkkhaki]darkkhaki[/COLOR]','[COLOR darkkhaki]').replace('[COLOR darkmagenta]darkmagenta[/COLOR]','[COLOR darkmagenta]').replace('[COLOR darkolivegreen]darkolivegreen[/COLOR]','[COLOR darkolivegreen]').replace('[COLOR darkorange]darkorange[/COLOR]','[COLOR darkorange]').replace('[COLOR darkorchid]darkorchid[/COLOR]','[COLOR darkorchid]').replace('[COLOR darkred]darkred[/COLOR]','[COLOR darkred]').replace('[COLOR darksalmon]darksalmon[/COLOR]','[COLOR darksalmon]').replace('[COLOR darkseagreen]darkseagreen[/COLOR]','[COLOR darkseagreen]').replace('[COLOR darkslateblue]darkslateblue[/COLOR]','[COLOR darkslateblue]').replace('[COLOR darkslategray]darkslategray[/COLOR]','[COLOR darkslategray]').replace('[COLOR darkslategrey]darkslategrey[/COLOR]','[COLOR darkslategrey]').replace('[COLOR darkturquoise]darkturquoise[/COLOR]','[COLOR darkturquoise]').replace('[COLOR deeppink]deeppink[/COLOR]','[COLOR deeppink]').replace('[COLOR deepskyblue]deepskyblue[/COLOR]','[COLOR deepskyblue]').replace('[COLOR dimgray]dimgray[/COLOR]','[COLOR dimgray]').replace('[COLOR dimgrey]dimgrey[/COLOR]','[COLOR dimgrey]').replace('[COLOR dodgerblue]dodgerblue[/COLOR]','[COLOR dodgerblue]').replace('[COLOR firebrick]firebrick[/COLOR]','[COLOR firebrick]').replace('[COLOR floralwhite]floralwhite[/COLOR]','[COLOR floralwhite]').replace('[COLOR forestgreen]forestgreen[/COLOR]','[COLOR forestgreen]').replace('[COLOR fuchsia]fuchsia[/COLOR]','[COLOR fuchsia]').replace('[COLOR gainsboro]gainsboro[/COLOR]','[COLOR gainsboro]').replace('[COLOR ghostwhite]ghostwhite[/COLOR]','[COLOR ghostwhite]').replace('[COLOR gold]gold[/COLOR]','[COLOR gold]').replace('[COLOR goldenrod]goldenrod[/COLOR]','[COLOR goldenrod]').replace('[COLOR gray]gray[/COLOR]','[COLOR gray]').replace('[COLOR green]green[/COLOR]','[COLOR green]').replace('[COLOR greenyellow]greenyellow[/COLOR]','[COLOR greenyellow]').replace('[COLOR grey]grey[/COLOR]','[COLOR grey]').replace('[COLOR honeydew]honeydew[/COLOR]','[COLOR honeydew]').replace('[COLOR hotpink]hotpink[/COLOR]','[COLOR hotpink]').replace('[COLOR indianred]indianred[/COLOR]','[COLOR indianred]').replace('[COLOR indigo]indigo[/COLOR]','[COLOR indigo]').replace('[COLOR ivory]ivory[/COLOR]','[COLOR ivory]').replace('[COLOR khaki]khaki[/COLOR]','[COLOR khaki]').replace('[COLOR lavender]lavender[/COLOR]','[COLOR lavender]').replace('[COLOR lavenderblush]lavenderblush[/COLOR]','[COLOR lavenderblush]').replace('[COLOR lawngreen]lawngreen[/COLOR]','[COLOR lawngreen]').replace('[COLOR lemonchiffon]lemonchiffon[/COLOR]','[COLOR lemonchiffon]').replace('[COLOR lightblue]lightblue[/COLOR]','[COLOR lightblue]').replace('[COLOR lightcoral]lightcoral[/COLOR]','[COLOR lightcoral]').replace('[COLOR lightcyan]lightcyan[/COLOR]','[COLOR lightcyan]').replace('[COLOR lightgoldenrodyellow]lightgoldenrodyellow[/COLOR]','[COLOR lightgoldenrodyellow]').replace('[COLOR lightgray]lightgray[/COLOR]','[COLOR lightgray]').replace('[COLOR lightgreen]lightgreen[/COLOR]','[COLOR lightgreen]').replace('[COLOR lightgrey]lightgrey[/COLOR]','[COLOR lightgrey]').replace('[COLOR lightpink]lightpink[/COLOR]','[COLOR lightpink]').replace('[COLOR lightsalmon]lightsalmon[/COLOR]','[COLOR lightsalmon]').replace('[COLOR lightseagreen]lightseagreen[/COLOR]','[COLOR lightseagreen]').replace('[COLOR lightslategray]lightslategray[/COLOR]','[COLOR lightslategray]').replace('[COLOR lightslategrey]lightslategrey[/COLOR]','[COLOR lightslategrey]').replace('[COLOR lightsteelblue]lightsteelblue[/COLOR]','[COLOR lightsteelblue]').replace('[COLOR lightyellow]lightyellow[/COLOR]','[COLOR lightyellow]').replace('[COLOR lime]lime[/COLOR]','[COLOR lime]').replace('[COLOR limegreen]limegreen[/COLOR]','[COLOR limegreen]').replace('[COLOR linen]linen[/COLOR]','[COLOR linen]').replace('[COLOR magenta]magenta[/COLOR]','[COLOR magenta]').replace('[COLOR maroon]maroon[/COLOR]','[COLOR maroon]').replace('[COLOR mediumaquamarine]mediumaquamarine[/COLOR]','[COLOR mediumaquamarine]').replace('[COLOR mediumblue]mediumblue[/COLOR]','[COLOR mediumblue]').replace('[COLOR mediumorchid]mediumorchid[/COLOR]','[COLOR mediumorchid]').replace('[COLOR mediumpurple]mediumpurple[/COLOR]','[COLOR mediumpurple]').replace('[COLOR mediumseagreen]mediumseagreen[/COLOR]','[COLOR mediumseagreen]').replace('[COLOR mediumslateblue]mediumslateblue[/COLOR]','[COLOR mediumslateblue]').replace('[COLOR mediumspringgreen]mediumspringgreen[/COLOR]','[COLOR mediumspringgreen]').replace('[COLOR mediumturquoise]mediumturquoise[/COLOR]','[COLOR mediumturquoise]').replace('[COLOR mediumvioletred]mediumvioletred[/COLOR]','[COLOR mediumvioletred]').replace('[COLOR midnightblue]midnightblue[/COLOR]','[COLOR midnightblue]').replace('[COLOR mintcream]mintcream[/COLOR]','[COLOR mintcream]').replace('[COLOR mistyrose]mistyrose[/COLOR]','[COLOR mistyrose]').replace('[COLOR moccasin]moccasin[/COLOR]','[COLOR moccasin]').replace('[COLOR navajowhite]navajowhite[/COLOR]','[COLOR navajowhite]').replace('[COLOR navy]navy[/COLOR]','[COLOR navy]').replace('[COLOR none]none[/COLOR]','[COLOR none]').replace('[COLOR oldlace]oldlace[/COLOR]','[COLOR oldlace]').replace('[COLOR olive]olive[/COLOR]','[COLOR olive]').replace('[COLOR olivedrab]olivedrab[/COLOR]','[COLOR olivedrab]').replace('[COLOR orange]orange[/COLOR]','[COLOR orange]').replace('[COLOR orangered]orangered[/COLOR]','[COLOR orangered]').replace('[COLOR orchid]orchid[/COLOR]','[COLOR orchid]').replace('[COLOR palegoldenrod]palegoldenrod[/COLOR]','[COLOR palegoldenrod]').replace('[COLOR palegreen]palegreen[/COLOR]','[COLOR palegreen]').replace('[COLOR paleturquoise]paleturquoise[/COLOR]','[COLOR paleturquoise]').replace('[COLOR palevioletred]palevioletred[/COLOR]','[COLOR palevioletred]').replace('[COLOR papayawhip]papayawhip[/COLOR]','[COLOR papayawhip]').replace('[COLOR peachpuff]peachpuff[/COLOR]','[COLOR peachpuff]').replace('[COLOR peru]peru[/COLOR]','[COLOR peru]').replace('[COLOR pink]pink[/COLOR]','[COLOR pink]').replace('[COLOR plum]plum[/COLOR]','[COLOR plum]').replace('[COLOR powderblue]powderblue[/COLOR]','[COLOR powderblue]').replace('[COLOR purple]purple[/COLOR]','[COLOR purple]').replace('[COLOR red]red[/COLOR]','[COLOR red]').replace('[COLOR rosybrown]rosybrown[/COLOR]','[COLOR rosybrown]').replace('[COLOR royalblue]royalblue[/COLOR]','[COLOR royalblue]').replace('[COLOR saddlebrown]saddlebrown[/COLOR]','[COLOR saddlebrown]').replace('[COLOR salmon]salmon[/COLOR]','[COLOR salmon]').replace('[COLOR sandybrown]sandybrown[/COLOR]','[COLOR sandybrown]').replace('[COLOR seagreen]seagreen[/COLOR]','[COLOR seagreen]').replace('[COLOR seashell]seashell[/COLOR]','[COLOR seashell]').replace('[COLOR sienna]sienna[/COLOR]','[COLOR sienna]').replace('[COLOR silver]silver[/COLOR]','[COLOR silver]').replace('[COLOR skyblue]skyblue[/COLOR]','[COLOR skyblue]').replace('[COLOR slateblue]slateblue[/COLOR]','[COLOR slateblue]').replace('[COLOR slategray]slategray[/COLOR]','[COLOR slategray]').replace('[COLOR slategrey]slategrey[/COLOR]','[COLOR slategrey]').replace('[COLOR snow]snow[/COLOR]','[COLOR snow]').replace('[COLOR springgreen]springgreen[/COLOR]','[COLOR springgreen]').replace('[COLOR steelblue]steelblue[/COLOR]','[COLOR steelblue]').replace('[COLOR tan]tan[/COLOR]','[COLOR tan]').replace('[COLOR teal]teal[/COLOR]','[COLOR teal]').replace('[COLOR thistle]thistle[/COLOR]','[COLOR thistle]').replace('[COLOR transparent]transparent[/COLOR]','[COLOR transparent]').replace('[COLOR turquoise]turquoise[/COLOR]','[COLOR turquoise]').replace('[COLOR violet]violet[/COLOR]','[COLOR violet]').replace('[COLOR wheat]wheat[/COLOR]','[COLOR wheat]').replace('[COLOR white]white[/COLOR]','[COLOR white]').replace('[COLOR whitesmoke]whitesmoke[/COLOR]','[COLOR whitesmoke]').replace('[COLOR yellow]yellow[/COLOR]','[COLOR yellow]').replace('[COLOR yellowgreen]yellowgreen[/COLOR]','[COLOR yellowgreen]')</expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+
+
+
+
+
+ <!--
+<item>
+<title>[COLOR gold]*^Test de Scripts/Dependencias Instalados^*[/COLOR]</title>
+<link>NOLINK</link>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+ -->
+
+
+
+
+
+
+<!--
+<item>
+<title>[COLOR white]Limpia Kodi[/COLOR]</title>
+<link>na</link>
+<jsonrpc>plugin://plugin.video.cristalazul/?url=%24doregex%5Blimpiar%5D&amp;mode=17&amp;regexs=%7Bu%27limpiar%27%3A%20%7B%27expres%27%3A%20u%27%23%24pyFunction%5Cr%5Cndef%20GetLSProData%28page_data%2CCookie_Jar%2Cm%29%3A%5Cr%5Cn%20%20%20import%20xbmc%2C%20xbmcgui%2C%20shutil%5Cr%5Cn%20%20%20seleccion%20%3D%20xbmcgui.Dialog%28%29.multiselect%28%22seleciona%20borrar%22%2C%20%5B%22Cache%22%2C%20%22Packages%22%2C%20%22Thumbnails%20%20%20%28fuerza%20cierre%20kodi%29%22%5D%2C%20preselect%3D%5B0%2C1%5D%29%5Cr%5Cn%20%20%20if%20%5B%5D%20%3D%3D%20seleccion%3A%5Cr%5Cn%20%20%20%20%20%20%20return%20xbmc.executebuiltin%28%22XBMC.Notification%28%5BCOLOR%20aqua%5DCristal%20Azul%20%5B/COLOR%5D%2C%5BCOLOR%20gold%5Dno%20hemos%20borado%20nada%5B/COLOR%5D%2C%204000%29%22%29%5Cr%5Cn%20%20%20elif%20%5B0%5D%20%3D%3D%20seleccion%3A%5Cr%5Cn%20%20%20%20%20%20%20addon_path3%20%3D%20xbmc.translatePath%28%5C%27special%3A//home/cache%5C%27%29.decode%28%5C%27utf-8%5C%27%29%5Cr%5Cn%20%20%20%20%20%20%20shutil.rmtree%28addon_path3%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20%20%20%20%20%20%20return%20xbmc.executebuiltin%28%22XBMC.Notification%28%5BCOLOR%20aqua%5DCristal%20Azul%20%5B/COLOR%5D%2C%5BCOLOR%20gold%5Dborrado%20cach%5Cxe9%5B/COLOR%5D%2C%204000%29%22%29%5Cr%5Cn%20%20%20elif%20%5B0%2C%201%5D%20%3D%3D%20seleccion%3A%5Cr%5Cn%20%20%20%20%20%20%20addon_path2%20%3D%20xbmc.translatePath%28%5C%27special%3A//home/addons/packages%5C%27%29.decode%28%5C%27utf-8%5C%27%29%5Cr%5Cn%20%20%20%20%20%20%20shutil.rmtree%28addon_path2%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20%20%20%20%20%20%20addon_path3%20%3D%20xbmc.translatePath%28%5C%27special%3A//home/cache%5C%27%29.decode%28%5C%27utf-8%5C%27%29%5Cr%5Cn%20%20%20%20%20%20%20shutil.rmtree%28addon_path3%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20%20%20%20%20%20%20return%20xbmc.executebuiltin%28%22XBMC.Notification%28%5BCOLOR%20aqua%5DCristal%20Azul%20%5B/COLOR%5D%2C%5BCOLOR%20gold%5Dborrado%20packages%20y%20cach%5Cxe9%5B/COLOR%5D%2C%204000%29%22%29%5Cr%5Cn%20%20%20elif%20%5B0%2C%202%5D%20%3D%3D%20seleccion%3A%5Cr%5Cn%20%20%20%20%20%20%20xbmc.executebuiltin%28%22XBMC.Notification%28%5BCOLOR%20aqua%5DCristal%20Azul%20%5B/COLOR%5D%2C%5BCOLOR%20gold%5Dborrado%20cach%5Cxe9%20y%20thumbnails%5B/COLOR%5D%2C%204000%29%22%29%5Cr%5Cn%20%20%20%20%20%20%20addon_path%20%3D%20xbmc.translatePath%28%5C%27special%3A//home/userdata/Thumbnails%5C%27%29.decode%28%5C%27utf-8%5C%27%29%5Cr%5Cn%20%20%20%20%20%20%20shutil.rmtree%28addon_path%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20%20%20%20%20%20%20addon_path3%20%3D%20xbmc.translatePath%28%5C%27special%3A//home/cache%5C%27%29.decode%28%5C%27utf-8%5C%27%29%5Cr%5Cn%20%20%20%20%20%20%20shutil.rmtree%28addon_path3%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20%20%20%20%20%20%20return%20xbmc.executebuiltin%28%5C%27Quit%5C%27%29%5Cr%5Cn%20%20%20elif%20%5B0%2C%201%2C%202%5D%20%3D%3D%20seleccion%3A%5Cr%5Cn%20%20%20%20%20%20%20xbmc.executebuiltin%28%22XBMC.Notification%28%5BCOLOR%20aqua%5DCristal%20Azul%20%5B/COLOR%5D%2C%5BCOLOR%20gold%5Dborrado%20cach%5Cxe9%2C%20packages%20y%20thumbnails%5B/COLOR%5D%2C%204000%29%22%29%5Cr%5Cn%20%20%20%20%20%20%20addon_path%20%3D%20xbmc.translatePath%28%5C%27special%3A//home/userdata/Thumbnails%5C%27%29.decode%28%5C%27utf-8%5C%27%29%5Cr%5Cn%20%20%20%20%20%20%20shutil.rmtree%28addon_path%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20%20%20%20%20%20%20addon_path2%20%3D%20xbmc.translatePath%28%5C%27special%3A//home/addons/packages%5C%27%29.decode%28%5C%27utf-8%5C%27%29%5Cr%5Cn%20%20%20%20%20%20%20shutil.rmtree%28addon_path2%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20%20%20%20%20%20%20addon_path3%20%3D%20xbmc.translatePath%28%5C%27special%3A//home/cache%5C%27%29.decode%28%5C%27utf-8%5C%27%29%5Cr%5Cn%20%20%20%20%20%20%20shutil.rmtree%28addon_path3%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20%20%20%20%20%20%20return%20xbmc.executebuiltin%28%5C%27Quit%5C%27%29%5Cr%5Cn%20%20%20elif%20%5B1%5D%20%3D%3D%20seleccion%3A%5Cr%5Cn%20%20%20%20%20%20%20addon_path2%20%3D%20xbmc.translatePath%28%5C%27special%3A//home/addons/packages%5C%27%29.decode%28%5C%27utf-8%5C%27%29%5Cr%5Cn%20%20%20%20%20%20%20shutil.rmtree%28addon_path2%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20%20%20%20%20%20%20return%20xbmc.executebuiltin%28%22XBMC.Notification%28%5BCOLOR%20aqua%5DCristal%20Azul%20%5B/COLOR%5D%2C%5BCOLOR%20gold%5Dborrado%20packages%5B/COLOR%5D%2C%204000%29%22%29%5Cr%5Cn%20%20%20elif%20%5B1%2C%202%5D%20%3D%3D%20seleccion%3A%5Cr%5Cn%20%20%20%20%20%20%20xbmc.executebuiltin%28%22XBMC.Notification%28%5BCOLOR%20aqua%5DCristal%20Azul%20%5B/COLOR%5D%2C%5BCOLOR%20gold%5Dborrado%20packages%20y%20thumbnails%5B/COLOR%5D%2C%204000%29%22%29%5Cr%5Cn%20%20%20%20%20%20%20addon_path%20%3D%20xbmc.translatePath%28%5C%27special%3A//home/userdata/Thumbnails%5C%27%29.decode%28%5C%27utf-8%5C%27%29%5Cr%5Cn%20%20%20%20%20%20%20shutil.rmtree%28addon_path%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20%20%20%20%20%20%20addon_path2%20%3D%20xbmc.translatePath%28%5C%27special%3A//home/addons/packages%5C%27%29.decode%28%5C%27utf-8%5C%27%29%5Cr%5Cn%20%20%20%20%20%20%20shutil.rmtree%28addon_path2%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20%20%20%20%20%20%20return%20xbmc.executebuiltin%28%5C%27Quit%5C%27%29%5Cr%5Cn%20%20%20elif%20%5B2%5D%20%3D%3D%20seleccion%3A%5Cr%5Cn%20%20%20%20%20%20%20xbmc.executebuiltin%28%22XBMC.Notification%28%5BCOLOR%20aqua%5DCristal%20Azul%20%5B/COLOR%5D%2C%5BCOLOR%20gold%5Dborrado%20thumbnails%5B/COLOR%5D%2C%204000%29%22%29%5Cr%5Cn%20%20%20%20%20%20%20addon_path%20%3D%20xbmc.translatePath%28%5C%27special%3A//home/userdata/Thumbnails%5C%27%29.decode%28%5C%27utf-8%5C%27%29%5Cr%5Cn%20%20%20%20%20%20%20shutil.rmtree%28addon_path%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20%20%20%20%20%20%20return%20xbmc.executebuiltin%28%5C%27Quit%5C%27%29%5Cr%5Cn%20%20%20else%3A%5Cr%5Cn%20%20%20%20%20%20%20pass%5Cr%5Cn%27%2C%20%27cookiejar%27%3A%20%27%27%2C%20%27name%27%3A%20u%27limpiar%27%2C%20%27page%27%3A%20None%7D%7D&amp;iconimage=https%3A%2F%2Fi.imgur.com%2FjpPDGCr.jpg</jsonrpc>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+-->
+
+
+
+
+
+
+<item>
+<title>[COLOR white]Instalar FESTA[/COLOR] </title>
+<link>$doregex[id]</link>
+<regex>
+<name>id</name>
+<expres>$pyFunction:xbmc.executebuiltin('InstallAddon(plugin.video.festa)')</expres>
+<page></page>
+<NOTPlayable>True</NOTPlayable>
+</regex>
+<thumbnail>https://i.imgur.com/1tWD4bK.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+ 
+ 
+
+
+
+
+
+
+
+
+<item>
+<title>[COLOR white]Instalador actualizador Scripts/Dependencias Configuradas[/COLOR] </title>
+<link>$doregex[id]</link>
+<regex>
+<name>id</name>
+<expres>$pyFunction:xbmc.executebuiltin('InstallAddon(script.i.cristalazul)')</expres>
+<page></page>
+<NOTPlayable>True</NOTPlayable>
+</regex>
+<thumbnail>https://i.imgur.com/1tWD4bK.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+
+<!-- TODO Y TRIPLES COMILLAS -->
+<item>
+<title>[COLOR white]Test de Scripts/Dependencias Instalados[/COLOR]</title>
+<link>$doregex[cristal]</link>
+<jsonrpc>plugin://plugin.video.cristalazul/?fanart=https%3a%2f%2fi.imgur.com%2fRsLj1lh.jpg&amp;mode=1&amp;name=%5bCOLOR%20white%5dTest%20de%20Scripts%2fDependencias%20Instalados%20%5b%2fCOLOR%5d&amp;regexs=%7bu%27versionurlresolve%27%3a%20%7b%27expres%27%3a%20u%27%22URLResolver%22%20version%3d%22(.%2a%3f)%22%27%2c%20%27name%27%3a%20u%27versionurlresolve%27%2c%20%27page%27%3a%20u%27https%3a%2f%2fraw.githubusercontent.com%2ftvaddonsco%2ftva-resolvers-repo%2fmaster%2faddons.xml%27%7d%2c%20u%27versionResolveurl%27%3a%20%7b%27expres%27%3a%20u%27ResolveURL%22%20version%3d%22(.%2a%3f)%22%27%2c%20%27name%27%3a%20u%27versionResolveurl%27%2c%20%27page%27%3a%20u%27https%3a%2f%2fraw.githubusercontent.com%2fjsergio123%2fscript.module.resolveurl%2fmaster%2faddon.xml%27%7d%2c%20u%27git%27%3a%20%7b%27cookiejar%27%3a%20%27%27%2c%20%27name%27%3a%20u%27git%27%2c%20%27agent%27%3a%20u%27Mozilla%2f5.0%20(Windows%20NT%2010.0%3b%20Win64%3b%20x64%3b%20rv%3a61.0)%20Gecko%2f20100101%20Firefox%2f61.0%27%2c%20%27expres%27%3a%20u%27%22(plugin%5c%5c.video%5c%5c.cristalazul)%22%27%2c%20%27referer%27%3a%20u%27https%3a%2f%2fgithub.com%2f%27%2c%20%27page%27%3a%20u%27https%3a%2f%2fraw.githubusercontent.com%2fpicapaujulen%2frepositorio%2fmaster%2fRepositorio%2faddons.xml%27%7d%2c%20u%27indigo%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20hola%20%3d%20xbmc.getCondVisibility(%27System.HasAddon(plugin.program.indigo)%27)%5cr%5cn%20if%20hola%3d%3d0%3a%5cr%5cn%20%20%20%20%20return%20%27%27%5cr%5cn%20else%3a%5cr%5cn%20%20%20%20%20return%20%27%24doregex%5bindigo2%5d%27%5cr%5cn%5cr%5cn%22%2c%20%27cookiejar%27%3a%20%27%27%2c%20%27name%27%3a%20u%27indigo%27%2c%20%27page%27%3a%20None%7d%2c%20u%27f4mt%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20addon%20%3d%20xbmcaddon.Addon(%27plugin.video.f4mTester%27)%5cr%5cn%20return%20addon.getAddonInfo(%27version%27)%5cr%5cn%22%2c%20%27name%27%3a%20u%27f4mt%27%2c%20%27page%27%3a%20None%7d%2c%20u%27plexus%27%3a%20%7b%27expres%27%3a%20u%22%24pyFunction%3a(%27%24doregex%5bplexus1%5d%27).replace(%270%27%2c%27%5bCOLOR%20red%5dNO%2c%20le%20recomendamos%20que%20lo%20instale.%20Si%20no%20lo%20instala%2c%20NO%20podr%5cxe1%20ver%20gran%20parte%20de%20la%20secci%5cxedn%20Deporte.%5b%2fCOLOR%5d%27).replace(%271%27%2c%27%5bCOLOR%20green%5dSI%2c%20compruebe%20que%20tenga%20tambien%20la%20aplicaci%5cxf3n%20Acestream%20fuera%20de%20kodi.%5b%2fCOLOR%5d%27)%22%2c%20%27name%27%3a%20u%27plexus%27%2c%20%27page%27%3a%20None%7d%2c%20u%27plexus1%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%5cr%5cn%20hola%20%3d%20xbmc.getCondVisibility(%27System.HasAddon(program.plexus)%27)%5cr%5cn%20return%20hola%5cr%5cn%22%2c%20%27name%27%3a%20u%27plexus1%27%2c%20%27page%27%3a%20None%7d%2c%20u%27f4mproxy%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20instalado%20%3d%20%27%24doregex%5bf4mp%5d%27%5cr%5cn%20if%20%27%27%3d%3dinstalado%3a%5cr%5cn%20%20%20xbmc.executebuiltin(%27InstallAddon(script.video.F4mProxy)%27)%5cr%5cn%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%20le%20recomendamos%20que%20lo%20instale.%20Si%20no%20lo%20instala%2c%20No%20le%20funcionara%20gran%20parte%20de%20la%20zona%20de%20televisi%5cxf3n.%20Vamos%20a%20forzar%20la%20instalaci%5cxf3n.%5b%2fCOLOR%5d%27%5cr%5cn%20elif%20%27.%27%20in%20instalado%3a%5cr%5cn%20%20%20return%20%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%27%5cr%5cn%20else%3a%5cr%5cn%20%20%20return%20%27nada%27%5cr%5cn%22%2c%20%27name%27%3a%20u%27f4mproxy%27%2c%20%27page%27%3a%20None%7d%2c%20u%27f4mtester%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20instalado%20%3d%20%27%24doregex%5bf4mt%5d%27%5cr%5cn%20if%20%27%27%3d%3dinstalado%3a%5cr%5cn%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%20le%20recomendamos%20que%20lo%20instale.%20Si%20no%20lo%20instala%2c%20No%20le%20funcionara%20gran%20parte%20de%20la%20zona%20de%20televisi%5cxf3n.%20Vamos%20a%20forzar%20la%20instalaci%5cxf3n.%5b%2fCOLOR%5d%27%5cr%5cn%20elif%20%27.%27%20in%20instalado%3a%5cr%5cn%20%20%20return%20%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%27%5cr%5cn%20else%3a%5cr%5cn%20%20%20return%20%27nada%27%5cr%5cn%22%2c%20%27name%27%3a%20u%27f4mtester%27%2c%20%27page%27%3a%20None%7d%2c%20u%27resolveurl%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20hola%20%3d%20xbmc.getCondVisibility(%27System.HasAddon(script.module.resolveurl)%27)%5cr%5cn%20if%20hola%3d%3d0%3a%5cr%5cn%20%20%20%20%20xbmc.executebuiltin(%27InstallAddon(script.module.resolveurl)%27)%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%20le%20recomendamos%20que%20lo%20instale.%20Si%20no%20lo%20instala%2c%20No%20le%20funcionara%20ni%20la%20secci%5cxf3n%20de%20SERIES%20ni%20la%20de%20CINE.%20Vamos%20a%20forzar%20la%20instalaci%5cxf3n.%5b%2fCOLOR%5d%27%5cr%5cn%20else%3a%5cr%5cn%20%20%20%20%20__addon__%20%3d%20xbmcaddon.Addon(%27script.module.resolveurl%27)%5cr%5cn%20%20%20%20%20__addonname__%20%3d%20__addon__.getAddonInfo(%27version%27)%20%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%20version%20instalada%20%27%20%2b%20__addonname__%5cr%5cn%5cr%5cn%22%2c%20%27name%27%3a%20u%27resolveurl%27%2c%20%27page%27%3a%20None%7d%2c%20u%27inputstream%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20hola%20%3d%20xbmc.getCondVisibility(%27System.HasAddon(inputstream.adaptive)%27)%5cr%5cn%20if%20hola%3d%3d0%3a%5cr%5cn%20%20%20%20%20xbmc.executebuiltin(%27InstallAddon(inputstream.adaptive)%27)%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%20le%20recomendamos%20que%20lo%20instale.%20Si%20no%20lo%20instala%2c%20No%20le%20funcionara%20ni%20la%20secci%5cxf3n%20de%20ANDROID%2010%20ni%20la%20de%20DOCUMENTALES.%20Vamos%20a%20forzar%20la%20instalaci%5cxf3n.%5b%2fCOLOR%5d%27%5cr%5cn%20else%3a%5cr%5cn%20%20%20%20%20__addon__%20%3d%20xbmcaddon.Addon(%27inputstream.adaptive%27)%5cr%5cn%20%20%20%20%20__addonname__%20%3d%20__addon__.getAddonInfo(%27version%27)%20%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%20%5bCOLOR%20white%5dversion%20instalada%20%27%20%2b%20__addonname__%20%2b%20%27%5b%2fCOLOR%5d%27%5cr%5cn%5cr%5cn%22%2c%20%27name%27%3a%20u%27inputstream%27%2c%20%27page%27%3a%20None%7d%2c%20u%27vResolveurl_repo%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20hola%20%3d%20%27%24doregex%5bversionResolveurl%5d%27%5cr%5cn%20__addon__%20%3d%20xbmcaddon.Addon(%27script.module.resolveurl%27)%5cr%5cn%20__addonname__%20%3d%20__addon__.getAddonInfo(%27version%27)%5cr%5cn%20if%20not%20hola%3d%3d__addonname__%3a%5cr%5cn%20%20%20%20return%20instaladorepo()%5cr%5cn%20else%3a%5cr%5cn%20%20%20%20return%20%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%20tiene%20la%20%5cxfaltima%20versi%5cxf3n%2c%20la%20%27%20%2b%20__addonname__%5ct%20%20%5cr%5cn%5cr%5cndef%20instaladorepo()%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20hola%20%3d%20xbmc.getCondVisibility(%27System.HasAddon(repository.resolverurl)%27)%5cr%5cn%20if%20hola%3d%3d0%3a%5cr%5cn%20%20%20%20%20__addon__%20%3d%20xbmcaddon.Addon(%27script.module.resolveurl%27)%5cr%5cn%20%20%20%20%20__addonname__%20%3d%20__addon__.getAddonInfo(%27version%27)%5cr%5cn%20%20%20%20%20xbmc.executebuiltin(%27InstallAddon(repository.resolverurl)%27)%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%5b%2fCOLOR%5d%20tiene%20la%20%5bCOLOR%20red%5d%27%20%2b%20__addonname__%20%2b%20%27%5bCOLOR%20white%5d%20y%20la%20ultima%20es%20la%5b%2fCOLOR%5d%5bCOLOR%20red%5d%20%24doregex%5bversionResolveurl%5d%5b%2fCOLOR%5d%2c%20Tampoco%20tiene%20su%20repositorio%20para%20que%20se%20actualice%2c%20Asique%20forzaremos%20la%20instalaci%5cxf3n.%5bCOLOR%20red%5d%20Si%20no%20le%20actualiza%20No%20le%20funcionara%20ni%20la%20secci%5cxf3n%20de%20SERIES%20ni%20la%20de%20CINE.%5b%2fCOLOR%5d%27%5cr%5cn%20else%3a%5cr%5cn%20%20%20%20%20__addon__%20%3d%20xbmcaddon.Addon(%27script.module.resolveurl%27)%5cr%5cn%20%20%20%20%20__addonname__%20%3d%20__addon__.getAddonInfo(%27version%27)%20%20%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%5b%2fCOLOR%5d%20est%5cxe1%20en%20proceso...%20de%20momento%20tiene%20la%20%27%20%2b%20__addonname__%20%2b%20%27%5bCOLOR%20white%5d%20y%20la%20ultima%20es%20la%5b%2fCOLOR%5d%5bCOLOR%20red%5d%20%24doregex%5bversionResolveurl%5d%5b%2fCOLOR%5d%20si%20no%20le%20actualiza%20s%5cxf3lo%2c%20fuerce%20el%20repositorio%20de%20resolverurl%2c%20%5bCOLOR%20red%5dMientras%20no%20le%20actualiza%20No%20le%20funcionara%20ni%20la%20secci%5cxf3n%20de%20SERIES%20ni%20la%20de%20CINE.%5b%2fCOLOR%5d%27%5cr%5cn%5ct%5cr%5cn%22%2c%20%27name%27%3a%20u%27vResolveurl_repo%27%2c%20%27page%27%3a%20None%7d%2c%20u%27Github%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cnimport%20re%2crequests%2cxbmc%2curlresolver%5cr%5cnimport%20re%2crequests%2cxbmc%2curlresolver%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm%2cfinalurl%3d%27%24doregex%5bgit%5d%27)%3a%23cLrJIhsDApL%5cr%5cn%5cr%5cn%20%20if%20%27cristalazul%27%20in%20finalurl%3a%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%27%5cr%5cn%20%20else%3a%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%20SU%20COMPA%5cxd1IA%20LE%20EST%5cxc1%20CAPANDO%20ACCESO%20A%20WEBS%2c%20CAMBIE%20DNS%20O%20USE%20VPN.%5b%2fCOLOR%5d%27%5cr%5cn%22%2c%20%27name%27%3a%20u%27Github%27%2c%20%27page%27%3a%20None%7d%2c%20u%27indigo2%27%3a%20%7b%27expres%27%3a%20u%27%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20%20import%20xbmc%2c%20xbmcaddon%2c%20shutil%5cr%5cn%20%20addon%20%3d%20xbmcaddon.Addon(%5c%27plugin.program.indigo%5c%27)%5cr%5cn%20%20version%20%3d%20addon.getAddonInfo(%5c%27version%5c%27)%5cr%5cn%20%20hola%20%3d%20%5c%279.9.9%5c%27%5cr%5cn%20%20if%20hola%3d%3dversion%3a%5cr%5cn%20%20%20%20%20%20return%20%5c%27%5c%27%5cr%5cn%20%20else%3a%5cr%5cn%20%20%20%20%20%20xbmc.executeJSONRPC(%5c%27%7b%22jsonrpc%22%3a%20%222.0%22%2c%20%22id%22%3a1%2c%20%22method%22%3a%20%22Addons.SetAddonEnabled%22%2c%20%22params%22%3a%20%7b%20%22addonid%22%3a%20%22plugin.program.indigo%22%2c%20%22enabled%22%3a%20false%20%7d%7d%5c%27)%5cr%5cn%20%20%20%20%20%20return%20%5c%27%5c%27%5cr%5cn%27%2c%20%27name%27%3a%20u%27indigo2%27%2c%20%27page%27%3a%20None%7d%2c%20u%27vUrlresolve_repo%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20hola%20%3d%20%27%24doregex%5bversionurlresolve%5d%27%5cr%5cn%20__addon__%20%3d%20xbmcaddon.Addon(%27script.module.urlresolver%27)%5cr%5cn%20__addonname__%20%3d%20__addon__.getAddonInfo(%27version%27)%5cr%5cn%20if%20not%20hola%3d%3d__addonname__%3a%5cr%5cn%20%20%20%20return%20instaladorepo()%5cr%5cn%20else%3a%5cr%5cn%20%20%20%20return%20%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%20tiene%20la%20%5cxfaltima%20versi%5cxf3n%2c%20la%20%27%20%2b%20__addonname__%5ct%20%20%5cr%5cn%5cr%5cndef%20instaladorepo()%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20hola%20%3d%20xbmc.getCondVisibility(%27System.HasAddon(repository.xbmchub)%27)%5cr%5cn%20if%20hola%3d%3d0%3a%5cr%5cn%20%20%20%20%20__addon__%20%3d%20xbmcaddon.Addon(%27script.module.urlresolver%27)%5cr%5cn%20%20%20%20%20__addonname__%20%3d%20__addon__.getAddonInfo(%27version%27)%5cr%5cn%20%20%20%20%20xbmc.executebuiltin(%27InstallAddon(repository.xbmchub)%27)%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%5b%2fCOLOR%5d%20tiene%20la%20%5bCOLOR%20red%5d%27%20%2b%20__addonname__%20%2b%20%27%5bCOLOR%20white%5d%20y%20la%20ultima%20es%20la%5b%2fCOLOR%5d%5bCOLOR%20red%5d%20%24doregex%5bversionurlresolve%5d%5b%2fCOLOR%5d%2c%20Tampoco%20tiene%20su%20repositorio%20para%20que%20se%20actualice%2c%20Asique%20forzaremos%20la%20instalaci%5cxf3n.%5bCOLOR%20red%5d%20Si%20no%20le%20actualiza%20No%20le%20funcionara%20ni%20la%20secci%5cxf3n%20de%20SERIES%20ni%20la%20de%20CINE.%5b%2fCOLOR%5d%27%5cr%5cn%20else%3a%5cr%5cn%20%20%20%20%20__addon__%20%3d%20xbmcaddon.Addon(%27script.module.urlresolver%27)%5cr%5cn%20%20%20%20%20__addonname__%20%3d%20__addon__.getAddonInfo(%27version%27)%20%20%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%5b%2fCOLOR%5d%20est%5cxe1%20en%20proceso...%20de%20momento%20tiene%20la%20%27%20%2b%20__addonname__%20%2b%20%27%5bCOLOR%20white%5d%20y%20la%20ultima%20es%20la%5b%2fCOLOR%5d%5bCOLOR%20red%5d%20%24doregex%5bversionurlresolve%5d%5b%2fCOLOR%5d%20si%20no%20le%20actualiza%20s%5cxf3lo%2c%20fuerce%20el%20repositorio%20de%20tvaddons%2c%20%5bCOLOR%20red%5dMientras%20no%20le%20actualiza%20No%20le%20funcionara%20ni%20la%20secci%5cxf3n%20de%20SERIES%20ni%20la%20de%20CINE.%5b%2fCOLOR%5d%27%5cr%5cn%5ct%5cr%5cn%22%2c%20%27name%27%3a%20u%27vUrlresolve_repo%27%2c%20%27page%27%3a%20None%7d%2c%20u%27yt1%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%5cr%5cn%20hola%20%3d%20xbmc.getCondVisibility(%27System.HasAddon(plugin.video.youtube)%27)%5cr%5cn%20return%20hola%5cr%5cn%22%2c%20%27name%27%3a%20u%27yt1%27%2c%20%27page%27%3a%20None%7d%2c%20u%27test%27%3a%20%7b%27expres%27%3a%20u%27%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20%20%20%20import%20xbmcgui%5cr%5cn%20%20%20%20dialog%20%3d%20xbmcgui.Dialog()%5cr%5cn%20%20%20%20dialog.textviewer(%22%22%22%5bCOLOR%20aqua%5dCRISTAL%20AZUL%5b%2fCOLOR%5d%22%22%22%2c%20%22%22%22%5bCOLOR%20white%5dQue%20Scripts%2fDepencias%20tengo%20instalados%3f%3a%5b%2fCOLOR%5d%5cr%5cn%5cr%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dAcceso%20a%20Repositorios%20(Actualizaciones)%3a%20%20%24doregex%5bGithub%5d%5b%2fCOLOR%5d%5cr%5cn%5cr%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dInputstream%20Adaptative%3a%20%20%24doregex%5binputstream%5d%5b%2fCOLOR%5d%5cr%5cn%5cr%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dResolveUrl%3a%20%20%24doregex%5bresolveurl%5d%5b%2fCOLOR%5d%5cr%5cn%5cr%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dActualizado%20ResolveUrl%3f%20%24doregex%5bvResolveurl_repo%5d%5cr%5cn%5cr%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dUrlresolve%3a%20%20%24doregex%5burlresolve%5d%5b%2fCOLOR%5d%5cr%5cn%5cr%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dActualizado%20Urlresolve%3f%20%24doregex%5bvUrlresolve_repo%5d%5cr%5cn%5cr%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dF4mProxy%3a%20%24doregex%5bf4mproxy%5d%5b%2fCOLOR%5d%5cr%5cn%5cr%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5df4mTester%3a%20%24doregex%5bf4mtester%5d%5b%2fCOLOR%5d%5cr%5cn%5cr%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dPlexus%3a%20%24doregex%5bplexus%5d%5b%2fCOLOR%5d%5cr%5cn%5cr%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dYoutube%3a%20%24doregex%5byt%5d%5cr%5cn%5cr%5cn%5cr%5cn%20%20%5bCOLOR%20aqua%5dLea%20todo%20hasta%20el%20final%20e%20instale%20lo%20que%20le%20falte%20en%20la%20siguiente%20pantalla%2c%20%24doregex%5bindigo%5dsi%20tiene%20problemas%20en%20la%20instalaci%5cxf3n%2c%20instale%20desde%20la%20secci%5cxf3n%20navaja%20suiza%2c%20fuente%20kodileia%2c%20carpeta%20ayuda%2c%20el%20repositorio%20de%20urlresolve%20se%20llama%20repository.xbmchub.%5b%2fCOLOR%5d%5cr%5cn%5cr%5cn%5cr%5cn%5cr%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dRecuerde%20que%20necesita%20%5cxe9stos%20scripts%2faddons%2c%20%5b%2fCOLOR%5d%5bCOLOR%20white%5dTenga%20siempre%20actualizadas%20%5cxe9stas%20dependencias%2c%20gracias%20a%20todos%20ellos%20por%20su%20trabajo.%5b%2fCOLOR%5d%5cr%5cn%5cr%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5d%5cxbfY%20d%5cxf3nde%20conseguirlos%20actualizados%3f%5b%2fCOLOR%5d%5cr%5cn%5bCOLOR%20white%5dEn%20nuestra%20fuente%3a%20%5bCOLOR%20gold%5dhttp%3a%2f%2fkodileia.xyz%5b%2fCOLOR%5d%5cr%5cn%5cr%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dQue%20%5cxe9sto%20todav%5cxeda%20no%20me%20funciona%3a%5b%2fCOLOR%5d%5cr%5cn%5bCOLOR%20white%5dEstamos%20en%20telegram%3a%20%5bCOLOR%20gold%5dhttps%3a%2f%2ft.me%2faddonfestaycristal%20%5bCOLOR%20white%5dy%20en%20%5bCOLOR%20gold%5dhttps%3a%2f%2ft.me%2fkodi18%5b%2fCOLOR%5d%5cr%5cn%5cr%5cn%5cr%5cn%5cr%5cn%5cr%5cn%5cr%5cn%5cr%5cn%5cr%5cn%5cr%5cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5bCOLOR%20aqua%5dCristal%20Azul%5b%2fCOLOR%5d%22%22%22)%5cr%5cn%20%20%20%20return%20%5c%27https%3a%2f%2fpastebin.com%2fraw%2fJ7JmvXZj%5c%27%5cr%5cn%27%2c%20%27name%27%3a%20u%27test%27%2c%20%27page%27%3a%20None%7d%2c%20u%27gdrive%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%2c%20shutil%5cr%5cn%20addon_path2%20%3d%20xbmc.translatePath((%27special%3a%2f%2fhome%2faddons%2fplugin.video.gdrive%27)).decode(%27utf-8%27)%5cr%5cn%20shutil.rmtree(addon_path2%2c%20ignore_errors%3dTrue)%5cr%5cn%20return%20%27%27%5cr%5cn%22%2c%20%27name%27%3a%20u%27gdrive%27%2c%20%27page%27%3a%20None%7d%2c%20u%27yt%27%3a%20%7b%27expres%27%3a%20u%22%24pyFunction%3a(%27%24doregex%5byt1%5d%27).replace(%270%27%2c%27%5bCOLOR%20red%5dNO%2c%20le%20recomendamos%20que%20lo%20instale.%20Si%20no%20lo%20instala%2c%20NO%20podr%5cxe1%20ver%20la%20secci%5cxf3n%20documentales.%5b%2fCOLOR%5d%27).replace(%271%27%2c%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%27)%22%2c%20%27name%27%3a%20u%27yt%27%2c%20%27page%27%3a%20None%7d%2c%20u%27f4mp%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20addon%20%3d%20xbmcaddon.Addon(%27script.video.F4mProxy%27)%5cr%5cn%20return%20addon.getAddonInfo(%27version%27)%5cr%5cn%22%2c%20%27name%27%3a%20u%27f4mp%27%2c%20%27page%27%3a%20None%7d%2c%20u%27urlresolve%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20hola%20%3d%20xbmc.getCondVisibility(%27System.HasAddon(script.module.urlresolver)%27)%5cr%5cn%20if%20hola%3d%3d0%3a%5cr%5cn%20%20%20%20%20xbmc.executebuiltin(%27InstallAddon(script.module.urlresolver)%27)%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%20le%20recomendamos%20que%20lo%20instale.%20Si%20no%20lo%20instala%2c%20No%20le%20funcionara%20ni%20la%20secci%5cxf3n%20de%20SERIES%20ni%20la%20de%20CINE.%20Vamos%20a%20forzar%20la%20instalaci%5cxf3n.%5b%2fCOLOR%5d%27%5cr%5cn%20else%3a%5cr%5cn%20%20%20%20%20__addon__%20%3d%20xbmcaddon.Addon(%27script.module.urlresolver%27)%5cr%5cn%20%20%20%20%20__addonname__%20%3d%20__addon__.getAddonInfo(%27version%27)%20%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%20version%20instalada%20%27%20%2b%20__addonname__%5cr%5cn%5cr%5cn%22%2c%20%27name%27%3a%20u%27urlresolve%27%2c%20%27page%27%3a%20None%7d%7d&amp;url=%24doregex%5btest%5d</jsonrpc>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]Borra Ajustes Gdrive[/COLOR]</title>
+<link>$doregex[link]</link>
+<regex>
+<name>link</name>
+<expres><![CDATA[#$pyFunction
+import xbmc,xbmcaddon,xbmcgui,shutil
+def GetLSProData(page_data,Cookie_Jar,m):#cLrJIhsDApL
+  dialog = xbmcgui.Dialog()
+  try:
+    estamos = xbmcaddon.Addon('plugin.video.gdrive')
+    version = estamos.getAddonInfo('version')
+    version_minima = '0.8.65'
+    if version > version_minima:
+      addon_path = xbmc.translatePath('special://profile/addon_data/plugin.video.gdrive').decode('utf-8')
+      shutil.rmtree(addon_path, ignore_errors=True)
+      return xbmcgui.Dialog().textviewer("""[COLOR aqua]Información[/COLOR]""", """[COLOR white]
+  -Hemos borrado los ajustes del plugin gdrive.
+  -siga con el tutorial desde el paso 2.
+  -cualquier duda, pregunte en el grupo. 
+  [/COLOR]""")
+    else:
+      dialog.notification("Lo Sentimos", "Gdrive Desactualizado!!!", xbmcgui.NOTIFICATION_INFO, 5000, False)
+      return
+  except:
+    dialog.notification("Lo Sentimos", "Gdrive No Instalado!!!", xbmcgui.NOTIFICATION_INFO, 5000, False)
+    return
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+<item>
+<title>[COLOR white]probar si me funciona inputstream[/COLOR]</title>
+<inputstream>https://cloud3-atres-st.atresmedia.com/geo/assets9/2019/11/27/BCB53E86-1B7A-41EC-B819-5622D5A32A61/hevc/packaged/cmaf/playlist.m3u8</inputstream>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+
+
+<!-- COJE LA VERSION DEL RESOLVE DE SU FUENTE-->
+<!--
+<item>
+<title>[COLOR white]Test de Scripts/Dependencias Instalados[/COLOR]</title>
+<link>$doregex[cristal]</link>
+<jsonrpc>plugin://plugin.video.cristalazul/?fanart=https%3a%2f%2fi.imgur.com%2fRsLj1lh.jpg&amp;mode=1&amp;name=%5bCOLOR%20white%5dTest%20de%20Scripts%2fDependencias%20Instalados%20%5b%2fCOLOR%5d&amp;regexs=%7bu%27versionurlresolve%27%3a%20%7b%27expres%27%3a%20u%27%22%3escript.module.urlresolver-(.%2a%3f).zip%27%2c%20%27name%27%3a%20u%27versionurlresolve%27%2c%20%27page%27%3a%20u%27http%3a%2f%2ffusion.tvaddons.co%2fkodi-scripts%2f%27%7d%2c%20u%27git%27%3a%20%7b%27cookiejar%27%3a%20%27%27%2c%20%27name%27%3a%20u%27git%27%2c%20%27agent%27%3a%20u%27Mozilla%2f5.0%20(Windows%20NT%2010.0%3b%20Win64%3b%20x64%3b%20rv%3a61.0)%20Gecko%2f20100101%20Firefox%2f61.0%27%2c%20%27expres%27%3a%20u%27%22(plugin%5c%5c.video%5c%5c.cristalazul)%22%27%2c%20%27referer%27%3a%20u%27https%3a%2f%2fgithub.com%2f%27%2c%20%27page%27%3a%20u%27https%3a%2f%2fraw.githubusercontent.com%2fpicapaujulen%2frepositorio%2fmaster%2fRepositorio%2faddons.xml%27%7d%2c%20u%27urlresolve1%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20hola%20%3d%20xbmc.getCondVisibility(%27System.HasAddon(script.module.urlresolver)%27)%5cr%5cn%20if%20hola%3d%3d0%3a%5cr%5cn%20%20%20%20%20xbmc.executebuiltin(%27InstallAddon(script.module.urlresolver)%27)%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%20le%20recomendamos%20que%20lo%20instale.%20Si%20no%20lo%20instala%2c%20No%20le%20funcionara%20ni%20la%20secci%5cxf3n%20de%20SERIES%20ni%20la%20de%20CINE.%20Vamos%20a%20forzar%20la%20instalaci%5cxf3n.%5b%2fCOLOR%5d%27%5cr%5cn%20else%3a%5cr%5cn%20%20%20%20%20__addon__%20%3d%20xbmcaddon.Addon(%27script.module.urlresolver%27)%5cr%5cn%20%20%20%20%20__addonname__%20%3d%20__addon__.getAddonInfo(%27version%27)%20%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%20version%20instalada%20%27%20%2b%20__addonname__%5cr%5cn%5cr%5cn%22%2c%20%27name%27%3a%20u%27urlresolve1%27%2c%20%27page%27%3a%20None%7d%2c%20u%27repourlresolve%27%3a%20%7b%27expres%27%3a%20u%22%24pyFunction%3a(%27%24doregex%5brepourlresolve1%5d%27).replace(%270%27%2c%27%5bCOLOR%20red%5dPosiblemente%20NO%2c%20le%20recomendamos%20que%20instale%20el%20repositorio%20repository.xbmchb%20y%20compruebe%20que%20en%20el%20script%20Urlresolve%20tenga%20activado%20el%20autoactualizar.%20El%20script%20Urlresolve%20actualmente%20va%20por%20la%20versi%5cxf3n%20%5bCOLOR%20white%5d%24doregex%5bversionurlresolve%5d.%5b%2fCOLOR%5d%27).replace(%271%27%2c%27%5bCOLOR%20green%5dPosiblemente%20SI%2c%20la%20%5cxfaltima%20version%20del%20script%20es%20la%20%5bCOLOR%20white%5d%24doregex%5bversionurlresolve%5d%20%5bCOLOR%20green%5dcompruebe%20si%20tiene%20%5cxe9sa.%5b%2fCOLOR%5d%27)%22%2c%20%27name%27%3a%20u%27repourlresolve%27%2c%20%27page%27%3a%20None%7d%2c%20u%27vresolve_repo%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20hola%20%3d%20%27%24doregex%5bversionurlresolve%5d%27%5cr%5cn%20__addon__%20%3d%20xbmcaddon.Addon(%27script.module.urlresolver%27)%5cr%5cn%20__addonname__%20%3d%20__addon__.getAddonInfo(%27version%27)%5cr%5cn%20if%20not%20hola%3d%3d__addonname__%3a%5cr%5cn%20%20%20%20return%20instaladorepo()%5cr%5cn%20else%3a%5cr%5cn%20%20%20%20return%20%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%20tiene%20la%20%5cxfaltima%20versi%5cxf3n%2c%20la%20%27%20%2b%20__addonname__%5ct%20%20%5cr%5cn%5cr%5cndef%20instaladorepo()%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20hola%20%3d%20xbmc.getCondVisibility(%27System.HasAddon(repository.xbmchub)%27)%5cr%5cn%20if%20hola%3d%3d0%3a%5cr%5cn%20%20%20%20%20__addon__%20%3d%20xbmcaddon.Addon(%27script.module.urlresolver%27)%5cr%5cn%20%20%20%20%20__addonname__%20%3d%20__addon__.getAddonInfo(%27version%27)%5cr%5cn%20%20%20%20%20xbmc.executebuiltin(%27InstallAddon(repository.xbmchub)%27)%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%5b%2fCOLOR%5d%20tiene%20la%20%5bCOLOR%20red%5d%27%20%2b%20__addonname__%20%2b%20%27%5bCOLOR%20white%5d%20y%20la%20ultima%20es%20la%5b%2fCOLOR%5d%5bCOLOR%20red%5d%20%24doregex%5bversionurlresolve%5d%5b%2fCOLOR%5d%2c%20Tampoco%20tiene%20su%20repositorio%20para%20que%20se%20actualice%2c%20Asique%20forzaremos%20la%20instalaci%5cxf3n.%5bCOLOR%20red%5d%20Si%20no%20le%20actualiza%20No%20le%20funcionara%20ni%20la%20secci%5cxf3n%20de%20SERIES%20ni%20la%20de%20CINE.%5b%2fCOLOR%5d%27%5cr%5cn%20else%3a%5cr%5cn%20%20%20%20%20__addon__%20%3d%20xbmcaddon.Addon(%27script.module.urlresolver%27)%5cr%5cn%20%20%20%20%20__addonname__%20%3d%20__addon__.getAddonInfo(%27version%27)%20%20%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%5b%2fCOLOR%5d%20est%5cxe1%20en%20proceso...%20de%20momento%20tiene%20la%20%27%20%2b%20__addonname__%20%2b%20%27%5bCOLOR%20white%5d%20y%20la%20ultima%20es%20la%5b%2fCOLOR%5d%5bCOLOR%20red%5d%20%24doregex%5bversionurlresolve%5d%5b%2fCOLOR%5d%20si%20no%20le%20actualiza%20s%5cxf3lo%2c%20fuerce%20el%20repositorio%20de%20tvaddons%2c%20%5bCOLOR%20red%5dMientras%20no%20le%20actualiza%20No%20le%20funcionara%20ni%20la%20secci%5cxf3n%20de%20SERIES%20ni%20la%20de%20CINE.%5b%2fCOLOR%5d%27%5cr%5cn%5ct%5cr%5cn%22%2c%20%27name%27%3a%20u%27vresolve_repo%27%2c%20%27page%27%3a%20None%7d%2c%20u%27plexus%27%3a%20%7b%27expres%27%3a%20u%22%24pyFunction%3a(%27%24doregex%5bplexus1%5d%27).replace(%270%27%2c%27%5bCOLOR%20red%5dNO%2c%20le%20recomendamos%20que%20lo%20instale.%20Si%20no%20lo%20instala%2c%20NO%20podr%5cxe1%20ver%20gran%20parte%20de%20la%20secci%5cxedn%20Deporte.%5b%2fCOLOR%5d%27).replace(%271%27%2c%27%5bCOLOR%20green%5dSI%2c%20compruebe%20que%20tenga%20tambien%20la%20aplicaci%5cxf3n%20Acestream%20fuera%20de%20kodi.%5b%2fCOLOR%5d%27)%22%2c%20%27name%27%3a%20u%27plexus%27%2c%20%27page%27%3a%20None%7d%2c%20u%27f4mtester%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20instalado%20%3d%20%27%24doregex%5bf4mt%5d%27%5cr%5cn%20if%20%27%27%3d%3dinstalado%3a%5cr%5cn%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%20le%20recomendamos%20que%20lo%20instale.%20Si%20no%20lo%20instala%2c%20No%20le%20funcionara%20gran%20parte%20de%20la%20zona%20de%20televisi%5cxf3n.%20Vamos%20a%20forzar%20la%20instalaci%5cxf3n.%5b%2fCOLOR%5d%27%5cr%5cn%20elif%20%27.%27%20in%20instalado%3a%5cr%5cn%20%20%20return%20%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%27%5cr%5cn%20else%3a%5cr%5cn%20%20%20return%20%27nada%27%5cr%5cn%22%2c%20%27name%27%3a%20u%27f4mtester%27%2c%20%27page%27%3a%20None%7d%2c%20u%27f4mt%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20addon%20%3d%20xbmcaddon.Addon(%27plugin.video.f4mTester%27)%5cr%5cn%20return%20addon.getAddonInfo(%27version%27)%5cr%5cn%22%2c%20%27name%27%3a%20u%27f4mt%27%2c%20%27page%27%3a%20None%7d%2c%20u%27yt1%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%5cr%5cn%20hola%20%3d%20xbmc.getCondVisibility(%27System.HasAddon(plugin.video.youtube)%27)%5cr%5cn%20return%20hola%5cr%5cn%22%2c%20%27name%27%3a%20u%27yt1%27%2c%20%27page%27%3a%20None%7d%2c%20u%27Github%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cnimport%20re%2crequests%2cxbmc%2curlresolver%5cr%5cnimport%20re%2crequests%2cxbmc%2curlresolver%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm%2cfinalurl%3d%27%24doregex%5bgit%5d%27)%3a%23cLrJIhsDApL%5cr%5cn%5cr%5cn%20%20if%20%27cristalazul%27%20in%20finalurl%3a%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%27%5cr%5cn%20%20else%3a%5cr%5cn%20%20%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%20SU%20COMPA%5cxd1IA%20LE%20EST%5cxc1%20CAPANDO%20ACCESO%20A%20WEBS%2c%20CAMBIE%20DNS%20O%20USE%20VPN.%5b%2fCOLOR%5d%27%5cr%5cn%22%2c%20%27name%27%3a%20u%27Github%27%2c%20%27page%27%3a%20None%7d%2c%20u%27f4mproxy%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20instalado%20%3d%20%27%24doregex%5bf4mp%5d%27%5cr%5cn%20if%20%27%27%3d%3dinstalado%3a%5cr%5cn%20%20%20xbmc.executebuiltin(%27InstallAddon(script.video.F4mProxy)%27)%5cr%5cn%20%20%20return%20%27%5bCOLOR%20red%5dNO%2c%20le%20recomendamos%20que%20lo%20instale.%20Si%20no%20lo%20instala%2c%20No%20le%20funcionara%20gran%20parte%20de%20la%20zona%20de%20televisi%5cxf3n.%20Vamos%20a%20forzar%20la%20instalaci%5cxf3n.%5b%2fCOLOR%5d%27%5cr%5cn%20elif%20%27.%27%20in%20instalado%3a%5cr%5cn%20%20%20return%20%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%27%5cr%5cn%20else%3a%5cr%5cn%20%20%20return%20%27nada%27%5cr%5cn%22%2c%20%27name%27%3a%20u%27f4mproxy%27%2c%20%27page%27%3a%20None%7d%2c%20u%27test%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20%20%20%20import%20xbmcgui%5cr%5cn%20%20%20%20dialog%20%3d%20xbmcgui.Dialog()%5cr%5cn%20%20%20%20dialog.textviewer(%27%5bCOLOR%20aqua%5dCRISTAL%20AZUL%5b%2fCOLOR%5d%27%2c%20%27%5bCOLOR%20white%5dQue%20Scripts%2fDepencias%20tengo%20instalados%3f%3a%5b%2fCOLOR%5d%5c%5cn%5c%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dAcceso%20a%20Repositorios%20(Actualizaciones)%3a%20%20%24doregex%5bGithub%5d%5b%2fCOLOR%5d%5c%5cn%5c%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dUrlresolve%3a%20%20%24doregex%5burlresolve1%5d%5b%2fCOLOR%5d%5c%5cn%5c%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dActualizado%20Urlresolve%3f%20%24doregex%5bvresolve_repo%5d%5c%5cn%5c%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dF4mProxy%3a%20%24doregex%5bf4mproxy%5d%5b%2fCOLOR%5d%5c%5cn%5c%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5df4mTester%3a%20%24doregex%5bf4mtester%5d%5b%2fCOLOR%5d%5c%5cn%5c%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dPlexus%3a%20%24doregex%5bplexus%5d%5b%2fCOLOR%5d%5c%5cn%5c%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dYoutube%3a%20%24doregex%5byt%5d%5c%5cn%5c%5cn%5c%5cn%20%20%5bCOLOR%20aqua%5dLea%20todo%20hasta%20el%20final%20e%20instale%20lo%20que%20le%20falte%20en%20la%20siguiente%20pantalla%2c%20si%20tiene%20problemas%20en%20la%20instalaci%5cxf3n%2c%20instale%20desde%20la%20secci%5cxf3n%20navaja%20suiza%2c%20fuente%20kodileia%2c%20carpeta%20ayuda%2c%20el%20repositorio%20de%20urlresolve%20se%20llama%20repository.xbmchub.%5b%2fCOLOR%5d%5c%5cn%5c%5cn%5c%5cn%5c%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dRecuerde%20que%20necesita%20%5cxe9stos%20scripts%2faddons%2c%20%5b%2fCOLOR%5d%5bCOLOR%20white%5dTenga%20siempre%20actualizadas%20%5cxe9stas%20dependencias%2c%20gracias%20a%20todos%20ellos%20por%20su%20trabajo.%5b%2fCOLOR%5d%5c%5cn%5c%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5d%5cxbfY%20d%5cxf3nde%20conseguirlos%20actualizados%3f%5b%2fCOLOR%5d%5c%5cn%5bCOLOR%20white%5dEn%20nuestra%20fuente%3a%20%5bCOLOR%20gold%5dhttp%3a%2f%2fkodileia.xyz%5b%2fCOLOR%5d%5c%5cn%5c%5cn%5bCOLOR%20lightskyblue%5d-%5bCOLOR%20white%5dQue%20%5cxe9sto%20todav%5cxeda%20no%20me%20funciona%3a%5b%2fCOLOR%5d%5c%5cn%5bCOLOR%20white%5dEstamos%20en%20telegram%3a%20%5bCOLOR%20gold%5dhttps%3a%2f%2ft.me%2faddonfestaycristal%20%5bCOLOR%20white%5dy%20en%20%5bCOLOR%20gold%5dhttps%3a%2f%2ft.me%2fkodi18%5b%2fCOLOR%5d%5c%5cn%5c%5cn%5c%5cn%5c%5cn%5c%5cn%5c%5cn%5c%5cn%5c%5cn%5c%5cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5bCOLOR%20aqua%5dCristal%20Azul%5b%2fCOLOR%5d%27)%5cr%5cn%20%20%20%20return%20%27https%3a%2f%2fpastebin.com%2fraw%2fJ7JmvXZj%27%5cr%5cn%22%2c%20%27name%27%3a%20u%27test%27%2c%20%27page%27%3a%20None%7d%2c%20u%27plexus1%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%5cr%5cn%20hola%20%3d%20xbmc.getCondVisibility(%27System.HasAddon(program.plexus)%27)%5cr%5cn%20return%20hola%5cr%5cn%22%2c%20%27name%27%3a%20u%27plexus1%27%2c%20%27page%27%3a%20None%7d%2c%20u%27yt%27%3a%20%7b%27expres%27%3a%20u%22%24pyFunction%3a(%27%24doregex%5byt1%5d%27).replace(%270%27%2c%27%5bCOLOR%20red%5dNO%2c%20le%20recomendamos%20que%20lo%20instale.%20Si%20no%20lo%20instala%2c%20NO%20podr%5cxe1%20ver%20la%20secci%5cxf3n%20documentales.%5b%2fCOLOR%5d%27).replace(%271%27%2c%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%27)%22%2c%20%27name%27%3a%20u%27yt%27%2c%20%27page%27%3a%20None%7d%2c%20u%27f4mp%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20addon%20%3d%20xbmcaddon.Addon(%27script.video.F4mProxy%27)%5cr%5cn%20return%20addon.getAddonInfo(%27version%27)%5cr%5cn%22%2c%20%27name%27%3a%20u%27f4mp%27%2c%20%27page%27%3a%20None%7d%2c%20u%27urlresolve%27%3a%20%7b%27expres%27%3a%20u%22%24pyFunction%3a(%27%24doregex%5burlresolve1%5d%27).replace(%270%27%2c%27%5bCOLOR%20red%5dNO%2c%20le%20recomendamos%20que%20lo%20instale.%20Si%20no%20lo%20instala%2c%20NO%20podr%5cxe1%20ver%20la%20mayor%5cxeda%20de%20las%20pel%5cxedculas%20y%20series.%5b%2fCOLOR%5d%27).replace(%271%27%2c%27%5bCOLOR%20green%5dSI.%5b%2fCOLOR%5d%27)%22%2c%20%27name%27%3a%20u%27urlresolve%27%2c%20%27page%27%3a%20None%7d%7d&amp;url=%24doregex%5btest%5d</jsonrpc>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+-->
+
+
+
+
+
+<item>
+<title>[COLOR white]Navaja Suiza[/COLOR]</title>
+<link>NO</link>
+<externallink>https://pastebin.com/raw/GCr84naS</externallink>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+
+
+
+
+
+<!--
+<item>
+<title>[COLOR white]Instalador Scripts/Dependencias[/COLOR] prueba</title>
+<link>na</link>
+<jsonrpc>plugin://script.i.cristalazul</jsonrpc>
+<thumbnail>https://i.imgur.com/1tWD4bK.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+-->
+
+
+
+
+<item>
+<title>[COLOR white]Borra ResolveUrl fake y cierra kodi[/COLOR]</title>
+<link>na</link>
+<jsonrpc>plugin://plugin.video.cristalazul/?url=%24doregex%5Bcristal%5D&amp;mode=17&amp;regexs=%7Bu%27cristal%27%3A%20%7B%27expres%27%3A%20u%22%23%24pyFunction%5Cr%5Cndef%20GetLSProData%28page_data%2CCookie_Jar%2Cm%29%3A%5Cr%5Cn%20import%20xbmc%2C%20xbmcaddon%2C%20shutil%5Cr%5Cn%20addon_path%20%3D%20xbmc.translatePath%28%28%27special%3A//home/addons/repository.venom%27%29%29.decode%28%27utf-8%27%29%5Cr%5Cn%20shutil.rmtree%28addon_path%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20addon_path2%20%3D%20xbmc.translatePath%28%28%27special%3A//home/addons/script.module.resolveurl%27%29%29.decode%28%27utf-8%27%29%5Cr%5Cn%20shutil.rmtree%28addon_path2%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20addon_path2%20%3D%20xbmc.translatePath%28%28%27special%3A//home/addons/repository.sgkodi%27%29%29.decode%28%27utf-8%27%29%5Cr%5Cn%20shutil.rmtree%28addon_path2%2C%20ignore_errors%3DTrue%29%5Cr%5Cn%20return%20xbmc.executebuiltin%28%27Quit%27%29%5Cr%5Cn%22%2C%20%27name%27%3A%20u%27cristal%27%2C%20%27page%27%3A%20None%7D%7D&amp;iconimage=https%3A%2F%2Fi.imgur.com%2FjpPDGCr.jpg</jsonrpc>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]Lanzar Webs[/COLOR]</title>
+<link>$doregex[noticia]</link>
+<regex>
+<name>noticia</name>
+<expres><![CDATA[#$pyFunction
+import xbmc,xbmcgui,webbrowser
+def GetLSProData(page_data,Cookie_Jar,m):
+  
+   web = Buscador()
+   return webbrowser.open_new_tab(web) + xbmc.executebuiltin('StartAndroidActivity(,android.intent.action.VIEW,,%s)' % (web))
+ 
+def Buscador():
+    teclado = xbmcgui.Dialog()
+    Respuesta_Buscador = teclado.input('Inserte su enlace', type=xbmcgui.INPUT_ALPHANUM)
+    return Respuesta_Buscador
+]]></expres>
+<page></page>
+</regex>
+<info>[COLOR lightblue]Navegador, 'lance su web preferida'
+[COLOR white]
+"NO funciona con raspberry"[/COLOR]</info>
+<thumbnail>https://stva.zriel.ga/wizard/imagenes/icon.png</thumbnail>
+<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+</item>
+
+
+
+
+
+<!--
+<item>
+<title>[COLOR white]Abrir instalador[/COLOR] prueba</title>
+<link>$doregex[id]</link>
+<regex>
+<name>id</name>
+<expres>$pyFunction:xbmc.executebuiltin('RunAddon(script.i.cristalazul)')</expres>
+<page></page>
+<NOTPlayable>True</NOTPlayable>
+</regex>
+<thumbnail>https://i.imgur.com/1tWD4bK.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+-->
+
+
+
+
+
+<item>
+<title>[COLOR gold]$doregex[coloreando]*^Reproduce tus Enlaces^*[/COLOR]</title>
+<link>$doregex[link_inteligente]1:0:19:78B4:3EC:$doregex[id]C00000:0:0:0:</link>
+<regex>
+<name>link_inteligente</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,xbmc
+def GetLSProData(page_data,Cookie_Jar,m,url='$doregex[id]'):#cPrLItsLTfakl
+
+  if '1' in url:
+    return '$doregex[finallink]'
+  else:
+    return ''
+]]></expres>
+<page></page>
+</regex> 
+ <regex>
+<name>finallink</name>
+<expres>(.*?)CRISTALAZUL</expres>
+<page>https://pastebin.com/raw/uC9BgVZF</page>
+<setcookie>beget=begetok</setcookie>
+</regex> 
+<regex>
+<name>id</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ addon = xbmcaddon.Addon('plugin.video.cristalazul')
+ return addon.getSetting('Password')
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>colores</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ addon = xbmcaddon.Addon('plugin.video.cristalazul')
+ return addon.getSetting('ColoreandoPrincipal')
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>coloreando</name>
+<expres>$pyFunction:('$doregex[colores]').replace('Predeterminado','').replace('[COLOR lightskyblue]lightskyblue[/COLOR]','[COLOR lightskyblue]').replace('[COLOR aliceblue]aliceblue[/COLOR]','[COLOR aliceblue]').replace('[COLOR antiquewhite]antiquewhite[/COLOR]','[COLOR antiquewhite]').replace('[COLOR aqua]aqua[/COLOR]','[COLOR aqua]').replace('[COLOR aquamarine]aquamarine[/COLOR]','[COLOR aquamarine]').replace('[COLOR azure]azure[/COLOR]','[COLOR azure]').replace('[COLOR beige]beige[/COLOR]','[COLOR beige]').replace('[COLOR bisque]bisque[/COLOR]','[COLOR bisque]').replace('[COLOR black]black[/COLOR]','[COLOR black]').replace('[COLOR blanchedalmond]blanchedalmond[/COLOR]','[COLOR blanchedalmond]').replace('[COLOR blue]blue[/COLOR]','[COLOR blue]').replace('[COLOR blueviolet]blueviolet[/COLOR]','[COLOR blueviolet]').replace('[COLOR brown]brown[/COLOR]','[COLOR brown]').replace('[COLOR burlywood]burlywood[/COLOR]','[COLOR burlywood]').replace('[COLOR cadetblue]cadetblue[/COLOR]','[COLOR cadetblue]').replace('[COLOR chartreuse]chartreuse[/COLOR]','[COLOR chartreuse]').replace('[COLOR chocolate]chocolate[/COLOR]','[COLOR chocolate]').replace('[COLOR coral]coral[/COLOR]','[COLOR coral]').replace('[COLOR cornflowerblue]cornflowerblue[/COLOR]','[COLOR cornflowerblue]').replace('[COLOR crimson]crimson[/COLOR]','[COLOR crimson]').replace('[COLOR cyan]cyan[/COLOR]','[COLOR cyan]').replace('[COLOR darkblue]darkblue[/COLOR]','[COLOR darkblue]').replace('[COLOR darkcyan]darkcyan[/COLOR]','[COLOR darkcyan]').replace('[COLOR darkgoldenrod]darkgoldenrod[/COLOR]','[COLOR darkgoldenrod]').replace('[COLOR darkgray]darkgray[/COLOR]','[COLOR darkgray]').replace('[COLOR darkgreen]darkgreen[/COLOR]','[COLOR darkgreen]').replace('[COLOR darkgrey]darkgrey[/COLOR]','[COLOR darkgrey]').replace('[COLOR darkkhaki]darkkhaki[/COLOR]','[COLOR darkkhaki]').replace('[COLOR darkmagenta]darkmagenta[/COLOR]','[COLOR darkmagenta]').replace('[COLOR darkolivegreen]darkolivegreen[/COLOR]','[COLOR darkolivegreen]').replace('[COLOR darkorange]darkorange[/COLOR]','[COLOR darkorange]').replace('[COLOR darkorchid]darkorchid[/COLOR]','[COLOR darkorchid]').replace('[COLOR darkred]darkred[/COLOR]','[COLOR darkred]').replace('[COLOR darksalmon]darksalmon[/COLOR]','[COLOR darksalmon]').replace('[COLOR darkseagreen]darkseagreen[/COLOR]','[COLOR darkseagreen]').replace('[COLOR darkslateblue]darkslateblue[/COLOR]','[COLOR darkslateblue]').replace('[COLOR darkslategray]darkslategray[/COLOR]','[COLOR darkslategray]').replace('[COLOR darkslategrey]darkslategrey[/COLOR]','[COLOR darkslategrey]').replace('[COLOR darkturquoise]darkturquoise[/COLOR]','[COLOR darkturquoise]').replace('[COLOR deeppink]deeppink[/COLOR]','[COLOR deeppink]').replace('[COLOR deepskyblue]deepskyblue[/COLOR]','[COLOR deepskyblue]').replace('[COLOR dimgray]dimgray[/COLOR]','[COLOR dimgray]').replace('[COLOR dimgrey]dimgrey[/COLOR]','[COLOR dimgrey]').replace('[COLOR dodgerblue]dodgerblue[/COLOR]','[COLOR dodgerblue]').replace('[COLOR firebrick]firebrick[/COLOR]','[COLOR firebrick]').replace('[COLOR floralwhite]floralwhite[/COLOR]','[COLOR floralwhite]').replace('[COLOR forestgreen]forestgreen[/COLOR]','[COLOR forestgreen]').replace('[COLOR fuchsia]fuchsia[/COLOR]','[COLOR fuchsia]').replace('[COLOR gainsboro]gainsboro[/COLOR]','[COLOR gainsboro]').replace('[COLOR ghostwhite]ghostwhite[/COLOR]','[COLOR ghostwhite]').replace('[COLOR gold]gold[/COLOR]','[COLOR gold]').replace('[COLOR goldenrod]goldenrod[/COLOR]','[COLOR goldenrod]').replace('[COLOR gray]gray[/COLOR]','[COLOR gray]').replace('[COLOR green]green[/COLOR]','[COLOR green]').replace('[COLOR greenyellow]greenyellow[/COLOR]','[COLOR greenyellow]').replace('[COLOR grey]grey[/COLOR]','[COLOR grey]').replace('[COLOR honeydew]honeydew[/COLOR]','[COLOR honeydew]').replace('[COLOR hotpink]hotpink[/COLOR]','[COLOR hotpink]').replace('[COLOR indianred]indianred[/COLOR]','[COLOR indianred]').replace('[COLOR indigo]indigo[/COLOR]','[COLOR indigo]').replace('[COLOR ivory]ivory[/COLOR]','[COLOR ivory]').replace('[COLOR khaki]khaki[/COLOR]','[COLOR khaki]').replace('[COLOR lavender]lavender[/COLOR]','[COLOR lavender]').replace('[COLOR lavenderblush]lavenderblush[/COLOR]','[COLOR lavenderblush]').replace('[COLOR lawngreen]lawngreen[/COLOR]','[COLOR lawngreen]').replace('[COLOR lemonchiffon]lemonchiffon[/COLOR]','[COLOR lemonchiffon]').replace('[COLOR lightblue]lightblue[/COLOR]','[COLOR lightblue]').replace('[COLOR lightcoral]lightcoral[/COLOR]','[COLOR lightcoral]').replace('[COLOR lightcyan]lightcyan[/COLOR]','[COLOR lightcyan]').replace('[COLOR lightgoldenrodyellow]lightgoldenrodyellow[/COLOR]','[COLOR lightgoldenrodyellow]').replace('[COLOR lightgray]lightgray[/COLOR]','[COLOR lightgray]').replace('[COLOR lightgreen]lightgreen[/COLOR]','[COLOR lightgreen]').replace('[COLOR lightgrey]lightgrey[/COLOR]','[COLOR lightgrey]').replace('[COLOR lightpink]lightpink[/COLOR]','[COLOR lightpink]').replace('[COLOR lightsalmon]lightsalmon[/COLOR]','[COLOR lightsalmon]').replace('[COLOR lightseagreen]lightseagreen[/COLOR]','[COLOR lightseagreen]').replace('[COLOR lightslategray]lightslategray[/COLOR]','[COLOR lightslategray]').replace('[COLOR lightslategrey]lightslategrey[/COLOR]','[COLOR lightslategrey]').replace('[COLOR lightsteelblue]lightsteelblue[/COLOR]','[COLOR lightsteelblue]').replace('[COLOR lightyellow]lightyellow[/COLOR]','[COLOR lightyellow]').replace('[COLOR lime]lime[/COLOR]','[COLOR lime]').replace('[COLOR limegreen]limegreen[/COLOR]','[COLOR limegreen]').replace('[COLOR linen]linen[/COLOR]','[COLOR linen]').replace('[COLOR magenta]magenta[/COLOR]','[COLOR magenta]').replace('[COLOR maroon]maroon[/COLOR]','[COLOR maroon]').replace('[COLOR mediumaquamarine]mediumaquamarine[/COLOR]','[COLOR mediumaquamarine]').replace('[COLOR mediumblue]mediumblue[/COLOR]','[COLOR mediumblue]').replace('[COLOR mediumorchid]mediumorchid[/COLOR]','[COLOR mediumorchid]').replace('[COLOR mediumpurple]mediumpurple[/COLOR]','[COLOR mediumpurple]').replace('[COLOR mediumseagreen]mediumseagreen[/COLOR]','[COLOR mediumseagreen]').replace('[COLOR mediumslateblue]mediumslateblue[/COLOR]','[COLOR mediumslateblue]').replace('[COLOR mediumspringgreen]mediumspringgreen[/COLOR]','[COLOR mediumspringgreen]').replace('[COLOR mediumturquoise]mediumturquoise[/COLOR]','[COLOR mediumturquoise]').replace('[COLOR mediumvioletred]mediumvioletred[/COLOR]','[COLOR mediumvioletred]').replace('[COLOR midnightblue]midnightblue[/COLOR]','[COLOR midnightblue]').replace('[COLOR mintcream]mintcream[/COLOR]','[COLOR mintcream]').replace('[COLOR mistyrose]mistyrose[/COLOR]','[COLOR mistyrose]').replace('[COLOR moccasin]moccasin[/COLOR]','[COLOR moccasin]').replace('[COLOR navajowhite]navajowhite[/COLOR]','[COLOR navajowhite]').replace('[COLOR navy]navy[/COLOR]','[COLOR navy]').replace('[COLOR none]none[/COLOR]','[COLOR none]').replace('[COLOR oldlace]oldlace[/COLOR]','[COLOR oldlace]').replace('[COLOR olive]olive[/COLOR]','[COLOR olive]').replace('[COLOR olivedrab]olivedrab[/COLOR]','[COLOR olivedrab]').replace('[COLOR orange]orange[/COLOR]','[COLOR orange]').replace('[COLOR orangered]orangered[/COLOR]','[COLOR orangered]').replace('[COLOR orchid]orchid[/COLOR]','[COLOR orchid]').replace('[COLOR palegoldenrod]palegoldenrod[/COLOR]','[COLOR palegoldenrod]').replace('[COLOR palegreen]palegreen[/COLOR]','[COLOR palegreen]').replace('[COLOR paleturquoise]paleturquoise[/COLOR]','[COLOR paleturquoise]').replace('[COLOR palevioletred]palevioletred[/COLOR]','[COLOR palevioletred]').replace('[COLOR papayawhip]papayawhip[/COLOR]','[COLOR papayawhip]').replace('[COLOR peachpuff]peachpuff[/COLOR]','[COLOR peachpuff]').replace('[COLOR peru]peru[/COLOR]','[COLOR peru]').replace('[COLOR pink]pink[/COLOR]','[COLOR pink]').replace('[COLOR plum]plum[/COLOR]','[COLOR plum]').replace('[COLOR powderblue]powderblue[/COLOR]','[COLOR powderblue]').replace('[COLOR purple]purple[/COLOR]','[COLOR purple]').replace('[COLOR red]red[/COLOR]','[COLOR red]').replace('[COLOR rosybrown]rosybrown[/COLOR]','[COLOR rosybrown]').replace('[COLOR royalblue]royalblue[/COLOR]','[COLOR royalblue]').replace('[COLOR saddlebrown]saddlebrown[/COLOR]','[COLOR saddlebrown]').replace('[COLOR salmon]salmon[/COLOR]','[COLOR salmon]').replace('[COLOR sandybrown]sandybrown[/COLOR]','[COLOR sandybrown]').replace('[COLOR seagreen]seagreen[/COLOR]','[COLOR seagreen]').replace('[COLOR seashell]seashell[/COLOR]','[COLOR seashell]').replace('[COLOR sienna]sienna[/COLOR]','[COLOR sienna]').replace('[COLOR silver]silver[/COLOR]','[COLOR silver]').replace('[COLOR skyblue]skyblue[/COLOR]','[COLOR skyblue]').replace('[COLOR slateblue]slateblue[/COLOR]','[COLOR slateblue]').replace('[COLOR slategray]slategray[/COLOR]','[COLOR slategray]').replace('[COLOR slategrey]slategrey[/COLOR]','[COLOR slategrey]').replace('[COLOR snow]snow[/COLOR]','[COLOR snow]').replace('[COLOR springgreen]springgreen[/COLOR]','[COLOR springgreen]').replace('[COLOR steelblue]steelblue[/COLOR]','[COLOR steelblue]').replace('[COLOR tan]tan[/COLOR]','[COLOR tan]').replace('[COLOR teal]teal[/COLOR]','[COLOR teal]').replace('[COLOR thistle]thistle[/COLOR]','[COLOR thistle]').replace('[COLOR transparent]transparent[/COLOR]','[COLOR transparent]').replace('[COLOR turquoise]turquoise[/COLOR]','[COLOR turquoise]').replace('[COLOR violet]violet[/COLOR]','[COLOR violet]').replace('[COLOR wheat]wheat[/COLOR]','[COLOR wheat]').replace('[COLOR white]white[/COLOR]','[COLOR white]').replace('[COLOR whitesmoke]whitesmoke[/COLOR]','[COLOR whitesmoke]').replace('[COLOR yellow]yellow[/COLOR]','[COLOR yellow]').replace('[COLOR yellowgreen]yellowgreen[/COLOR]','[COLOR yellowgreen]')</expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+<!--
+<item>
+<title>[COLOR gold]$doregex[coloreando]*^Reproduce tus Enlaces^*[/COLOR]</title>
+<link>NOLINK</link>
+<regex>
+<name>colores</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ addon = xbmcaddon.Addon('plugin.video.cristalazul')
+ return addon.getSetting('ColoreandoPrincipal')
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>coloreando</name>
+<expres>$pyFunction:('$doregex[colores]').replace('Predeterminado','').replace('[COLOR lightskyblue]lightskyblue[/COLOR]','[COLOR lightskyblue]').replace('[COLOR aliceblue]aliceblue[/COLOR]','[COLOR aliceblue]').replace('[COLOR antiquewhite]antiquewhite[/COLOR]','[COLOR antiquewhite]').replace('[COLOR aqua]aqua[/COLOR]','[COLOR aqua]').replace('[COLOR aquamarine]aquamarine[/COLOR]','[COLOR aquamarine]').replace('[COLOR azure]azure[/COLOR]','[COLOR azure]').replace('[COLOR beige]beige[/COLOR]','[COLOR beige]').replace('[COLOR bisque]bisque[/COLOR]','[COLOR bisque]').replace('[COLOR black]black[/COLOR]','[COLOR black]').replace('[COLOR blanchedalmond]blanchedalmond[/COLOR]','[COLOR blanchedalmond]').replace('[COLOR blue]blue[/COLOR]','[COLOR blue]').replace('[COLOR blueviolet]blueviolet[/COLOR]','[COLOR blueviolet]').replace('[COLOR brown]brown[/COLOR]','[COLOR brown]').replace('[COLOR burlywood]burlywood[/COLOR]','[COLOR burlywood]').replace('[COLOR cadetblue]cadetblue[/COLOR]','[COLOR cadetblue]').replace('[COLOR chartreuse]chartreuse[/COLOR]','[COLOR chartreuse]').replace('[COLOR chocolate]chocolate[/COLOR]','[COLOR chocolate]').replace('[COLOR coral]coral[/COLOR]','[COLOR coral]').replace('[COLOR cornflowerblue]cornflowerblue[/COLOR]','[COLOR cornflowerblue]').replace('[COLOR crimson]crimson[/COLOR]','[COLOR crimson]').replace('[COLOR cyan]cyan[/COLOR]','[COLOR cyan]').replace('[COLOR darkblue]darkblue[/COLOR]','[COLOR darkblue]').replace('[COLOR darkcyan]darkcyan[/COLOR]','[COLOR darkcyan]').replace('[COLOR darkgoldenrod]darkgoldenrod[/COLOR]','[COLOR darkgoldenrod]').replace('[COLOR darkgray]darkgray[/COLOR]','[COLOR darkgray]').replace('[COLOR darkgreen]darkgreen[/COLOR]','[COLOR darkgreen]').replace('[COLOR darkgrey]darkgrey[/COLOR]','[COLOR darkgrey]').replace('[COLOR darkkhaki]darkkhaki[/COLOR]','[COLOR darkkhaki]').replace('[COLOR darkmagenta]darkmagenta[/COLOR]','[COLOR darkmagenta]').replace('[COLOR darkolivegreen]darkolivegreen[/COLOR]','[COLOR darkolivegreen]').replace('[COLOR darkorange]darkorange[/COLOR]','[COLOR darkorange]').replace('[COLOR darkorchid]darkorchid[/COLOR]','[COLOR darkorchid]').replace('[COLOR darkred]darkred[/COLOR]','[COLOR darkred]').replace('[COLOR darksalmon]darksalmon[/COLOR]','[COLOR darksalmon]').replace('[COLOR darkseagreen]darkseagreen[/COLOR]','[COLOR darkseagreen]').replace('[COLOR darkslateblue]darkslateblue[/COLOR]','[COLOR darkslateblue]').replace('[COLOR darkslategray]darkslategray[/COLOR]','[COLOR darkslategray]').replace('[COLOR darkslategrey]darkslategrey[/COLOR]','[COLOR darkslategrey]').replace('[COLOR darkturquoise]darkturquoise[/COLOR]','[COLOR darkturquoise]').replace('[COLOR deeppink]deeppink[/COLOR]','[COLOR deeppink]').replace('[COLOR deepskyblue]deepskyblue[/COLOR]','[COLOR deepskyblue]').replace('[COLOR dimgray]dimgray[/COLOR]','[COLOR dimgray]').replace('[COLOR dimgrey]dimgrey[/COLOR]','[COLOR dimgrey]').replace('[COLOR dodgerblue]dodgerblue[/COLOR]','[COLOR dodgerblue]').replace('[COLOR firebrick]firebrick[/COLOR]','[COLOR firebrick]').replace('[COLOR floralwhite]floralwhite[/COLOR]','[COLOR floralwhite]').replace('[COLOR forestgreen]forestgreen[/COLOR]','[COLOR forestgreen]').replace('[COLOR fuchsia]fuchsia[/COLOR]','[COLOR fuchsia]').replace('[COLOR gainsboro]gainsboro[/COLOR]','[COLOR gainsboro]').replace('[COLOR ghostwhite]ghostwhite[/COLOR]','[COLOR ghostwhite]').replace('[COLOR gold]gold[/COLOR]','[COLOR gold]').replace('[COLOR goldenrod]goldenrod[/COLOR]','[COLOR goldenrod]').replace('[COLOR gray]gray[/COLOR]','[COLOR gray]').replace('[COLOR green]green[/COLOR]','[COLOR green]').replace('[COLOR greenyellow]greenyellow[/COLOR]','[COLOR greenyellow]').replace('[COLOR grey]grey[/COLOR]','[COLOR grey]').replace('[COLOR honeydew]honeydew[/COLOR]','[COLOR honeydew]').replace('[COLOR hotpink]hotpink[/COLOR]','[COLOR hotpink]').replace('[COLOR indianred]indianred[/COLOR]','[COLOR indianred]').replace('[COLOR indigo]indigo[/COLOR]','[COLOR indigo]').replace('[COLOR ivory]ivory[/COLOR]','[COLOR ivory]').replace('[COLOR khaki]khaki[/COLOR]','[COLOR khaki]').replace('[COLOR lavender]lavender[/COLOR]','[COLOR lavender]').replace('[COLOR lavenderblush]lavenderblush[/COLOR]','[COLOR lavenderblush]').replace('[COLOR lawngreen]lawngreen[/COLOR]','[COLOR lawngreen]').replace('[COLOR lemonchiffon]lemonchiffon[/COLOR]','[COLOR lemonchiffon]').replace('[COLOR lightblue]lightblue[/COLOR]','[COLOR lightblue]').replace('[COLOR lightcoral]lightcoral[/COLOR]','[COLOR lightcoral]').replace('[COLOR lightcyan]lightcyan[/COLOR]','[COLOR lightcyan]').replace('[COLOR lightgoldenrodyellow]lightgoldenrodyellow[/COLOR]','[COLOR lightgoldenrodyellow]').replace('[COLOR lightgray]lightgray[/COLOR]','[COLOR lightgray]').replace('[COLOR lightgreen]lightgreen[/COLOR]','[COLOR lightgreen]').replace('[COLOR lightgrey]lightgrey[/COLOR]','[COLOR lightgrey]').replace('[COLOR lightpink]lightpink[/COLOR]','[COLOR lightpink]').replace('[COLOR lightsalmon]lightsalmon[/COLOR]','[COLOR lightsalmon]').replace('[COLOR lightseagreen]lightseagreen[/COLOR]','[COLOR lightseagreen]').replace('[COLOR lightslategray]lightslategray[/COLOR]','[COLOR lightslategray]').replace('[COLOR lightslategrey]lightslategrey[/COLOR]','[COLOR lightslategrey]').replace('[COLOR lightsteelblue]lightsteelblue[/COLOR]','[COLOR lightsteelblue]').replace('[COLOR lightyellow]lightyellow[/COLOR]','[COLOR lightyellow]').replace('[COLOR lime]lime[/COLOR]','[COLOR lime]').replace('[COLOR limegreen]limegreen[/COLOR]','[COLOR limegreen]').replace('[COLOR linen]linen[/COLOR]','[COLOR linen]').replace('[COLOR magenta]magenta[/COLOR]','[COLOR magenta]').replace('[COLOR maroon]maroon[/COLOR]','[COLOR maroon]').replace('[COLOR mediumaquamarine]mediumaquamarine[/COLOR]','[COLOR mediumaquamarine]').replace('[COLOR mediumblue]mediumblue[/COLOR]','[COLOR mediumblue]').replace('[COLOR mediumorchid]mediumorchid[/COLOR]','[COLOR mediumorchid]').replace('[COLOR mediumpurple]mediumpurple[/COLOR]','[COLOR mediumpurple]').replace('[COLOR mediumseagreen]mediumseagreen[/COLOR]','[COLOR mediumseagreen]').replace('[COLOR mediumslateblue]mediumslateblue[/COLOR]','[COLOR mediumslateblue]').replace('[COLOR mediumspringgreen]mediumspringgreen[/COLOR]','[COLOR mediumspringgreen]').replace('[COLOR mediumturquoise]mediumturquoise[/COLOR]','[COLOR mediumturquoise]').replace('[COLOR mediumvioletred]mediumvioletred[/COLOR]','[COLOR mediumvioletred]').replace('[COLOR midnightblue]midnightblue[/COLOR]','[COLOR midnightblue]').replace('[COLOR mintcream]mintcream[/COLOR]','[COLOR mintcream]').replace('[COLOR mistyrose]mistyrose[/COLOR]','[COLOR mistyrose]').replace('[COLOR moccasin]moccasin[/COLOR]','[COLOR moccasin]').replace('[COLOR navajowhite]navajowhite[/COLOR]','[COLOR navajowhite]').replace('[COLOR navy]navy[/COLOR]','[COLOR navy]').replace('[COLOR none]none[/COLOR]','[COLOR none]').replace('[COLOR oldlace]oldlace[/COLOR]','[COLOR oldlace]').replace('[COLOR olive]olive[/COLOR]','[COLOR olive]').replace('[COLOR olivedrab]olivedrab[/COLOR]','[COLOR olivedrab]').replace('[COLOR orange]orange[/COLOR]','[COLOR orange]').replace('[COLOR orangered]orangered[/COLOR]','[COLOR orangered]').replace('[COLOR orchid]orchid[/COLOR]','[COLOR orchid]').replace('[COLOR palegoldenrod]palegoldenrod[/COLOR]','[COLOR palegoldenrod]').replace('[COLOR palegreen]palegreen[/COLOR]','[COLOR palegreen]').replace('[COLOR paleturquoise]paleturquoise[/COLOR]','[COLOR paleturquoise]').replace('[COLOR palevioletred]palevioletred[/COLOR]','[COLOR palevioletred]').replace('[COLOR papayawhip]papayawhip[/COLOR]','[COLOR papayawhip]').replace('[COLOR peachpuff]peachpuff[/COLOR]','[COLOR peachpuff]').replace('[COLOR peru]peru[/COLOR]','[COLOR peru]').replace('[COLOR pink]pink[/COLOR]','[COLOR pink]').replace('[COLOR plum]plum[/COLOR]','[COLOR plum]').replace('[COLOR powderblue]powderblue[/COLOR]','[COLOR powderblue]').replace('[COLOR purple]purple[/COLOR]','[COLOR purple]').replace('[COLOR red]red[/COLOR]','[COLOR red]').replace('[COLOR rosybrown]rosybrown[/COLOR]','[COLOR rosybrown]').replace('[COLOR royalblue]royalblue[/COLOR]','[COLOR royalblue]').replace('[COLOR saddlebrown]saddlebrown[/COLOR]','[COLOR saddlebrown]').replace('[COLOR salmon]salmon[/COLOR]','[COLOR salmon]').replace('[COLOR sandybrown]sandybrown[/COLOR]','[COLOR sandybrown]').replace('[COLOR seagreen]seagreen[/COLOR]','[COLOR seagreen]').replace('[COLOR seashell]seashell[/COLOR]','[COLOR seashell]').replace('[COLOR sienna]sienna[/COLOR]','[COLOR sienna]').replace('[COLOR silver]silver[/COLOR]','[COLOR silver]').replace('[COLOR skyblue]skyblue[/COLOR]','[COLOR skyblue]').replace('[COLOR slateblue]slateblue[/COLOR]','[COLOR slateblue]').replace('[COLOR slategray]slategray[/COLOR]','[COLOR slategray]').replace('[COLOR slategrey]slategrey[/COLOR]','[COLOR slategrey]').replace('[COLOR snow]snow[/COLOR]','[COLOR snow]').replace('[COLOR springgreen]springgreen[/COLOR]','[COLOR springgreen]').replace('[COLOR steelblue]steelblue[/COLOR]','[COLOR steelblue]').replace('[COLOR tan]tan[/COLOR]','[COLOR tan]').replace('[COLOR teal]teal[/COLOR]','[COLOR teal]').replace('[COLOR thistle]thistle[/COLOR]','[COLOR thistle]').replace('[COLOR transparent]transparent[/COLOR]','[COLOR transparent]').replace('[COLOR turquoise]turquoise[/COLOR]','[COLOR turquoise]').replace('[COLOR violet]violet[/COLOR]','[COLOR violet]').replace('[COLOR wheat]wheat[/COLOR]','[COLOR wheat]').replace('[COLOR white]white[/COLOR]','[COLOR white]').replace('[COLOR whitesmoke]whitesmoke[/COLOR]','[COLOR whitesmoke]').replace('[COLOR yellow]yellow[/COLOR]','[COLOR yellow]').replace('[COLOR yellowgreen]yellowgreen[/COLOR]','[COLOR yellowgreen]')</expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+-->
+
+
+
+
+
+
+
+<item>
+<title>[COLOR white]Enlaces m3u8, mp4, mp3...[/COLOR]</title>
+<link>$doregex[id2]</link>
+<regex>
+<name>busca</name>
+<expres><![CDATA[#$pyFunction
+import xbmc
+import xbmcaddon
+import xbmcgui
+def GetLSProData(page_data,Cookie_Jar,m):
+    dialog = xbmcgui.Dialog()
+    d = dialog.input('Inserte su enlace', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
+    return d
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>id2</name>
+<expres><![CDATA[#$pyFunction
+from urlresolver.plugins.lib import jsunpack
+def GetLSProData(page_data,Cookie_Jar,m):
+    return '$doregex[busca]|user-agent=mozilla5.0'
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]Reproduce Conector Cristal Azul[/COLOR]</title>
+<link>$doregex[selecion_inteligente]</link>
+<regex>
+<name>link_final</name>
+<expres><![CDATA[#$pyFunction
+import xbmc , xbmcaddon , xbmcgui
+def GetLSProData(page_data,Cookie_Jar,m):
+    teclado = xbmcgui.Dialog()
+    Respuesta_Buscador = teclado.input('Inserte su enlace', type=xbmcgui.INPUT_ALPHANUM)
+    return Respuesta_Buscador
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>selecion_inteligente</name>
+<expres><![CDATA[#$pyFunction
+url = '$doregex[link_final]'
+$doregex[importar]
+from resolveurl.plugins.lib import jsunpack
+$doregex[reparar_conectores]
+
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>reparar_conectores</name>
+<expres><![CDATA[#$pyFunction
+import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWRzKGJhc2U2NC5iNjRkZWNvZGUoIll3QUFBQUFBQUFBQUFRQUFBRUFBQUFCekRRQUFBR1FBQUlRQUFGb0FBR1FCQUZNb0FnQUFBR01EQUFBQUJRQUFBQU1BQUFCREFBQUFjMEVBQUFCa0FRQmtBQUJzQUFCOUF3QmtBZ0JxQVFCa0F3Q0RBUUI5QkFCa0JBQnFBUUJrQXdDREFRQjlBQUI4QXdCcUFnQjhCQUI4QUFBWGd3RUFhZ01BZ3dBQVV5Z0ZBQUFBVG1uLy8vLy9jeFFBQUFCaFNGSXdZMGhOTmt4NU9XbGhXRkYxWWtoclBYUUdBQUFBWW1GelpUWTBjeUFBQUFCTU1FNTJZbTFXYW1SSE9YbGFXRTVtVVROS2NHTXpVbWhpUlVZMlpGZDNQU2dFQUFBQWRBY0FBQUIxY214c2FXSXlkQVlBQUFCa1pXTnZaR1YwQndBQUFIVnliRzl3Wlc1MEJBQUFBSEpsWVdRb0JRQUFBSFFSQUFBQVR6QlBNRTlQTUU4d01FOVBNREF3VHpCMEVRQUFBRTlQVDA4d1QwOVBNRTh3VHpCUE1FOHdkQkVBQUFCUFR6QXdNREF3TUU4d1QwOHdUekJQVDFJQkFBQUFkQkVBQUFCUE1FOVBUekF3TUU5UE1EQXdUMDlQTUNnQUFBQUFLQUFBQUFCekJnQUFBSE5qY21sd2RIUU1BQUFBUjJWMFRGTlFjbTlFWVhSaEFRQUFBSE1JQUFBQUFBRU1BUThCRHdGT0tBRUFBQUJTQ1FBQUFDZ0FBQUFBS0FBQUFBQW9BQUFBQUhNR0FBQUFjMk55YVhCMGRBZ0FBQUE4Ylc5a2RXeGxQZ0VBQUFCekFBQUFBQT09IikpKQ=="))
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>importar</name>
+<expres><![CDATA[#$pyFunction
+import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWRzKGJhc2U2NC5iNjRkZWNvZGUoIll3QUFBQUFBQUFBQUFRQUFBRUFBQUFCekRRQUFBR1FBQUlRQUFGb0FBR1FCQUZNb0FnQUFBR01EQUFBQUNBQUFBQVlBQUFCREFBQUFjL1FBQUFCa0FRQmtBQUJzQUFCOUF3QmtBUUJrQUFCc0FRQjlCQUJrQVFCa0FBQnNBZ0I5QlFCa0FRQmtBQUJzQXdCOUJnQmtBUUJrQUFCc0JBQjlCd0JrQWdCOEJ3QnFCUUNEQUFCcUJnQmtBd0NEQVFCckJnQnlnUUI4QkFCcUJ3QmtCQUJrQlFCcEFnQmtCZ0JrQndBMlpBZ0FaQWtBTm1RS0FIUUlBSU1CQW1vSkFGTmtDd0I4QndCcUJRQ0RBQUJxQmdCa0F3Q0RBUUJyQmdCeXhnQjhCQUJxQndCa0JBQmtCUUJwQWdCa0JnQmtCd0EyWkFnQVpBa0FObVFLQUhRSUFJTUJBbW9KQUZOOEJBQnFCd0JrREFCa0JRQnBBZ0JrQmdCa0J3QTJaQWdBWkFrQU5tUUtBSFFJQUlNQkFtb0pBRk5rQUFCVEtBMEFBQUJPYWYvLy8vOTBDd0FBQUdOeWFYTjBZV3hoZW5Wc2RBSUFBQUJwWkhNaEFBQUFhSFIwY0hNNkx5OXdZWE4wWldKcGJpNWpiMjB2Y21GM0wycFFXbUZDUjFsT2RBY0FBQUJvWldGa1pYSnpjMGdBQUFCTmIzcHBiR3hoTHpVdU1DQW9WMmx1Wkc5M2N5Qk9WQ0EyTGpNN0lGZFBWelkwT3lCeWRqbzFOUzR3S1NCSFpXTnJieTh5TURFd01ERXdNU0JHYVhKbFptOTRMelUxTGpCekNnQUFBRlZ6WlhJdFFXZGxiblJ6RkFBQUFHaDBkSEJ6T2k4dmNHRnpkR1ZpYVc0dVkyOXRkQWNBQUFCU1pXWmxjbVZ5ZEFZQUFBQjJaWEpwWm5sMEJRQUFBR1psYzNSaGN5RUFBQUJvZEhSd2N6b3ZMM0JoYzNSbFltbHVMbU52YlM5eVlYY3ZSalJvZG1KcGVIa29DZ0FBQUhRQ0FBQUFjbVYwQ0FBQUFISmxjWFZsYzNSemRBSUFBQUJ2YzNRRUFBQUFlR0p0WTNRSkFBQUFlR0p0WTJGa1pHOXVkQVVBQUFCQlpHUnZiblFNQUFBQVoyVjBRV1JrYjI1SmJtWnZkQU1BQUFCblpYUjBCUUFBQUVaaGJITmxkQVFBQUFCMFpYaDBLQWdBQUFCMEVRQUFBRTh3VHpCUE1EQXdUekF3TURCUE1FOHdkQkVBQUFCUE1FOVBUekF3VHpBd1R6QXdUekJQVDNRUkFBQUFUMDlQVHpCUE1EQlBUMDlQTUU4d1R6QlNCZ0FBQUZJSEFBQUFVZ2dBQUFCU0NRQUFBRklLQUFBQUtBQUFBQUFvQUFBQUFITUdBQUFBYzJOeWFYQjBkQXdBQUFCSFpYUk1VMUJ5YjBSaGRHRUJBQUFBY3d3QUFBQUFBVHdCR3dFcUFSc0JLZ0pPS0FFQUFBQlNFd0FBQUNnQUFBQUFLQUFBQUFBb0FBQUFBSE1HQUFBQWMyTnlhWEIwZEFnQUFBQThiVzlrZFd4bFBnRUFBQUJ6QUFBQUFBPT0iKSkp"))
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+
+
+
+
+
+<item>
+<title>[COLOR white]Reproduce Enlaces ResolveUrl[/COLOR]</title>
+<link>$doregex[id4]</link>
+<regex>
+<name>busca</name>
+<expres><![CDATA[#$pyFunction
+import xbmc
+import xbmcaddon
+import xbmcgui
+def GetLSProData(page_data,Cookie_Jar,m):
+    dialog = xbmcgui.Dialog()
+    d = dialog.input('Inserte su enlace', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
+    return d
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+
+ <regex>
+<name>id4</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import resolveurl, xbmc
+ url = '$doregex[busca]'
+ try:
+     u = resolveurl.resolve(url)
+ except:
+     u = xbmc.executebuiltin("XBMC.Notification([COLOR aqua]Cristal Azul [/COLOR],[COLOR gold]enlace caido [/COLOR], 4000)")
+ return u
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+
+
+<item>
+<title>[COLOR green]Añade [COLOR white]tu lista IPTV (la guarda en sus archivos locales)[/COLOR]</title>              
+<link>no</link>
+<externallink>$doregex[userpw]$$TSDOWNLOADER$$</externallink>
+<regex>
+<name>userpw</name>
+<expres><![CDATA[#$pyFunction
+import re, requests, xbmc, xbmcaddon, xbmcgui, time
+def GetLSProData(page_data,Cookie_Jar,m, txt1='Inserte su lista  http...type=m3u'):
+ myheaders = {'User-Agent': 'vlc', 'Referer': ''}
+ path = xbmc.translatePath("special://profile/addon_data/" + "plugin.video.cristalazul/_MI_LISTA_IPTV")
+ addon = xbmcaddon.Addon('plugin.video.cristalazul')
+ profile = xbmc.translatePath(addon.getAddonInfo('profile').decode('utf-8'))
+ 
+ try:
+  f = open(path, 'r')
+  key = f.read()
+  f.close()
+  
+ except:
+  solver = InputWindow( txt=txt1)
+  key = solver.get().replace('&amp;','&')
+  f = open(path, 'w')
+  f.write(key)
+  f.close()
+
+ full = key
+ return full
+
+  
+class InputWindow(xbmcgui.WindowDialog):
+ def __init__(self, *args, **kwargs):
+  self.txt = kwargs.get('txt','')
+  xbmcgui.WindowXMLDialog.__init__(self)
+  #self.addControl(self.txt)
+  path = xbmcaddon.Addon().getAddonInfo('path')
+  self.kbd = xbmc.Keyboard()
+  self.kbd.setHeading( self.txt)
+ def get(self):
+  self.show()
+  time.sleep(2)
+  self.kbd.doModal()
+  if (self.kbd.isConfirmed()):
+      text = self.kbd.getText()
+      self.close()
+      return text
+  self.close()
+  return False  
+]]></expres>
+<page></page>
+</regex> 
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+<!--
+<item>  
+<title>[COLOR red]Borra[COLOR white]   su lista IPTV (la Borra    de sus archivos locales)[/COLOR] </title>    
+<link>NA</link>  
+<externallink>$doregex[clearMEMO]</externallink>
+<regex>
+<name>clearMEMO</name>
+<expres><![CDATA[#$pyFunction
+import urllib, re, requests, xbmcgui, xbmc, xbmcaddon, time
+import os
+def GetLSProData(page_data,Cookie_Jar,m):
+
+  selected = '_MI_LISTA_IPTV'
+
+  try:
+    path = xbmc.translatePath("special://profile/addon_data/" + "plugin.video.cristalazul/")
+    addon = xbmcaddon.Addon('plugin.video.cristalazul')
+    addon_version = addon.getAddonInfo('version')
+    profile = xbmc.translatePath(addon.getAddonInfo('profile').decode('utf-8'))
+      
+    os.remove (path + selected)
+    
+    xbmc.executebuiltin("XBMC.Notification(Hecho !, Borrada su Lista\nCon exito !, 2000)")
+    return 'https://pastebin.com/raw/ibz5CkWb'
+
+  except:
+    pass
+ 
+class InputWindow(xbmcgui.WindowDialog):
+    def __init__(self, *args, **kwargs):
+        self.txt = kwargs.get('txt','')
+        xbmcgui.WindowXMLDialog.__init__(self)
+        #self.addControl(self.txt)
+        path = xbmcaddon.Addon().getAddonInfo('path')
+        self.kbd = xbmc.Keyboard()
+        self.kbd.setHeading( self.txt)
+
+    def get(self):
+        self.show()
+        time.sleep(2)
+        self.kbd.doModal()
+        if (self.kbd.isConfirmed()):
+            text = self.kbd.getText()
+            self.close()
+            return text
+        self.close()
+        return False
+ 
+]]></expres>
+<page></page>
+</regex> 
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>  
+
+-->
+
+<!--
+<item>  
+<title>[COLOR red]Borra[COLOR white]   tu lista IPTV (la Borra    de sus archivos locales)[/COLOR] </title>     
+<link>NA</link>  
+<externallink>$doregex[clearMEMO]</externallink>
+<regex>
+<name>clearMEMO</name>
+<expres><![CDATA[#$pyFunction
+import urllib, re, requests, xbmcgui, xbmc, xbmcaddon, time
+import os
+def GetLSProData(page_data,Cookie_Jar,m):
+
+  dialog = xbmcgui.Dialog()
+  ret = dialog.select('Quieres borrar Tú lista?', ['[COLOR red]No borrar lista[/COLOR]', '[COLOR green]Si borrar lista[/COLOR]'])
+  MEMOrefs = ['nigun_addon', '_MI_LISTA_IPTV']
+  selected = MEMOrefs[ret]
+
+  try:
+    path = xbmc.translatePath("special://profile/addon_data/" + "plugin.video.cristalazul/")
+    addon = xbmcaddon.Addon('plugin.video.cristalazul')
+    addon_version = addon.getAddonInfo('version')
+    profile = xbmc.translatePath(addon.getAddonInfo('profile').decode('utf-8'))
+      
+    os.remove (path + selected)
+    
+    xbmc.executebuiltin("XBMC.Notification(Hecho !, Lista Borrada\nCon exito !, 2000)")
+    return 'https://pastebin.com/raw/ibz5CkWb'
+
+  except:
+    pass
+ 
+class InputWindow(xbmcgui.WindowDialog):
+    def __init__(self, *args, **kwargs):
+        self.txt = kwargs.get('txt','')
+        xbmcgui.WindowXMLDialog.__init__(self)
+        #self.addControl(self.txt)
+        path = xbmcaddon.Addon().getAddonInfo('path')
+        self.kbd = xbmc.Keyboard()
+        self.kbd.setHeading( self.txt)
+
+    def get(self):
+        self.show()
+        time.sleep(2)
+        self.kbd.doModal()
+        if (self.kbd.isConfirmed()):
+            text = self.kbd.getText()
+            self.close()
+            return text
+        self.close()
+        return False
+ 
+]]></expres>
+<page></page>
+</regex> 
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>  
+-->
+
+
+
+
+<!--
+<item>  
+<title>[COLOR red]Borra[COLOR white]   tu lista IPTV (la Borra    de sus archivos locales)[/COLOR] </title>     
+<link>NA</link>  
+<externallink>$doregex[clearMEMO]</externallink>
+<regex>
+<name>clearMEMO</name>
+<expres><![CDATA[#$pyFunction
+import urllib, re, requests, xbmcgui, xbmc, xbmcaddon, time
+import os
+def GetLSProData(page_data,Cookie_Jar,m):
+
+  dialog = xbmcgui.Dialog()
+  ret = dialog.select('Quieres borrar Tú lista?', ['[COLOR red]No borrar lista[/COLOR]', '[COLOR green]Si borrar lista[/COLOR]'])
+  MEMOrefs = ['nigun_addon', '_MI_LISTA_IPTV']
+  selected = MEMOrefs[ret]
+
+  try:
+    path = xbmc.translatePath("special://profile/addon_data/" + "plugin.video.cristalazul/")
+    addon = xbmcaddon.Addon('plugin.video.cristalazul')
+    addon_version = addon.getAddonInfo('version')
+    profile = xbmc.translatePath(addon.getAddonInfo('profile').decode('utf-8'))
+      
+    os.remove (path + selected)
+    
+    xbmc.executebuiltin('PlayMedia("http://sonidosmp3gratis.com/sounds/bites-ta-da-winner",1)')
+    time.sleep( 1 )
+    return 'https://pastebin.com/raw/ibz5CkWb'
+
+  except:
+    pass
+ 
+class InputWindow(xbmcgui.WindowDialog):
+    def __init__(self, *args, **kwargs):
+        self.txt = kwargs.get('txt','')
+        xbmcgui.WindowXMLDialog.__init__(self)
+        #self.addControl(self.txt)
+        path = xbmcaddon.Addon().getAddonInfo('path')
+        self.kbd = xbmc.Keyboard()
+        self.kbd.setHeading( self.txt)
+
+    def get(self):
+        self.show()
+        time.sleep(2)
+        self.kbd.doModal()
+        if (self.kbd.isConfirmed()):
+            text = self.kbd.getText()
+            self.close()
+            return text
+        self.close()
+        return False
+ 
+]]></expres>
+<page></page>
+</regex> 
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item> 
+-->
+
+
+
+
+
+<item>  
+<title>[COLOR red]Borra[COLOR white]   tu lista IPTV (la Borra    de sus archivos locales)[/COLOR] </title>     
+<link>$doregex[borraMEMO]</link>  
+<regex>
+<name>borraMEMO</name>
+<expres><![CDATA[#$pyFunction
+import urllib, re, requests, xbmcgui, xbmc, xbmcaddon, time
+import os
+def GetLSProData(page_data,Cookie_Jar,m):
+
+  dialog = xbmcgui.Dialog()
+  ret = dialog.select('Quieres borrar Tú lista?', ['[COLOR red]No borrar lista[/COLOR]', '[COLOR green]Si borrar lista[/COLOR]'])
+  MEMOrefs = ['nigun_addon', '_MI_LISTA_IPTV']
+  selected = MEMOrefs[ret]
+
+  try:
+    path = xbmc.translatePath("special://profile/addon_data/" + "plugin.video.cristalazul/")
+    addon = xbmcaddon.Addon('plugin.video.cristalazul')
+    addon_version = addon.getAddonInfo('version')
+    profile = xbmc.translatePath(addon.getAddonInfo('profile').decode('utf-8'))
+      
+    os.remove (path + selected)
+    
+    xbmc.executebuiltin('PlayMedia("http://sonidosmp3gratis.com/sounds/bites-ta-da-winner",1)')
+    time.sleep( 1 )
+    dialog = xbmcgui.Dialog()
+    return dialog.textviewer('[COLOR aqua]CRISTAL AZUL[/COLOR]', '[COLOR red]Acaba de borrar con éxito su lista IPTV del addon Cristal Azul:[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]está en disposición de añadir una nueva lista.[/COLOR]\n\n\n[COLOR white]Estamos en telegram: [COLOR gold]https://t.me/addonfestaycristal [COLOR white]y en [COLOR gold]https://t.me/kodi18[/COLOR]\n\n\n\n\n\n\n\n\n                                                                                                                                                          [COLOR aqua]Cristal Azul[/COLOR]')
+
+  except:
+    pass
+ 
+class InputWindow(xbmcgui.WindowDialog):
+    def __init__(self, *args, **kwargs):
+        self.txt = kwargs.get('txt','')
+        xbmcgui.WindowXMLDialog.__init__(self)
+        #self.addControl(self.txt)
+        path = xbmcaddon.Addon().getAddonInfo('path')
+        self.kbd = xbmc.Keyboard()
+        self.kbd.setHeading( self.txt)
+
+    def get(self):
+        self.show()
+        time.sleep(2)
+        self.kbd.doModal()
+        if (self.kbd.isConfirmed()):
+            text = self.kbd.getText()
+            self.close()
+            return text
+        self.close()
+        return False
+ 
+]]></expres>
+<page></page>
+</regex> 
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item> 
+
+
+
+
+
+
+
+<item>
+<title>[COLOR white]Inserte su lista IPTV (no la guarda)[/COLOR]</title>
+<link>nada</link>
+<externallink>$doregex[id2]$$TSDOWNLOADER$$</externallink>
+<regex>
+<name>busca</name>
+<expres><![CDATA[#$pyFunction
+import xbmc
+import xbmcaddon
+import xbmcgui
+def GetLSProData(page_data,Cookie_Jar,m):
+    dialog = xbmcgui.Dialog()
+    d = dialog.input('Inserte su lista  http...type=m3u', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
+    return d
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>id2</name>
+<expres><![CDATA[#$pyFunction
+from urlresolver.plugins.lib import jsunpack
+def GetLSProData(page_data,Cookie_Jar,m):
+    return '$doregex[busca]'
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+<item>
+<title>[COLOR gold]$doregex[coloreando]*^Apk fork de Kodi Configurada para Android^*[/COLOR]</title>
+<link>$doregex[link_inteligente]1:0:1:7793:424:$doregex[id]C00000:0:0:0:</link>
+<regex>
+<name>link_inteligente</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,xbmc
+def GetLSProData(page_data,Cookie_Jar,m,url='$doregex[id]'):#cPrLItsLTfakl
+
+  if '1' in url:
+    return '$doregex[finallink]'
+  else:
+    return ''
+]]></expres>
+<page></page>
+</regex> 
+ <regex>
+<name>finallink</name>
+<expres>(.*?)CRISTALAZUL</expres>
+<page>https://pastebin.com/raw/uC9BgVZF</page>
+<setcookie>beget=begetok</setcookie>
+</regex> 
+<regex>
+<name>id</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ addon = xbmcaddon.Addon('plugin.video.cristalazul')
+ return addon.getSetting('Password')
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>colores</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ addon = xbmcaddon.Addon('plugin.video.cristalazul')
+ return addon.getSetting('ColoreandoPrincipal')
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>coloreando</name>
+<expres>$pyFunction:('$doregex[colores]').replace('Predeterminado','').replace('[COLOR lightskyblue]lightskyblue[/COLOR]','[COLOR lightskyblue]').replace('[COLOR aliceblue]aliceblue[/COLOR]','[COLOR aliceblue]').replace('[COLOR antiquewhite]antiquewhite[/COLOR]','[COLOR antiquewhite]').replace('[COLOR aqua]aqua[/COLOR]','[COLOR aqua]').replace('[COLOR aquamarine]aquamarine[/COLOR]','[COLOR aquamarine]').replace('[COLOR azure]azure[/COLOR]','[COLOR azure]').replace('[COLOR beige]beige[/COLOR]','[COLOR beige]').replace('[COLOR bisque]bisque[/COLOR]','[COLOR bisque]').replace('[COLOR black]black[/COLOR]','[COLOR black]').replace('[COLOR blanchedalmond]blanchedalmond[/COLOR]','[COLOR blanchedalmond]').replace('[COLOR blue]blue[/COLOR]','[COLOR blue]').replace('[COLOR blueviolet]blueviolet[/COLOR]','[COLOR blueviolet]').replace('[COLOR brown]brown[/COLOR]','[COLOR brown]').replace('[COLOR burlywood]burlywood[/COLOR]','[COLOR burlywood]').replace('[COLOR cadetblue]cadetblue[/COLOR]','[COLOR cadetblue]').replace('[COLOR chartreuse]chartreuse[/COLOR]','[COLOR chartreuse]').replace('[COLOR chocolate]chocolate[/COLOR]','[COLOR chocolate]').replace('[COLOR coral]coral[/COLOR]','[COLOR coral]').replace('[COLOR cornflowerblue]cornflowerblue[/COLOR]','[COLOR cornflowerblue]').replace('[COLOR crimson]crimson[/COLOR]','[COLOR crimson]').replace('[COLOR cyan]cyan[/COLOR]','[COLOR cyan]').replace('[COLOR darkblue]darkblue[/COLOR]','[COLOR darkblue]').replace('[COLOR darkcyan]darkcyan[/COLOR]','[COLOR darkcyan]').replace('[COLOR darkgoldenrod]darkgoldenrod[/COLOR]','[COLOR darkgoldenrod]').replace('[COLOR darkgray]darkgray[/COLOR]','[COLOR darkgray]').replace('[COLOR darkgreen]darkgreen[/COLOR]','[COLOR darkgreen]').replace('[COLOR darkgrey]darkgrey[/COLOR]','[COLOR darkgrey]').replace('[COLOR darkkhaki]darkkhaki[/COLOR]','[COLOR darkkhaki]').replace('[COLOR darkmagenta]darkmagenta[/COLOR]','[COLOR darkmagenta]').replace('[COLOR darkolivegreen]darkolivegreen[/COLOR]','[COLOR darkolivegreen]').replace('[COLOR darkorange]darkorange[/COLOR]','[COLOR darkorange]').replace('[COLOR darkorchid]darkorchid[/COLOR]','[COLOR darkorchid]').replace('[COLOR darkred]darkred[/COLOR]','[COLOR darkred]').replace('[COLOR darksalmon]darksalmon[/COLOR]','[COLOR darksalmon]').replace('[COLOR darkseagreen]darkseagreen[/COLOR]','[COLOR darkseagreen]').replace('[COLOR darkslateblue]darkslateblue[/COLOR]','[COLOR darkslateblue]').replace('[COLOR darkslategray]darkslategray[/COLOR]','[COLOR darkslategray]').replace('[COLOR darkslategrey]darkslategrey[/COLOR]','[COLOR darkslategrey]').replace('[COLOR darkturquoise]darkturquoise[/COLOR]','[COLOR darkturquoise]').replace('[COLOR deeppink]deeppink[/COLOR]','[COLOR deeppink]').replace('[COLOR deepskyblue]deepskyblue[/COLOR]','[COLOR deepskyblue]').replace('[COLOR dimgray]dimgray[/COLOR]','[COLOR dimgray]').replace('[COLOR dimgrey]dimgrey[/COLOR]','[COLOR dimgrey]').replace('[COLOR dodgerblue]dodgerblue[/COLOR]','[COLOR dodgerblue]').replace('[COLOR firebrick]firebrick[/COLOR]','[COLOR firebrick]').replace('[COLOR floralwhite]floralwhite[/COLOR]','[COLOR floralwhite]').replace('[COLOR forestgreen]forestgreen[/COLOR]','[COLOR forestgreen]').replace('[COLOR fuchsia]fuchsia[/COLOR]','[COLOR fuchsia]').replace('[COLOR gainsboro]gainsboro[/COLOR]','[COLOR gainsboro]').replace('[COLOR ghostwhite]ghostwhite[/COLOR]','[COLOR ghostwhite]').replace('[COLOR gold]gold[/COLOR]','[COLOR gold]').replace('[COLOR goldenrod]goldenrod[/COLOR]','[COLOR goldenrod]').replace('[COLOR gray]gray[/COLOR]','[COLOR gray]').replace('[COLOR green]green[/COLOR]','[COLOR green]').replace('[COLOR greenyellow]greenyellow[/COLOR]','[COLOR greenyellow]').replace('[COLOR grey]grey[/COLOR]','[COLOR grey]').replace('[COLOR honeydew]honeydew[/COLOR]','[COLOR honeydew]').replace('[COLOR hotpink]hotpink[/COLOR]','[COLOR hotpink]').replace('[COLOR indianred]indianred[/COLOR]','[COLOR indianred]').replace('[COLOR indigo]indigo[/COLOR]','[COLOR indigo]').replace('[COLOR ivory]ivory[/COLOR]','[COLOR ivory]').replace('[COLOR khaki]khaki[/COLOR]','[COLOR khaki]').replace('[COLOR lavender]lavender[/COLOR]','[COLOR lavender]').replace('[COLOR lavenderblush]lavenderblush[/COLOR]','[COLOR lavenderblush]').replace('[COLOR lawngreen]lawngreen[/COLOR]','[COLOR lawngreen]').replace('[COLOR lemonchiffon]lemonchiffon[/COLOR]','[COLOR lemonchiffon]').replace('[COLOR lightblue]lightblue[/COLOR]','[COLOR lightblue]').replace('[COLOR lightcoral]lightcoral[/COLOR]','[COLOR lightcoral]').replace('[COLOR lightcyan]lightcyan[/COLOR]','[COLOR lightcyan]').replace('[COLOR lightgoldenrodyellow]lightgoldenrodyellow[/COLOR]','[COLOR lightgoldenrodyellow]').replace('[COLOR lightgray]lightgray[/COLOR]','[COLOR lightgray]').replace('[COLOR lightgreen]lightgreen[/COLOR]','[COLOR lightgreen]').replace('[COLOR lightgrey]lightgrey[/COLOR]','[COLOR lightgrey]').replace('[COLOR lightpink]lightpink[/COLOR]','[COLOR lightpink]').replace('[COLOR lightsalmon]lightsalmon[/COLOR]','[COLOR lightsalmon]').replace('[COLOR lightseagreen]lightseagreen[/COLOR]','[COLOR lightseagreen]').replace('[COLOR lightslategray]lightslategray[/COLOR]','[COLOR lightslategray]').replace('[COLOR lightslategrey]lightslategrey[/COLOR]','[COLOR lightslategrey]').replace('[COLOR lightsteelblue]lightsteelblue[/COLOR]','[COLOR lightsteelblue]').replace('[COLOR lightyellow]lightyellow[/COLOR]','[COLOR lightyellow]').replace('[COLOR lime]lime[/COLOR]','[COLOR lime]').replace('[COLOR limegreen]limegreen[/COLOR]','[COLOR limegreen]').replace('[COLOR linen]linen[/COLOR]','[COLOR linen]').replace('[COLOR magenta]magenta[/COLOR]','[COLOR magenta]').replace('[COLOR maroon]maroon[/COLOR]','[COLOR maroon]').replace('[COLOR mediumaquamarine]mediumaquamarine[/COLOR]','[COLOR mediumaquamarine]').replace('[COLOR mediumblue]mediumblue[/COLOR]','[COLOR mediumblue]').replace('[COLOR mediumorchid]mediumorchid[/COLOR]','[COLOR mediumorchid]').replace('[COLOR mediumpurple]mediumpurple[/COLOR]','[COLOR mediumpurple]').replace('[COLOR mediumseagreen]mediumseagreen[/COLOR]','[COLOR mediumseagreen]').replace('[COLOR mediumslateblue]mediumslateblue[/COLOR]','[COLOR mediumslateblue]').replace('[COLOR mediumspringgreen]mediumspringgreen[/COLOR]','[COLOR mediumspringgreen]').replace('[COLOR mediumturquoise]mediumturquoise[/COLOR]','[COLOR mediumturquoise]').replace('[COLOR mediumvioletred]mediumvioletred[/COLOR]','[COLOR mediumvioletred]').replace('[COLOR midnightblue]midnightblue[/COLOR]','[COLOR midnightblue]').replace('[COLOR mintcream]mintcream[/COLOR]','[COLOR mintcream]').replace('[COLOR mistyrose]mistyrose[/COLOR]','[COLOR mistyrose]').replace('[COLOR moccasin]moccasin[/COLOR]','[COLOR moccasin]').replace('[COLOR navajowhite]navajowhite[/COLOR]','[COLOR navajowhite]').replace('[COLOR navy]navy[/COLOR]','[COLOR navy]').replace('[COLOR none]none[/COLOR]','[COLOR none]').replace('[COLOR oldlace]oldlace[/COLOR]','[COLOR oldlace]').replace('[COLOR olive]olive[/COLOR]','[COLOR olive]').replace('[COLOR olivedrab]olivedrab[/COLOR]','[COLOR olivedrab]').replace('[COLOR orange]orange[/COLOR]','[COLOR orange]').replace('[COLOR orangered]orangered[/COLOR]','[COLOR orangered]').replace('[COLOR orchid]orchid[/COLOR]','[COLOR orchid]').replace('[COLOR palegoldenrod]palegoldenrod[/COLOR]','[COLOR palegoldenrod]').replace('[COLOR palegreen]palegreen[/COLOR]','[COLOR palegreen]').replace('[COLOR paleturquoise]paleturquoise[/COLOR]','[COLOR paleturquoise]').replace('[COLOR palevioletred]palevioletred[/COLOR]','[COLOR palevioletred]').replace('[COLOR papayawhip]papayawhip[/COLOR]','[COLOR papayawhip]').replace('[COLOR peachpuff]peachpuff[/COLOR]','[COLOR peachpuff]').replace('[COLOR peru]peru[/COLOR]','[COLOR peru]').replace('[COLOR pink]pink[/COLOR]','[COLOR pink]').replace('[COLOR plum]plum[/COLOR]','[COLOR plum]').replace('[COLOR powderblue]powderblue[/COLOR]','[COLOR powderblue]').replace('[COLOR purple]purple[/COLOR]','[COLOR purple]').replace('[COLOR red]red[/COLOR]','[COLOR red]').replace('[COLOR rosybrown]rosybrown[/COLOR]','[COLOR rosybrown]').replace('[COLOR royalblue]royalblue[/COLOR]','[COLOR royalblue]').replace('[COLOR saddlebrown]saddlebrown[/COLOR]','[COLOR saddlebrown]').replace('[COLOR salmon]salmon[/COLOR]','[COLOR salmon]').replace('[COLOR sandybrown]sandybrown[/COLOR]','[COLOR sandybrown]').replace('[COLOR seagreen]seagreen[/COLOR]','[COLOR seagreen]').replace('[COLOR seashell]seashell[/COLOR]','[COLOR seashell]').replace('[COLOR sienna]sienna[/COLOR]','[COLOR sienna]').replace('[COLOR silver]silver[/COLOR]','[COLOR silver]').replace('[COLOR skyblue]skyblue[/COLOR]','[COLOR skyblue]').replace('[COLOR slateblue]slateblue[/COLOR]','[COLOR slateblue]').replace('[COLOR slategray]slategray[/COLOR]','[COLOR slategray]').replace('[COLOR slategrey]slategrey[/COLOR]','[COLOR slategrey]').replace('[COLOR snow]snow[/COLOR]','[COLOR snow]').replace('[COLOR springgreen]springgreen[/COLOR]','[COLOR springgreen]').replace('[COLOR steelblue]steelblue[/COLOR]','[COLOR steelblue]').replace('[COLOR tan]tan[/COLOR]','[COLOR tan]').replace('[COLOR teal]teal[/COLOR]','[COLOR teal]').replace('[COLOR thistle]thistle[/COLOR]','[COLOR thistle]').replace('[COLOR transparent]transparent[/COLOR]','[COLOR transparent]').replace('[COLOR turquoise]turquoise[/COLOR]','[COLOR turquoise]').replace('[COLOR violet]violet[/COLOR]','[COLOR violet]').replace('[COLOR wheat]wheat[/COLOR]','[COLOR wheat]').replace('[COLOR white]white[/COLOR]','[COLOR white]').replace('[COLOR whitesmoke]whitesmoke[/COLOR]','[COLOR whitesmoke]').replace('[COLOR yellow]yellow[/COLOR]','[COLOR yellow]').replace('[COLOR yellowgreen]yellowgreen[/COLOR]','[COLOR yellowgreen]')</expres>
+<page></page>
+</regex>
+<thumbnail>https://stva.zriel.ga/wizard/imagenes/icon.png</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]Descarga apk [COLOR orange]STVA[COLOR white]MC[/COLOR]</title>
+<link>$doregex[noticia]</link>
+<regex>
+<name>noticia</name>
+<expres><![CDATA[#$pyFunction
+ 
+def GetLSProData(page_data,Cookie_Jar,m):
+ 
+ import xbmc
+ import xbmcgui
+ import webbrowser
+ 
+ dialog = xbmcgui.Dialog()
+ 
+ nombre = dialog.select('[COLOR white]Descargue según su Tvbox[/COLOR]', ['[COLOR orange]Android STVA[COLOR white]MCx64 [COLOR orange](armv8)[/COLOR]', '[COLOR orange]Android STVA[COLOR white]MC [COLOR orange](armv7) [/COLOR]'])
+ webcristal = ['http://bit.ly/apkstvamc64', 'http://bit.ly/apkstvamcarmv7']
+ 
+ 
+
+ 
+ return webbrowser.open_new_tab(webcristal[nombre]) + xbmc.executebuiltin('StartAndroidActivity(,android.intent.action.VIEW,,%s)' % (webcristal[nombre]))
+ 
+]]></expres>
+ 
+<page></page>
+ 
+</regex>
+<info>[COLOR lightblue]STVAMC, 'https://t.me/stvabuild'
+[COLOR white]
+"Aplicación fork de kodi (completamente compatible con kodi),
+Configurada con la build de STVA, SOLO PARA ANDROID"[/COLOR]</info>
+<thumbnail>https://stva.zriel.ga/wizard/imagenes/icon.png</thumbnail>
+<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+</item>
+
+
+
+
+
+<item>
+<title>[COLOR gold]$doregex[coloreando]*^Configuraciónes de Urlresolve/lector ficheros^*[/COLOR]</title>
+<link>NOLINK</link>
+<regex>
+<name>colores</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ addon = xbmcaddon.Addon('plugin.video.cristalazul')
+ return addon.getSetting('ColoreandoPrincipal')
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>coloreando</name>
+<expres>$pyFunction:('$doregex[colores]').replace('Predeterminado','').replace('[COLOR lightskyblue]lightskyblue[/COLOR]','[COLOR lightskyblue]').replace('[COLOR aliceblue]aliceblue[/COLOR]','[COLOR aliceblue]').replace('[COLOR antiquewhite]antiquewhite[/COLOR]','[COLOR antiquewhite]').replace('[COLOR aqua]aqua[/COLOR]','[COLOR aqua]').replace('[COLOR aquamarine]aquamarine[/COLOR]','[COLOR aquamarine]').replace('[COLOR azure]azure[/COLOR]','[COLOR azure]').replace('[COLOR beige]beige[/COLOR]','[COLOR beige]').replace('[COLOR bisque]bisque[/COLOR]','[COLOR bisque]').replace('[COLOR black]black[/COLOR]','[COLOR black]').replace('[COLOR blanchedalmond]blanchedalmond[/COLOR]','[COLOR blanchedalmond]').replace('[COLOR blue]blue[/COLOR]','[COLOR blue]').replace('[COLOR blueviolet]blueviolet[/COLOR]','[COLOR blueviolet]').replace('[COLOR brown]brown[/COLOR]','[COLOR brown]').replace('[COLOR burlywood]burlywood[/COLOR]','[COLOR burlywood]').replace('[COLOR cadetblue]cadetblue[/COLOR]','[COLOR cadetblue]').replace('[COLOR chartreuse]chartreuse[/COLOR]','[COLOR chartreuse]').replace('[COLOR chocolate]chocolate[/COLOR]','[COLOR chocolate]').replace('[COLOR coral]coral[/COLOR]','[COLOR coral]').replace('[COLOR cornflowerblue]cornflowerblue[/COLOR]','[COLOR cornflowerblue]').replace('[COLOR crimson]crimson[/COLOR]','[COLOR crimson]').replace('[COLOR cyan]cyan[/COLOR]','[COLOR cyan]').replace('[COLOR darkblue]darkblue[/COLOR]','[COLOR darkblue]').replace('[COLOR darkcyan]darkcyan[/COLOR]','[COLOR darkcyan]').replace('[COLOR darkgoldenrod]darkgoldenrod[/COLOR]','[COLOR darkgoldenrod]').replace('[COLOR darkgray]darkgray[/COLOR]','[COLOR darkgray]').replace('[COLOR darkgreen]darkgreen[/COLOR]','[COLOR darkgreen]').replace('[COLOR darkgrey]darkgrey[/COLOR]','[COLOR darkgrey]').replace('[COLOR darkkhaki]darkkhaki[/COLOR]','[COLOR darkkhaki]').replace('[COLOR darkmagenta]darkmagenta[/COLOR]','[COLOR darkmagenta]').replace('[COLOR darkolivegreen]darkolivegreen[/COLOR]','[COLOR darkolivegreen]').replace('[COLOR darkorange]darkorange[/COLOR]','[COLOR darkorange]').replace('[COLOR darkorchid]darkorchid[/COLOR]','[COLOR darkorchid]').replace('[COLOR darkred]darkred[/COLOR]','[COLOR darkred]').replace('[COLOR darksalmon]darksalmon[/COLOR]','[COLOR darksalmon]').replace('[COLOR darkseagreen]darkseagreen[/COLOR]','[COLOR darkseagreen]').replace('[COLOR darkslateblue]darkslateblue[/COLOR]','[COLOR darkslateblue]').replace('[COLOR darkslategray]darkslategray[/COLOR]','[COLOR darkslategray]').replace('[COLOR darkslategrey]darkslategrey[/COLOR]','[COLOR darkslategrey]').replace('[COLOR darkturquoise]darkturquoise[/COLOR]','[COLOR darkturquoise]').replace('[COLOR deeppink]deeppink[/COLOR]','[COLOR deeppink]').replace('[COLOR deepskyblue]deepskyblue[/COLOR]','[COLOR deepskyblue]').replace('[COLOR dimgray]dimgray[/COLOR]','[COLOR dimgray]').replace('[COLOR dimgrey]dimgrey[/COLOR]','[COLOR dimgrey]').replace('[COLOR dodgerblue]dodgerblue[/COLOR]','[COLOR dodgerblue]').replace('[COLOR firebrick]firebrick[/COLOR]','[COLOR firebrick]').replace('[COLOR floralwhite]floralwhite[/COLOR]','[COLOR floralwhite]').replace('[COLOR forestgreen]forestgreen[/COLOR]','[COLOR forestgreen]').replace('[COLOR fuchsia]fuchsia[/COLOR]','[COLOR fuchsia]').replace('[COLOR gainsboro]gainsboro[/COLOR]','[COLOR gainsboro]').replace('[COLOR ghostwhite]ghostwhite[/COLOR]','[COLOR ghostwhite]').replace('[COLOR gold]gold[/COLOR]','[COLOR gold]').replace('[COLOR goldenrod]goldenrod[/COLOR]','[COLOR goldenrod]').replace('[COLOR gray]gray[/COLOR]','[COLOR gray]').replace('[COLOR green]green[/COLOR]','[COLOR green]').replace('[COLOR greenyellow]greenyellow[/COLOR]','[COLOR greenyellow]').replace('[COLOR grey]grey[/COLOR]','[COLOR grey]').replace('[COLOR honeydew]honeydew[/COLOR]','[COLOR honeydew]').replace('[COLOR hotpink]hotpink[/COLOR]','[COLOR hotpink]').replace('[COLOR indianred]indianred[/COLOR]','[COLOR indianred]').replace('[COLOR indigo]indigo[/COLOR]','[COLOR indigo]').replace('[COLOR ivory]ivory[/COLOR]','[COLOR ivory]').replace('[COLOR khaki]khaki[/COLOR]','[COLOR khaki]').replace('[COLOR lavender]lavender[/COLOR]','[COLOR lavender]').replace('[COLOR lavenderblush]lavenderblush[/COLOR]','[COLOR lavenderblush]').replace('[COLOR lawngreen]lawngreen[/COLOR]','[COLOR lawngreen]').replace('[COLOR lemonchiffon]lemonchiffon[/COLOR]','[COLOR lemonchiffon]').replace('[COLOR lightblue]lightblue[/COLOR]','[COLOR lightblue]').replace('[COLOR lightcoral]lightcoral[/COLOR]','[COLOR lightcoral]').replace('[COLOR lightcyan]lightcyan[/COLOR]','[COLOR lightcyan]').replace('[COLOR lightgoldenrodyellow]lightgoldenrodyellow[/COLOR]','[COLOR lightgoldenrodyellow]').replace('[COLOR lightgray]lightgray[/COLOR]','[COLOR lightgray]').replace('[COLOR lightgreen]lightgreen[/COLOR]','[COLOR lightgreen]').replace('[COLOR lightgrey]lightgrey[/COLOR]','[COLOR lightgrey]').replace('[COLOR lightpink]lightpink[/COLOR]','[COLOR lightpink]').replace('[COLOR lightsalmon]lightsalmon[/COLOR]','[COLOR lightsalmon]').replace('[COLOR lightseagreen]lightseagreen[/COLOR]','[COLOR lightseagreen]').replace('[COLOR lightslategray]lightslategray[/COLOR]','[COLOR lightslategray]').replace('[COLOR lightslategrey]lightslategrey[/COLOR]','[COLOR lightslategrey]').replace('[COLOR lightsteelblue]lightsteelblue[/COLOR]','[COLOR lightsteelblue]').replace('[COLOR lightyellow]lightyellow[/COLOR]','[COLOR lightyellow]').replace('[COLOR lime]lime[/COLOR]','[COLOR lime]').replace('[COLOR limegreen]limegreen[/COLOR]','[COLOR limegreen]').replace('[COLOR linen]linen[/COLOR]','[COLOR linen]').replace('[COLOR magenta]magenta[/COLOR]','[COLOR magenta]').replace('[COLOR maroon]maroon[/COLOR]','[COLOR maroon]').replace('[COLOR mediumaquamarine]mediumaquamarine[/COLOR]','[COLOR mediumaquamarine]').replace('[COLOR mediumblue]mediumblue[/COLOR]','[COLOR mediumblue]').replace('[COLOR mediumorchid]mediumorchid[/COLOR]','[COLOR mediumorchid]').replace('[COLOR mediumpurple]mediumpurple[/COLOR]','[COLOR mediumpurple]').replace('[COLOR mediumseagreen]mediumseagreen[/COLOR]','[COLOR mediumseagreen]').replace('[COLOR mediumslateblue]mediumslateblue[/COLOR]','[COLOR mediumslateblue]').replace('[COLOR mediumspringgreen]mediumspringgreen[/COLOR]','[COLOR mediumspringgreen]').replace('[COLOR mediumturquoise]mediumturquoise[/COLOR]','[COLOR mediumturquoise]').replace('[COLOR mediumvioletred]mediumvioletred[/COLOR]','[COLOR mediumvioletred]').replace('[COLOR midnightblue]midnightblue[/COLOR]','[COLOR midnightblue]').replace('[COLOR mintcream]mintcream[/COLOR]','[COLOR mintcream]').replace('[COLOR mistyrose]mistyrose[/COLOR]','[COLOR mistyrose]').replace('[COLOR moccasin]moccasin[/COLOR]','[COLOR moccasin]').replace('[COLOR navajowhite]navajowhite[/COLOR]','[COLOR navajowhite]').replace('[COLOR navy]navy[/COLOR]','[COLOR navy]').replace('[COLOR none]none[/COLOR]','[COLOR none]').replace('[COLOR oldlace]oldlace[/COLOR]','[COLOR oldlace]').replace('[COLOR olive]olive[/COLOR]','[COLOR olive]').replace('[COLOR olivedrab]olivedrab[/COLOR]','[COLOR olivedrab]').replace('[COLOR orange]orange[/COLOR]','[COLOR orange]').replace('[COLOR orangered]orangered[/COLOR]','[COLOR orangered]').replace('[COLOR orchid]orchid[/COLOR]','[COLOR orchid]').replace('[COLOR palegoldenrod]palegoldenrod[/COLOR]','[COLOR palegoldenrod]').replace('[COLOR palegreen]palegreen[/COLOR]','[COLOR palegreen]').replace('[COLOR paleturquoise]paleturquoise[/COLOR]','[COLOR paleturquoise]').replace('[COLOR palevioletred]palevioletred[/COLOR]','[COLOR palevioletred]').replace('[COLOR papayawhip]papayawhip[/COLOR]','[COLOR papayawhip]').replace('[COLOR peachpuff]peachpuff[/COLOR]','[COLOR peachpuff]').replace('[COLOR peru]peru[/COLOR]','[COLOR peru]').replace('[COLOR pink]pink[/COLOR]','[COLOR pink]').replace('[COLOR plum]plum[/COLOR]','[COLOR plum]').replace('[COLOR powderblue]powderblue[/COLOR]','[COLOR powderblue]').replace('[COLOR purple]purple[/COLOR]','[COLOR purple]').replace('[COLOR red]red[/COLOR]','[COLOR red]').replace('[COLOR rosybrown]rosybrown[/COLOR]','[COLOR rosybrown]').replace('[COLOR royalblue]royalblue[/COLOR]','[COLOR royalblue]').replace('[COLOR saddlebrown]saddlebrown[/COLOR]','[COLOR saddlebrown]').replace('[COLOR salmon]salmon[/COLOR]','[COLOR salmon]').replace('[COLOR sandybrown]sandybrown[/COLOR]','[COLOR sandybrown]').replace('[COLOR seagreen]seagreen[/COLOR]','[COLOR seagreen]').replace('[COLOR seashell]seashell[/COLOR]','[COLOR seashell]').replace('[COLOR sienna]sienna[/COLOR]','[COLOR sienna]').replace('[COLOR silver]silver[/COLOR]','[COLOR silver]').replace('[COLOR skyblue]skyblue[/COLOR]','[COLOR skyblue]').replace('[COLOR slateblue]slateblue[/COLOR]','[COLOR slateblue]').replace('[COLOR slategray]slategray[/COLOR]','[COLOR slategray]').replace('[COLOR slategrey]slategrey[/COLOR]','[COLOR slategrey]').replace('[COLOR snow]snow[/COLOR]','[COLOR snow]').replace('[COLOR springgreen]springgreen[/COLOR]','[COLOR springgreen]').replace('[COLOR steelblue]steelblue[/COLOR]','[COLOR steelblue]').replace('[COLOR tan]tan[/COLOR]','[COLOR tan]').replace('[COLOR teal]teal[/COLOR]','[COLOR teal]').replace('[COLOR thistle]thistle[/COLOR]','[COLOR thistle]').replace('[COLOR transparent]transparent[/COLOR]','[COLOR transparent]').replace('[COLOR turquoise]turquoise[/COLOR]','[COLOR turquoise]').replace('[COLOR violet]violet[/COLOR]','[COLOR violet]').replace('[COLOR wheat]wheat[/COLOR]','[COLOR wheat]').replace('[COLOR white]white[/COLOR]','[COLOR white]').replace('[COLOR whitesmoke]whitesmoke[/COLOR]','[COLOR whitesmoke]').replace('[COLOR yellow]yellow[/COLOR]','[COLOR yellow]').replace('[COLOR yellowgreen]yellowgreen[/COLOR]','[COLOR yellowgreen]')</expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]Cambia configuracion de Urlresolve[/COLOR]</title>
+<link>$doregex[canal]</link>
+<regex>
+ <name>canal</name>
+<expres><![CDATA[#$pyFunction
+import urlresolver
+def GetLSProData(page_data,Cookie_Jar,m):
+   streamLink = urlresolver.display_settings()
+   return streamLink
+]]></expres>
+ <page></page>
+<cookieJar></cookieJar>
+<agent>Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0</agent>
+<Referer></Referer>
+<Accept>*/*</Accept>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+ </item>
+
+
+
+
+<item>
+<title>[COLOR white]Cambia configuracion de Cristal Azul[/COLOR]</title>
+<link>$doregex[canal]</link>
+<regex>
+ <name>canal</name>
+<expres><![CDATA[#$pyFunction
+import re, requests, xbmc, xbmcaddon, xbmcgui, time
+def GetLSProData(page_data,Cookie_Jar,m):
+   addon = xbmcaddon.Addon('plugin.video.cristalazul')
+   streamLink = addon.openSettings()
+   return streamLink
+]]></expres>
+ <page></page>
+<cookieJar></cookieJar>
+<agent>Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0</agent>
+<Referer></Referer>
+<Accept>*/*</Accept>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+ </item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<item>
+<title>xbmcgui - file browser (returns first line of file for playback)</title>
+<link>nolink</link>
+<jsonrpc>$doregex[getinput]</jsonrpc>
+<regex>
+<name>getinput</name>
+<expres><![CDATA[#$pyFunction
+import xbmcgui, re
+def GetLSProData(page_data,Cookie_Jar,m):
+
+    localfile = getBrowseDialog()
+    f = open(localfile, 'r')
+    source = f.read()
+    f.close()
+    return re.findall('(.+)', source)[0]
+
+def getBrowseDialog( default="", heading="", dlg_type=1, shares="files", mask="", use_thumbs=False, treat_as_folder=False ):
+    """ shows a browse dialog and returns a value
+        - 0 : ShowAndGetDirectory
+        - 1 : ShowAndGetFile
+        - 2 : ShowAndGetImage
+        - 3 : ShowAndGetWriteableDirectory
+    """
+    dialog = xbmcgui.Dialog()
+    value = dialog.browse( dlg_type, heading, shares, mask, use_thumbs, treat_as_folder, default )
+    return value
+]]></expres>
+<page></page>
+</regex>
+</item>
+-->
+
+<item>
+<title>[COLOR white]Visor de texto y navegador de archivos kodi[/COLOR]</title>
+<link>$doregex[text]</link>
+<regex>
+<name>text</name>
+<expres><![CDATA[#$pyFunction
+import xbmcgui, re
+def GetLSProData(page_data,Cookie_Jar,m):
+
+    localfile = getBrowseDialog()
+    f = open(localfile, 'r')
+    source = f.read()
+    f.close()
+    dialog = xbmcgui.Dialog()
+    dialog.textviewer(localfile, source)
+    return 'ignore'
+
+def getBrowseDialog( default="", heading="", dlg_type=1, shares="files", mask="", use_thumbs=False, treat_as_folder=False ):
+    dialog = xbmcgui.Dialog()
+    value = dialog.browse( dlg_type, heading, shares, mask, use_thumbs, treat_as_folder, default )
+    return value
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+
+<item>
+<title>[COLOR gold]$doregex[coloreando]*^Añade tu Addon^*[/COLOR]</title>
+<link>NOLINK</link>
+<regex>
+<name>colores</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ addon = xbmcaddon.Addon('plugin.video.cristalazul')
+ return addon.getSetting('ColoreandoPrincipal')
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>coloreando</name>
+<expres>$pyFunction:('$doregex[colores]').replace('Predeterminado','').replace('[COLOR lightskyblue]lightskyblue[/COLOR]','[COLOR lightskyblue]').replace('[COLOR aliceblue]aliceblue[/COLOR]','[COLOR aliceblue]').replace('[COLOR antiquewhite]antiquewhite[/COLOR]','[COLOR antiquewhite]').replace('[COLOR aqua]aqua[/COLOR]','[COLOR aqua]').replace('[COLOR aquamarine]aquamarine[/COLOR]','[COLOR aquamarine]').replace('[COLOR azure]azure[/COLOR]','[COLOR azure]').replace('[COLOR beige]beige[/COLOR]','[COLOR beige]').replace('[COLOR bisque]bisque[/COLOR]','[COLOR bisque]').replace('[COLOR black]black[/COLOR]','[COLOR black]').replace('[COLOR blanchedalmond]blanchedalmond[/COLOR]','[COLOR blanchedalmond]').replace('[COLOR blue]blue[/COLOR]','[COLOR blue]').replace('[COLOR blueviolet]blueviolet[/COLOR]','[COLOR blueviolet]').replace('[COLOR brown]brown[/COLOR]','[COLOR brown]').replace('[COLOR burlywood]burlywood[/COLOR]','[COLOR burlywood]').replace('[COLOR cadetblue]cadetblue[/COLOR]','[COLOR cadetblue]').replace('[COLOR chartreuse]chartreuse[/COLOR]','[COLOR chartreuse]').replace('[COLOR chocolate]chocolate[/COLOR]','[COLOR chocolate]').replace('[COLOR coral]coral[/COLOR]','[COLOR coral]').replace('[COLOR cornflowerblue]cornflowerblue[/COLOR]','[COLOR cornflowerblue]').replace('[COLOR crimson]crimson[/COLOR]','[COLOR crimson]').replace('[COLOR cyan]cyan[/COLOR]','[COLOR cyan]').replace('[COLOR darkblue]darkblue[/COLOR]','[COLOR darkblue]').replace('[COLOR darkcyan]darkcyan[/COLOR]','[COLOR darkcyan]').replace('[COLOR darkgoldenrod]darkgoldenrod[/COLOR]','[COLOR darkgoldenrod]').replace('[COLOR darkgray]darkgray[/COLOR]','[COLOR darkgray]').replace('[COLOR darkgreen]darkgreen[/COLOR]','[COLOR darkgreen]').replace('[COLOR darkgrey]darkgrey[/COLOR]','[COLOR darkgrey]').replace('[COLOR darkkhaki]darkkhaki[/COLOR]','[COLOR darkkhaki]').replace('[COLOR darkmagenta]darkmagenta[/COLOR]','[COLOR darkmagenta]').replace('[COLOR darkolivegreen]darkolivegreen[/COLOR]','[COLOR darkolivegreen]').replace('[COLOR darkorange]darkorange[/COLOR]','[COLOR darkorange]').replace('[COLOR darkorchid]darkorchid[/COLOR]','[COLOR darkorchid]').replace('[COLOR darkred]darkred[/COLOR]','[COLOR darkred]').replace('[COLOR darksalmon]darksalmon[/COLOR]','[COLOR darksalmon]').replace('[COLOR darkseagreen]darkseagreen[/COLOR]','[COLOR darkseagreen]').replace('[COLOR darkslateblue]darkslateblue[/COLOR]','[COLOR darkslateblue]').replace('[COLOR darkslategray]darkslategray[/COLOR]','[COLOR darkslategray]').replace('[COLOR darkslategrey]darkslategrey[/COLOR]','[COLOR darkslategrey]').replace('[COLOR darkturquoise]darkturquoise[/COLOR]','[COLOR darkturquoise]').replace('[COLOR deeppink]deeppink[/COLOR]','[COLOR deeppink]').replace('[COLOR deepskyblue]deepskyblue[/COLOR]','[COLOR deepskyblue]').replace('[COLOR dimgray]dimgray[/COLOR]','[COLOR dimgray]').replace('[COLOR dimgrey]dimgrey[/COLOR]','[COLOR dimgrey]').replace('[COLOR dodgerblue]dodgerblue[/COLOR]','[COLOR dodgerblue]').replace('[COLOR firebrick]firebrick[/COLOR]','[COLOR firebrick]').replace('[COLOR floralwhite]floralwhite[/COLOR]','[COLOR floralwhite]').replace('[COLOR forestgreen]forestgreen[/COLOR]','[COLOR forestgreen]').replace('[COLOR fuchsia]fuchsia[/COLOR]','[COLOR fuchsia]').replace('[COLOR gainsboro]gainsboro[/COLOR]','[COLOR gainsboro]').replace('[COLOR ghostwhite]ghostwhite[/COLOR]','[COLOR ghostwhite]').replace('[COLOR gold]gold[/COLOR]','[COLOR gold]').replace('[COLOR goldenrod]goldenrod[/COLOR]','[COLOR goldenrod]').replace('[COLOR gray]gray[/COLOR]','[COLOR gray]').replace('[COLOR green]green[/COLOR]','[COLOR green]').replace('[COLOR greenyellow]greenyellow[/COLOR]','[COLOR greenyellow]').replace('[COLOR grey]grey[/COLOR]','[COLOR grey]').replace('[COLOR honeydew]honeydew[/COLOR]','[COLOR honeydew]').replace('[COLOR hotpink]hotpink[/COLOR]','[COLOR hotpink]').replace('[COLOR indianred]indianred[/COLOR]','[COLOR indianred]').replace('[COLOR indigo]indigo[/COLOR]','[COLOR indigo]').replace('[COLOR ivory]ivory[/COLOR]','[COLOR ivory]').replace('[COLOR khaki]khaki[/COLOR]','[COLOR khaki]').replace('[COLOR lavender]lavender[/COLOR]','[COLOR lavender]').replace('[COLOR lavenderblush]lavenderblush[/COLOR]','[COLOR lavenderblush]').replace('[COLOR lawngreen]lawngreen[/COLOR]','[COLOR lawngreen]').replace('[COLOR lemonchiffon]lemonchiffon[/COLOR]','[COLOR lemonchiffon]').replace('[COLOR lightblue]lightblue[/COLOR]','[COLOR lightblue]').replace('[COLOR lightcoral]lightcoral[/COLOR]','[COLOR lightcoral]').replace('[COLOR lightcyan]lightcyan[/COLOR]','[COLOR lightcyan]').replace('[COLOR lightgoldenrodyellow]lightgoldenrodyellow[/COLOR]','[COLOR lightgoldenrodyellow]').replace('[COLOR lightgray]lightgray[/COLOR]','[COLOR lightgray]').replace('[COLOR lightgreen]lightgreen[/COLOR]','[COLOR lightgreen]').replace('[COLOR lightgrey]lightgrey[/COLOR]','[COLOR lightgrey]').replace('[COLOR lightpink]lightpink[/COLOR]','[COLOR lightpink]').replace('[COLOR lightsalmon]lightsalmon[/COLOR]','[COLOR lightsalmon]').replace('[COLOR lightseagreen]lightseagreen[/COLOR]','[COLOR lightseagreen]').replace('[COLOR lightslategray]lightslategray[/COLOR]','[COLOR lightslategray]').replace('[COLOR lightslategrey]lightslategrey[/COLOR]','[COLOR lightslategrey]').replace('[COLOR lightsteelblue]lightsteelblue[/COLOR]','[COLOR lightsteelblue]').replace('[COLOR lightyellow]lightyellow[/COLOR]','[COLOR lightyellow]').replace('[COLOR lime]lime[/COLOR]','[COLOR lime]').replace('[COLOR limegreen]limegreen[/COLOR]','[COLOR limegreen]').replace('[COLOR linen]linen[/COLOR]','[COLOR linen]').replace('[COLOR magenta]magenta[/COLOR]','[COLOR magenta]').replace('[COLOR maroon]maroon[/COLOR]','[COLOR maroon]').replace('[COLOR mediumaquamarine]mediumaquamarine[/COLOR]','[COLOR mediumaquamarine]').replace('[COLOR mediumblue]mediumblue[/COLOR]','[COLOR mediumblue]').replace('[COLOR mediumorchid]mediumorchid[/COLOR]','[COLOR mediumorchid]').replace('[COLOR mediumpurple]mediumpurple[/COLOR]','[COLOR mediumpurple]').replace('[COLOR mediumseagreen]mediumseagreen[/COLOR]','[COLOR mediumseagreen]').replace('[COLOR mediumslateblue]mediumslateblue[/COLOR]','[COLOR mediumslateblue]').replace('[COLOR mediumspringgreen]mediumspringgreen[/COLOR]','[COLOR mediumspringgreen]').replace('[COLOR mediumturquoise]mediumturquoise[/COLOR]','[COLOR mediumturquoise]').replace('[COLOR mediumvioletred]mediumvioletred[/COLOR]','[COLOR mediumvioletred]').replace('[COLOR midnightblue]midnightblue[/COLOR]','[COLOR midnightblue]').replace('[COLOR mintcream]mintcream[/COLOR]','[COLOR mintcream]').replace('[COLOR mistyrose]mistyrose[/COLOR]','[COLOR mistyrose]').replace('[COLOR moccasin]moccasin[/COLOR]','[COLOR moccasin]').replace('[COLOR navajowhite]navajowhite[/COLOR]','[COLOR navajowhite]').replace('[COLOR navy]navy[/COLOR]','[COLOR navy]').replace('[COLOR none]none[/COLOR]','[COLOR none]').replace('[COLOR oldlace]oldlace[/COLOR]','[COLOR oldlace]').replace('[COLOR olive]olive[/COLOR]','[COLOR olive]').replace('[COLOR olivedrab]olivedrab[/COLOR]','[COLOR olivedrab]').replace('[COLOR orange]orange[/COLOR]','[COLOR orange]').replace('[COLOR orangered]orangered[/COLOR]','[COLOR orangered]').replace('[COLOR orchid]orchid[/COLOR]','[COLOR orchid]').replace('[COLOR palegoldenrod]palegoldenrod[/COLOR]','[COLOR palegoldenrod]').replace('[COLOR palegreen]palegreen[/COLOR]','[COLOR palegreen]').replace('[COLOR paleturquoise]paleturquoise[/COLOR]','[COLOR paleturquoise]').replace('[COLOR palevioletred]palevioletred[/COLOR]','[COLOR palevioletred]').replace('[COLOR papayawhip]papayawhip[/COLOR]','[COLOR papayawhip]').replace('[COLOR peachpuff]peachpuff[/COLOR]','[COLOR peachpuff]').replace('[COLOR peru]peru[/COLOR]','[COLOR peru]').replace('[COLOR pink]pink[/COLOR]','[COLOR pink]').replace('[COLOR plum]plum[/COLOR]','[COLOR plum]').replace('[COLOR powderblue]powderblue[/COLOR]','[COLOR powderblue]').replace('[COLOR purple]purple[/COLOR]','[COLOR purple]').replace('[COLOR red]red[/COLOR]','[COLOR red]').replace('[COLOR rosybrown]rosybrown[/COLOR]','[COLOR rosybrown]').replace('[COLOR royalblue]royalblue[/COLOR]','[COLOR royalblue]').replace('[COLOR saddlebrown]saddlebrown[/COLOR]','[COLOR saddlebrown]').replace('[COLOR salmon]salmon[/COLOR]','[COLOR salmon]').replace('[COLOR sandybrown]sandybrown[/COLOR]','[COLOR sandybrown]').replace('[COLOR seagreen]seagreen[/COLOR]','[COLOR seagreen]').replace('[COLOR seashell]seashell[/COLOR]','[COLOR seashell]').replace('[COLOR sienna]sienna[/COLOR]','[COLOR sienna]').replace('[COLOR silver]silver[/COLOR]','[COLOR silver]').replace('[COLOR skyblue]skyblue[/COLOR]','[COLOR skyblue]').replace('[COLOR slateblue]slateblue[/COLOR]','[COLOR slateblue]').replace('[COLOR slategray]slategray[/COLOR]','[COLOR slategray]').replace('[COLOR slategrey]slategrey[/COLOR]','[COLOR slategrey]').replace('[COLOR snow]snow[/COLOR]','[COLOR snow]').replace('[COLOR springgreen]springgreen[/COLOR]','[COLOR springgreen]').replace('[COLOR steelblue]steelblue[/COLOR]','[COLOR steelblue]').replace('[COLOR tan]tan[/COLOR]','[COLOR tan]').replace('[COLOR teal]teal[/COLOR]','[COLOR teal]').replace('[COLOR thistle]thistle[/COLOR]','[COLOR thistle]').replace('[COLOR transparent]transparent[/COLOR]','[COLOR transparent]').replace('[COLOR turquoise]turquoise[/COLOR]','[COLOR turquoise]').replace('[COLOR violet]violet[/COLOR]','[COLOR violet]').replace('[COLOR wheat]wheat[/COLOR]','[COLOR wheat]').replace('[COLOR white]white[/COLOR]','[COLOR white]').replace('[COLOR whitesmoke]whitesmoke[/COLOR]','[COLOR whitesmoke]').replace('[COLOR yellow]yellow[/COLOR]','[COLOR yellow]').replace('[COLOR yellowgreen]yellowgreen[/COLOR]','[COLOR yellowgreen]')</expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+<item>
+<title>[COLOR green]Añade [COLOR white]la url de tu Addon[/COLOR]</title>              
+<link>no</link>
+<externallink>$doregex[userpw]</externallink>
+ <regex>
+ 
+<name>addons</name>
+ 
+<expres><![CDATA[#$pyFunction
+ 
+def GetLSProData(page_data,Cookie_Jar,m):
+ 
+ import xbmcgui
+ 
+ dialog = xbmcgui.Dialog()
+ 
+ ret = dialog.select('[COLOR gold]Añada/Seleccione un Addon[/COLOR]', ['[COLOR white]Addon 1[/COLOR]', '[COLOR white]Addon 2[/COLOR]', '[COLOR white]Addon 3[/COLOR]', '[COLOR white]Addon 4[/COLOR]', '[COLOR white]Addon 5[/COLOR]', '[COLOR white]Addon 6[/COLOR]', '[COLOR white]Addon 7[/COLOR]'])
+ lists = ['Addon_1', 'Addon_2', 'Addon_3', 'Addon_4', 'Addon_5', 'Addon_6', 'Addon_7']
+ 
+ return lists[ret]
+ 
+]]></expres>
+ 
+<page></page>
+ 
+</regex>
+<regex>
+<name>userpw</name>
+<expres><![CDATA[#$pyFunction
+import re, requests, xbmc, xbmcaddon, xbmcgui, time
+def GetLSProData(page_data,Cookie_Jar,m, txt1='Inserte la url del Addon'):
+ myheaders = {'User-Agent': 'vlc', 'Referer': ''}
+ path = xbmc.translatePath("special://profile/addon_data/" + "plugin.video.cristalazul/$doregex[addons]")
+ addon = xbmcaddon.Addon('plugin.video.cristalazul')
+ profile = xbmc.translatePath(addon.getAddonInfo('profile').decode('utf-8'))
+ 
+ try:
+  f = open(path, 'r')
+  key = f.read()
+  f.close()
+  
+ except:
+  solver = InputWindow( txt=txt1)
+  key = solver.get().replace('&amp;','&')
+  f = open(path, 'w')
+  f.write(key)
+  f.close()
+
+ full = key
+ return full
+
+  
+class InputWindow(xbmcgui.WindowDialog):
+ def __init__(self, *args, **kwargs):
+  self.txt = kwargs.get('txt','')
+  xbmcgui.WindowXMLDialog.__init__(self)
+  #self.addControl(self.txt)
+  path = xbmcaddon.Addon().getAddonInfo('path')
+  self.kbd = xbmc.Keyboard()
+  self.kbd.setHeading( self.txt)
+ def get(self):
+  self.show()
+  time.sleep(2)
+  self.kbd.doModal()
+  if (self.kbd.isConfirmed()):
+      text = self.kbd.getText()
+      self.close()
+      return text
+  self.close()
+  return False  
+]]></expres>
+<page></page>
+</regex> 
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+<item>  
+<title>[COLOR red]Borra   [COLOR white]la url de tu Addon [/COLOR]  </title>    
+<link>NA</link>  
+<externallink>$doregex[clearMEMO]</externallink>
+<regex>
+<name>clearMEMO</name>
+<expres><![CDATA[#$pyFunction
+import urllib, re, requests, xbmcgui, xbmc, xbmcaddon, time
+import os
+def GetLSProData(page_data,Cookie_Jar,m):
+
+  dialog = xbmcgui.Dialog()
+  ret = dialog.select('Borra los addons ', ['[COLOR red]No borrar niguno[/COLOR]', '[COLOR white]borrar addon 1[/COLOR]', '[COLOR white]borrar addon 2[/COLOR]', '[COLOR white]borrar addon 3[/COLOR]', '[COLOR white]borrar addon 4[/COLOR]', '[COLOR white]borrar addon 5[/COLOR]', '[COLOR white]borrar addon 6[/COLOR]', '[COLOR white]borrar addon 7[/COLOR]'])
+  MEMOrefs = ['nigun_addon', 'Addon_1', 'Addon_2', 'Addon_3', 'Addon_4', 'Addon_5', 'Addon_6', 'Addon_7']
+  selected = MEMOrefs[ret]
+
+  try:
+    path = xbmc.translatePath("special://profile/addon_data/" + "plugin.video.cristalazul/")
+    addon = xbmcaddon.Addon('plugin.video.cristalazul')
+    addon_version = addon.getAddonInfo('version')
+    profile = xbmc.translatePath(addon.getAddonInfo('profile').decode('utf-8'))
+      
+    os.remove (path + selected)
+    
+    xbmc.executebuiltin("XBMC.Notification(Hecho !, Addon Borrado\nCon exito !, 2000)")
+    return 'https://pastebin.com/raw/ibz5CkWb'    ### YOUR URL HERE ### (or /path/local/file.xml)
+
+  except:
+    pass
+ 
+class InputWindow(xbmcgui.WindowDialog):
+    def __init__(self, *args, **kwargs):
+        self.txt = kwargs.get('txt','')
+        xbmcgui.WindowXMLDialog.__init__(self)
+        #self.addControl(self.txt)
+        path = xbmcaddon.Addon().getAddonInfo('path')
+        self.kbd = xbmc.Keyboard()
+        self.kbd.setHeading( self.txt)
+
+    def get(self):
+        self.show()
+        time.sleep(2)
+        self.kbd.doModal()
+        if (self.kbd.isConfirmed()):
+            text = self.kbd.getText()
+            self.close()
+            return text
+        self.close()
+        return False
+ 
+]]></expres>
+<page></page>
+</regex> 
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>  
+
+
+
+<!--
+<externallink>$doregex[clearMEMO]</externallink>
+
+<item>  
+<title>[COLOR red]Borra2   [COLOR white]la url de tu Addon [/COLOR]  </title>    
+<link>$doregex[clearMEMO]</link>  
+<regex>
+<name>clearMEMO</name>
+<expres><![CDATA[#$pyFunction
+import urllib, re, requests, xbmcgui, xbmc, xbmcaddon, time
+import os
+def GetLSProData(page_data,Cookie_Jar,m):
+
+  dialog = xbmcgui.Dialog()
+  ret = dialog.select('Borra los addons ', ['[COLOR red]No borrar niguno[/COLOR]', '[COLOR white]borrar addon 1[/COLOR]', '[COLOR white]borrar addon 2[/COLOR]', '[COLOR white]borrar addon 3[/COLOR]', '[COLOR white]borrar addon 4[/COLOR]', '[COLOR white]borrar addon 5[/COLOR]', '[COLOR white]borrar addon 6[/COLOR]', '[COLOR white]borrar addon 7[/COLOR]'])
+  MEMOrefs = ['nigun_addon', 'Addon_1', 'Addon_2', 'Addon_3', 'Addon_4', 'Addon_5', 'Addon_6', 'Addon_7']
+  selected = MEMOrefs[ret]
+
+  try:
+    path = xbmc.translatePath("special://profile/addon_data/" + "plugin.video.cristalazul/")
+    addon = xbmcaddon.Addon('plugin.video.cristalazul')
+    addon_version = addon.getAddonInfo('version')
+    profile = xbmc.translatePath(addon.getAddonInfo('profile').decode('utf-8'))
+      
+    os.remove (path + selected)
+    
+    xbmc.executebuiltin("XBMC.Notification(Hecho !, Addon Borrado\nCon exito !, 2000)")
+    return 'http://lyd.nrk.no/nrk_radio_p1_ostlandssendingen_mp3_h'    ### YOUR URL HERE ### (or /path/local/file.xml)
+
+  except:
+    pass
+ 
+class InputWindow(xbmcgui.WindowDialog):
+    def __init__(self, *args, **kwargs):
+        self.txt = kwargs.get('txt','')
+        xbmcgui.WindowXMLDialog.__init__(self)
+        #self.addControl(self.txt)
+        path = xbmcaddon.Addon().getAddonInfo('path')
+        self.kbd = xbmc.Keyboard()
+        self.kbd.setHeading( self.txt)
+
+    def get(self):
+        self.show()
+        time.sleep(2)
+        self.kbd.doModal()
+        if (self.kbd.isConfirmed()):
+            text = self.kbd.getText()
+            self.close()
+            return text
+        self.close()
+        return False
+ 
+]]></expres>
+<page></page>
+</regex> 
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>  
+
+
+
+
+
+<item>  
+<title>[COLOR red]Borra3   [COLOR white]la url de tu Addon [/COLOR]  </title>    
+<link>$doregex[clearMEMO]</link>  
+<externallink>$doregex[clearMEMO]</externallink>
+<regex>
+<name>clearMEMO</name>
+<expres><![CDATA[#$pyFunction
+import urllib, re, requests, xbmcgui, xbmc, xbmcaddon, time
+import os
+def GetLSProData(page_data,Cookie_Jar,m):
+
+  dialog = xbmcgui.Dialog()
+  ret = dialog.select('Borra los addons ', ['[COLOR red]No borrar niguno[/COLOR]', '[COLOR white]borrar addon 1[/COLOR]', '[COLOR white]borrar addon 2[/COLOR]', '[COLOR white]borrar addon 3[/COLOR]', '[COLOR white]borrar addon 4[/COLOR]', '[COLOR white]borrar addon 5[/COLOR]', '[COLOR white]borrar addon 6[/COLOR]', '[COLOR white]borrar addon 7[/COLOR]'])
+  MEMOrefs = ['nigun_addon', 'Addon_1', 'Addon_2', 'Addon_3', 'Addon_4', 'Addon_5', 'Addon_6', 'Addon_7']
+  selected = MEMOrefs[ret]
+
+  try:
+    path = xbmc.translatePath("special://profile/addon_data/" + "plugin.video.cristalazul/")
+    addon = xbmcaddon.Addon('plugin.video.cristalazul')
+    addon_version = addon.getAddonInfo('version')
+    profile = xbmc.translatePath(addon.getAddonInfo('profile').decode('utf-8'))
+      
+    os.remove (path + selected)
+    
+    xbmc.executebuiltin('PlayMedia("http://www.ivoox.com/listen_mn_4033483_1.m4a?internal=HTML5",1)')
+    time.sleep( 20 )
+    return 'https://pastebin.com/raw/ibz5CkWb'    ### YOUR URL HERE ### (or /path/local/file.xml)
+
+  except:
+    pass
+ 
+class InputWindow(xbmcgui.WindowDialog):
+    def __init__(self, *args, **kwargs):
+        self.txt = kwargs.get('txt','')
+        xbmcgui.WindowXMLDialog.__init__(self)
+        #self.addControl(self.txt)
+        path = xbmcaddon.Addon().getAddonInfo('path')
+        self.kbd = xbmc.Keyboard()
+        self.kbd.setHeading( self.txt)
+
+    def get(self):
+        self.show()
+        time.sleep(2)
+        self.kbd.doModal()
+        if (self.kbd.isConfirmed()):
+            text = self.kbd.getText()
+            self.close()
+            return text
+        self.close()
+        return False
+ 
+]]></expres>
+<page></page>
+</regex> 
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>  
+
+-->
+
+<item>
+<title>[COLOR red]Información herramientas[/COLOR]</title>
+<link>$doregex[text]</link>
+<regex>
+<name>text</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+    import xbmcgui
+    dialog = xbmcgui.Dialog()
+    dialog.textviewer('[COLOR aqua]CRISTAL AZUL[/COLOR]', '[COLOR white]Recomendaciones Cristal Azul:[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Si añade una lista iptv y no sabe como cambiar por otra lista entren en este grupo de telegram y se les explica:[/COLOR]\n[COLOR gold]https://t.me/addonfestaycristal [/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]si no saben que servidores pueden reproducir en cada una de las zonas[/COLOR]\n[COLOR lightskyblue][COLOR white]recuerde revisar los servidores que soporta kodi de forma nativa y el script urlresolve...[/COLOR]\n[COLOR white]Tengan siempre actualizados urlresolve, youtube... gracias a todos ellos por su trabajo.[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]¿Y dónde conseguirlos actualizados?[/COLOR]\n[COLOR white]En nuestra fuente: [COLOR gold]http://kodileia.xyz[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Consejo extra: no se frustre si no le va, tenemos la solucion.[/COLOR]\n\n[COLOR white]Estamos en telegram: [COLOR gold]https://t.me/addonfestaycristal [COLOR white]y en [COLOR gold]https://t.me/kodi18[/COLOR]\n\n\n\n\n\n\n\n\n                                                                                                                                                          [COLOR aqua]Cristal Azul[/COLOR]')
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/XN4pl8W.jpg</thumbnail>
+<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+</item>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<item>
+<title>[COLOR white]Enlaces gamovideo, rapidvideo, uptobox, vidoza, streamango, youtube...[/COLOR]</title>
+<link>$doregex[id3]</link>
+<regex>
+<name>busca</name>
+<expres><![CDATA[#$pyFunction
+import xbmc
+import xbmcaddon
+import xbmcgui
+def GetLSProData(page_data,Cookie_Jar,m):
+    dialog = xbmcgui.Dialog()
+    d = dialog.input('Inserte su enlace', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
+    return d
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>id2</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+    return '$doregex[busca]'
+]]></expres>
+<page></page>
+</regex>
+ <regex>
+<name>id3</name>
+<expres>$pyFunction: '$doregex[comecristal]' if not '$doregex[comecristal]'=='' else '$doregex[canal]' if not '$doregex[canal]'=='' else '$doregex[rapid]' if not '$doregex[rapid]'=='' else '$doregex[uptogamo]'</expres>
+<page></page>
+</regex>
+<regex>
+<name>pica4</name>
+<expres>$pyFunction:('$doregex[id2]').replace('https://www.rapidvideo.com/e/','https://www.rapidvideo.com/?v=')</expres>
+<page></page>
+</regex>
+<regex>
+<name>rapid</name>
+<expres><![CDATA[(?s)<source src="(.*?)"]]></expres>
+<page>$doregex[pica4]&amp;q=1080p</page>
+<referer>https://www.rapidvideo.com</referer>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>comecristal</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import requests,re
+ url= 'https://docs.google.com/uc?id=$doregex[id2]&export=download'
+ headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0 Iceweasel/44.0'}
+ source0= requests.get(url,headers=headers)
+ pageUrl = 'https://docs.google.com' + re.findall('goog-inline-block jfk-button jfk-button-action" href="(.*?)"', source0.text)[0].replace('amp;', '')
+ cookies =  source0.cookies.get_dict()
+ 
+ headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0 Iceweasel/44.0','Referer': url}
+ source= requests.get(pageUrl, headers=headers, cookies=cookies, allow_redirects=False)
+ 
+ cristalUrl = re.findall('HREF="(.*?)"',source.text)[0]
+ 
+ return cristalUrl
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+ <name>canal</name>
+<expres><![CDATA[#$pyFunction
+import urlresolver
+def GetLSProData(page_data,Cookie_Jar,m):
+    url = '$doregex[id2]'
+    streamLink = urlresolver.resolve(url)
+    return streamLink
+]]></expres>
+ <page></page>
+<cookieJar></cookieJar>
+<agent>Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0</agent>
+<Referer></Referer>
+<Accept>*/*</Accept>
+</regex>
+<regex>
+<name>gamo</name>
+<expres><![CDATA[#$pyFunction
+from urlresolver.plugins.lib import jsunpack
+def GetLSProData(page_data,Cookie_Jar,m):
+    import re
+    import requests
+    mozhdr = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:55.0) Gecko/20100101 Firefox/55.0', 'Referer': 'https://www.elitegol.fun/'}
+    url = '$doregex[id2]'
+    html = requests.get(url, headers=mozhdr, verify=False).text
+    edata = re.findall('javascript.*?(eval\(function\(p,a,c,k,e,d.*)', html)[0]
+    epage = jsunpack.unpack(edata).replace('\\', '')
+    fin = re.findall('file:"(h.*?)"', epage)[0]
+    return fin
+]]></expres>
+<page></page>
+</regex>
+ <regex>
+<name>uptogamo</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ import xbmcgui
+ import webbrowser
+ import cookielib,base64
+ import urlresolver
+ url = '$doregex[id2]'
+ try:
+     u = urlresolver.resolve(url)
+ except:
+     u = '$doregex[gamo]|Referer=http://gamovideo.com/firf.html&amp;User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0'
+ return u
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+<item>
+<title>[COLOR red]. [/COLOR]</title>
+<link>$doregex[select]</link>
+<regex>
+<name>select</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+   import xbmcgui
+   dialog = xbmcgui.Dialog()
+   ret = dialog.select('[COLOR lime]CINEMA PR[COLOR white]SELECCIONA UN LINK[/COLOR]', [' [COLOR white]LOS INCREIBLES 2 (2018)  [COLOR red] [1080p][COLOR white] DUAL AUDIO[/COLOR]', ' [COLOR white]LOS INCREIBLES 2 (2018)  [COLOR red] [1080p][COLOR white] LATINO[/COLOR]', ' [COLOR white]LOS INCREIBLES 2 (2018)  [COLOR red] [720p][COLOR white] LATINO[/COLOR]', ' [COLOR white]LOS INCREIBLES 2 (2018)  [COLOR red] [480p][COLOR white] LATINO[/COLOR]'])
+   link = ['https://www.googleapis.com/drive/v3/files/1SBxYTL5yrmdgTC-TlvqgvHFXCJNHOIkq?alt=media&key=AIzaSyDdoetN4aDmDBc6Y11CUGK4nhZ0pvZbXOw', 'https://www.googleapis.com/drive/v3/files/1T5JkLwiW31WhdOqdqIln6NKRLaT3dGij?alt=media&key=1Mz9QPP5XkPlJqXj4HMxKep6xrmtupWEi', 'https://goo.gl/z4ZXv9', 'https://goo.gl/24ARjt']
+   return link[ret]
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://poseidonhd.com/wp-content/uploads/2018/06/tAIoOSidSE9Iyq8UK5G5gSiM0PK-185x278.jpg</thumbnail>
+<date>Jun. 14, 2018United States</date>
+<genre>ANIMACION</genre>
+<info>Helen tiene que liderar una campaña para que los superhéroes regresen, mientras Bob vive su vida “normal” con Violet, Dash y el bebé Jack-Jack —cuyos superpoderes descubriremos—. Su misión se va a pique cuando aparece un nuevo villano con un brillante plan que lo amenaza todo. Pero los Parr no se amedrentarán y menos teniendo a Frozone de su parte.</info>
+<fanart>https://image.tmdb.org/t/p/w300/kqoBtMmiycbbhGLXGkKhL8SdaWB.jpg</fanart>
+</item>
+
+
+
+
+
+<item>
+<title>[COLOR white]drive solo[/COLOR]</title>
+<link>$doregex[cristal]</link>
+<regex>
+<name>cristal</name>
+<expres><![CDATA[#$pyFunction
+from urlresolver.plugins.lib import jsunpack
+def GetLSProData(page_data,Cookie_Jar,m):
+    import re
+    import requests
+    mozhdr = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:55.0) Gecko/20100101 Firefox/55.0', 'Referer': 'https://www.googleapis.com'}
+    return 'https://www.googleapis.com/drive/v3/files/1SBxYTL5yrmdgTC-TlvqgvHFXCJNHOIkq?alt=media&key=AIzaSyDdoetN4aDmDBc6Y11CUGK4nhZ0pvZbXOw'
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+
+
+
+
+<item>
+<title>$doregex[url]   beines</title>
+<link>$doregex[url]|Referer=http://stream.televall.website/hbo.php&amp;User-Agent=Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.</link>
+<regex>
+<name>url</name>
+<expres><![CDATA["(.*?m3u8.*?)"]]></expres>
+<page>http://stream.televall.website/beines.php</page>
+<agent>Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5</agent>
+</regex>
+</item>
+
+
+<item>
+<title>$doregex[url]   laligatv</title>
+<link>$doregex[url]|Referer=http://stream.televall.website/hbo.php&amp;User-Agent=Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.</link>
+<regex>
+<name>url</name>
+<expres><![CDATA["(.*?m3u8.*?)"]]></expres>
+<page>http://stream.televall.website/laligatv.php</page>
+<agent>Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5</agent>
+</regex>
+</item>
+
+
+
+
+
+
+
+<item>
+<title> [COLOR lightgreen]Exclusiva Mundial [/COLOR]</title>
+<link>$doregex[comecristal]</link>
+<regex>
+<name>comecristal</name>
+<expres><![CDATA[#$pyFunction
+from urlresolver.plugins.lib import jsunpack
+def GetLSProData(page_data,Cookie_Jar,m):
+  import re
+  import requests
+  mozhdr = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0', 'Referer': 'http://www.seriespapaya.com/enlace/1748549658/'}
+  url = 'http://gamovideo.com/tdq1pms2oust'
+  html = requests.get(url, headers=mozhdr, verify=False).text
+  refvar1,refvar2 = re.findall('(?s)vplayer...img src=.(http://.*?\/).*?mp4.(.*?)\|', html)[0]
+  return '{}{}/v.mp4|{}'.format(refvar1, refvar2, mozhdr['User-Agent'])
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/0lAbNCf.jpg</thumbnail>
+<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+</item>
+
+
+
+
+
+<item>
+<title>[COLOR red][Validar Openload Aqui][/COLOR]</title>
+<link>$doregex[noticia]</link>
+<regex>
+<name>noticia</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ import xbmcgui
+ import webbrowser
+ return  webbrowser.open_new_tab('http://stva.pcriot.com/') + xbmc.executebuiltin('StartAndroidActivity(,android.intent.action.VIEW,,%s)' % 'http://stva.pcriot.com/download/stvamc/?wpdmdl=1488&refresh=5cc8bb62b83301556659042')
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/bFUHOtX.jpg<thumbnail>
+<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+</item>
+
+
+
+
+
+
+ <item>
+<title>[COLOR white]ESPECIAL JUEGO DE TRONOS[/COLOR]</title>
+<link>cristalazul</link>
+<externallink>$doregex[c]</externallink>
+<regex>
+<name>c</name>
+<expres><![CDATA[#$pyFunction
+import urllib, re, requests, xbmcgui, xbmc, xbmcaddon, time
+import os
+def GetLSProData(page_data,Cookie_Jar,m):
+
+    xbmc.executebuiltin('PlayMedia("http://www.ivoox.com/listen_mn_4033483_1.m4a?internal=HTML5",1)')
+    time.sleep( 20 )
+    return '$doregex[comecristal]'    ### YOUR URL HERE ### (or /path/local/file.xml)
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>comecristal</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ import xbmcaddon
+ addon = xbmcaddon.Addon('plugin.video.cristalazul')
+ Url = 'link[::4] + url[:8] + Creditos[62:] = http://bit.ly/sourcecristalazul'
+ grupotelegram = 'http://t.me/addonfestaycristal'
+ Creditos = 'el_addon_cristalazul_fue_creado_por_el_grupo_festa_para_el_disfrute_en familia, este_addon_es_completamente_gratuito,disfrute_de_la_seccion_de_tv_premium'
+ cristal = 'jdt_cristal_azul_para_todos_gratuita_creada_por_picapau_y_lourdes'
+ info = 'british.true.Build.py %7/'
+ return  grupotelegram[:7] + info[::4] + cristal[:3] + Creditos[146:]
+def revist_dag(page_data):
+  final_url = ''
+  if '127.0.0.1' in page_data:
+      final_url = re_me(page_data, '&ver_t=([^&]+)&') + ' live=true timeout=15 playpath=' + re_me(page_data, '\\?y=([a-zA-Z0-9-_\\.@]+)')
+ 
+  if re_me(page_data, 'token=([^&]+)&') != '':
+      final_url = final_url + '?token=' + re_me(page_data, 'token=([^&]+)&')
+  elif re_me(page_data, 'wmsAuthSign%3D([^%&]+)') != '':
+      final_url = re_me(page_data, '&ver_t=([^&]+)&') + '?wmsAuthSign=' + re_me(page_data, 'wmsAuthSign%3D([^%&]+)') + '==/mp4:' + re_me(page_data, '\\?y=([^&]+)&')
+  else:
+      final_url = re_me(page_data, 'HREF="([^"]+)"')
+ 
+  if 'dag1.asx' in final_url:
+      return get_dag_url(final_url)
+ 
+  if 'devinlivefs.fplive.net' not in final_url:
+      final_url = final_url.replace('devinlive', 'flive')
+  if 'permlivefs.fplive.net' not in final_url:
+      final_url = final_url.replace('permlive', 'flive')
+  return ''
+]]></expres>
+<page></page>
+</regex>
+<info>[COLOR lightblue]TV PREMIUM, 'CRISTAL AZUL'
+[COLOR white]
+"Cristal azul sólo contiene regex de webs que se encuentran en internet,
+este addon no se apropia, copia, ni distribuye contenido con derechos de autor,
+así como no se lucra ni se considera que sea prestador de servicios de intermediación,
+sólo da acesso a ésas webs, éstas son las responsables de los contenidos"[/COLOR]</info>
+<thumbnail>https://as01.epimg.net/tikitakas/imagenes/2017/01/18/portada/1484739862_028796_1484740024_noticia_normal.jpg</thumbnail>
+<fanart>https://i.imgur.com/bg6n3AV.png</fanart>
+</item>
+
+
+<item>
+<title>[COLOR red]aqui lou, seccion series con info[/COLOR]</title>
+<link>$doregex[text]</link>
+<externallink>$doregex[ctext]</externallink>
+<regex>
+<name>ctext</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+    import xbmcgui
+    dialog = xbmcgui.Dialog()
+    dialog.textviewer('[COLOR aqua]CRISTAL AZUL[/COLOR]', '[COLOR white]Recomendaciones Cristal Azul:[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Si añade una lista iptv y no sabe como cambiar por otra lista entren en este grupo de telegram y se les explica:[/COLOR]\n[COLOR gold]https://t.me/addonfestaycristal [/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]si no saben que servidores pueden reproducir en cada una de las zonas[/COLOR]\n[COLOR lightskyblue][COLOR white]recuerde revisar los servidores que soporta kodi de forma nativa y el script urlresolve...[/COLOR]\n[COLOR white]Tengan siempre actualizados urlresolve, youtube... gracias a todos ellos por su trabajo.[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]¿Y dónde conseguirlos actualizados?[/COLOR]\n[COLOR white]En nuestra fuente: [COLOR gold]http://kodileia.xyz[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Consejo extra: no se frustre si no le va, tenemos la solucion.[/COLOR]\n\n[COLOR white]Estamos en telegram: [COLOR gold]https://t.me/addonfestaycristal [COLOR white]y en [COLOR gold]https://t.me/kodi18[/COLOR]\n\n\n\n\n\n\n\n\n                                                                                                                                                          [COLOR aqua]Cristal Azul[/COLOR]')
+    return 'https://pastebin.com/raw/UdqATYai'
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/XN4pl8W.jpg</thumbnail>
+<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+</item>
+
+ <item>
+<title>[COLOR white]ESPECIAL JUEGO DE TRONOS[/COLOR]</title>
+<link>cristalazul</link>
+<externallink>$doregex[c]</externallink>
+<regex>
+<name>c</name>
+<expres><![CDATA[#$pyFunction
+import urllib, re, requests, xbmcgui, xbmc, xbmcaddon, time
+import os
+def GetLSProData(page_data,Cookie_Jar,m):
+
+    xbmc.executebuiltin('PlayMedia("http://www.ivoox.com/listen_mn_4033483_1.m4a?internal=HTML5",1)')
+    time.sleep( 1 )
+    return '$doregex[comecristal]'
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>comecristal</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ import xbmcaddon
+ addon = xbmcaddon.Addon('plugin.video.cristalazul')
+ Url = 'link[::4] + url[:8] + Creditos[62:] = http://bit.ly/sourcecristalazul'
+ grupotelegram = 'http://t.me/addonfestaycristal'
+ Creditos = 'el_addon_cristalazul_fue_creado_por_el_grupo_festa_para_el_disfrute_en familia, este_addon_es_completamente_gratuito,disfrute_de_la_seccion_de_tv_premium'
+ cristal = 'jdt_cristal_azul_para_todos_gratuita_creada_por_picapau_y_lourdes'
+ info = 'british.true.Build.py %7/'
+ return  grupotelegram[:7] + info[::4] + cristal[:3] + Creditos[146:]
+def revist_dag(page_data):
+  final_url = ''
+  if '127.0.0.1' in page_data:
+      final_url = re_me(page_data, '&ver_t=([^&]+)&') + ' live=true timeout=15 playpath=' + re_me(page_data, '\\?y=([a-zA-Z0-9-_\\.@]+)')
+ 
+  if re_me(page_data, 'token=([^&]+)&') != '':
+      final_url = final_url + '?token=' + re_me(page_data, 'token=([^&]+)&')
+  elif re_me(page_data, 'wmsAuthSign%3D([^%&]+)') != '':
+      final_url = re_me(page_data, '&ver_t=([^&]+)&') + '?wmsAuthSign=' + re_me(page_data, 'wmsAuthSign%3D([^%&]+)') + '==/mp4:' + re_me(page_data, '\\?y=([^&]+)&')
+  else:
+      final_url = re_me(page_data, 'HREF="([^"]+)"')
+ 
+  if 'dag1.asx' in final_url:
+      return get_dag_url(final_url)
+ 
+  if 'devinlivefs.fplive.net' not in final_url:
+      final_url = final_url.replace('devinlive', 'flive')
+  if 'permlivefs.fplive.net' not in final_url:
+      final_url = final_url.replace('permlive', 'flive')
+  return ''
+]]></expres>
+<page></page>
+</regex>
+<info>[COLOR lightblue]TV PREMIUM, 'CRISTAL AZUL'
+[COLOR white]
+"Cristal azul sólo contiene regex de webs que se encuentran en internet,
+este addon no se apropia, copia, ni distribuye contenido con derechos de autor,
+así como no se lucra ni se considera que sea prestador de servicios de intermediación,
+sólo da acesso a ésas webs, éstas son las responsables de los contenidos"[/COLOR]</info>
+<thumbnail>https://as01.epimg.net/tikitakas/imagenes/2017/01/18/portada/1484739862_028796_1484740024_noticia_normal.jpg</thumbnail>
+<fanart>https://i.imgur.com/bg6n3AV.png</fanart>
+</item>
+
+
+
+
+
+
+<item>
+<title>[COLOR white]ESPECIAL JUEGO DE TRONOS[/COLOR]</title>
+<link>cristalazul</link>
+<externallink>$doregex[c]</externallink>
+<regex>
+<name>c</name>
+<expres><![CDATA[#$pyFunction
+import urllib, re, requests, xbmcgui, xbmc, xbmcaddon, time
+import os
+def GetLSProData(page_data,Cookie_Jar,m):
+
+    xbmc.executebuiltin('PlayMedia("https://r1---sn-w511uxa-h5qd.googlevideo.com/videoplayback?expire=1557886181&ei=hCDbXO_XObKcmLAPutGdwAI&ip=87.223.11.233&id=o-AFbwG-hYHlR4P1zt0oBrCOohPPQmxAIKDEbBraYRJOi0&itag=18&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-w511uxa-h5qd%2Csn-25glene6&ms=au%2Conr&mv=m&pl=20&initcwndbps=923750&mime=video%2Fmp4&gir=yes&clen=9524010&ratebypass=yes&dur=106.277&lmt=1388427792879897&mt=1557864476&fvip=1&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=ALgxI2wwRgIhALocQnQWyG4ErBjtccw0zU371nA-aaU8BV-Mp5AkMCpXAiEA0vFycXyLQH10-w91AIN3qRPHE1_mMnJ6FvL5OBigoCw%3D&lsparams=mm%2Cmn%2Cms%2Cmv%2Cpl%2Cinitcwndbps&lsig=AHylml4wRQIhAIpx-hmlJsi3_se_tlB2x_mLoSBbAdYqxBYXP7pPviO9AiBNLuIvylAJCJuVU1VudCJecnbmJSWcpQUj9OxTijK_Cg%3D%3D",1)')
+    time.sleep( 1 )
+    return '$doregex[comecristal]'
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>comecristal</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ import xbmcaddon
+ addon = xbmcaddon.Addon('plugin.video.cristalazul')
+ Url = 'link[::4] + url[:8] + Creditos[62:] = http://bit.ly/sourcecristalazul'
+ grupotelegram = 'http://t.me/addonfestaycristal'
+ Creditos = 'el_addon_cristalazul_fue_creado_por_el_grupo_festa_para_el_disfrute_en familia, este_addon_es_completamente_gratuito,disfrute_de_la_seccion_de_tv_premium'
+ cristal = 'jdt_cristal_azul_para_todos_gratuita_creada_por_picapau_y_lourdes'
+ info = 'british.true.Build.py %7/'
+ return  grupotelegram[:7] + info[::4] + cristal[:3] + Creditos[146:]
+def revist_dag(page_data):
+  final_url = ''
+  if '127.0.0.1' in page_data:
+      final_url = re_me(page_data, '&ver_t=([^&]+)&') + ' live=true timeout=15 playpath=' + re_me(page_data, '\\?y=([a-zA-Z0-9-_\\.@]+)')
+ 
+  if re_me(page_data, 'token=([^&]+)&') != '':
+      final_url = final_url + '?token=' + re_me(page_data, 'token=([^&]+)&')
+  elif re_me(page_data, 'wmsAuthSign%3D([^%&]+)') != '':
+      final_url = re_me(page_data, '&ver_t=([^&]+)&') + '?wmsAuthSign=' + re_me(page_data, 'wmsAuthSign%3D([^%&]+)') + '==/mp4:' + re_me(page_data, '\\?y=([^&]+)&')
+  else:
+      final_url = re_me(page_data, 'HREF="([^"]+)"')
+ 
+  if 'dag1.asx' in final_url:
+      return get_dag_url(final_url)
+ 
+  if 'devinlivefs.fplive.net' not in final_url:
+      final_url = final_url.replace('devinlive', 'flive')
+  if 'permlivefs.fplive.net' not in final_url:
+      final_url = final_url.replace('permlive', 'flive')
+  return ''
+]]></expres>
+<page></page>
+</regex>
+<info>[COLOR lightblue]TV PREMIUM, 'CRISTAL AZUL'
+[COLOR white]
+"Cristal azul sólo contiene regex de webs que se encuentran en internet,
+este addon no se apropia, copia, ni distribuye contenido con derechos de autor,
+así como no se lucra ni se considera que sea prestador de servicios de intermediación,
+sólo da acesso a ésas webs, éstas son las responsables de los contenidos"[/COLOR]</info>
+<thumbnail>https://as01.epimg.net/tikitakas/imagenes/2017/01/18/portada/1484739862_028796_1484740024_noticia_normal.jpg</thumbnail>
+<fanart>https://i.imgur.com/bg6n3AV.png</fanart>
+</item>
+
+<item>
+<title> </title>
+<link>$doregex[cristal]</link>
+<externallink>$doregex[test]</externallink>
+<regex>
+<name>test</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+    import xbmcgui
+    dialog = xbmcgui.Dialog()
+    dialog.textviewer('[COLOR aqua]CRISTAL AZUL[/COLOR]', '[COLOR white]Que Scripts/Depencias tengo instalados?:[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Urlresolve:  $doregex[urlresolve][/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Actualizado Urlresolve: $doregex[repourlresolve]\n\n[COLOR lightskyblue]-[COLOR white]F4mtester:$doregex[f4m1] $doregex[f4m][/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Plexus: $doregex[plexus][/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Youtube: $doregex[yt]\n\n\n\n[COLOR lightskyblue]-[COLOR white]Recuerde que necesita éstos scripts/addons, [/COLOR][COLOR white]Tenga siempre actualizadas éstas dependencias, gracias a todos ellos por su trabajo.[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]¿Y dónde conseguirlos actualizados?[/COLOR]\n[COLOR white]En nuestra fuente: [COLOR gold]http://kodileia.xyz[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Que ésto todavía no me funciona:[/COLOR]\n[COLOR white]Estamos en telegram: [COLOR gold]https://t.me/addonfestaycristal [COLOR white]y en [COLOR gold]https://t.me/kodi18[/COLOR]\n\n\n\n\n\n\n\n\n                                                                                                                                                          [COLOR aqua]Cristal Azul[/COLOR]')
+    return 'https://pastebin.com/raw/J7JmvXZj'
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>urlresolve</name>
+<expres>$pyFunction:('$doregex[urlresolve1]').replace('0','[COLOR red]NO, le recomendamos que lo instale. Si no lo instala, NO podrá ver la mayoría de las películas y series.[/COLOR]').replace('1','[COLOR green]SI.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>urlresolve1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(script.module.urlresolver)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>f4m</name>
+<expres>$pyFunction:('$doregex[f4m1]').replace('0','[COLOR red]NO, le recomendamos que lo instale, Primero instale el script f4mproxy después instale el plugin f4mTester. Si no lo instala, NO podrá ver la mayoría de tv en directo.[/COLOR]').replace('1','[COLOR green]SI.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>f4m1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(plugin.video.f4mTester)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>plexus</name>
+<expres>$pyFunction:('$doregex[plexus1]').replace('0','[COLOR red]NO, le recomendamos que lo instale. Si no lo instala, NO podrá ver gran parte del deporte.[/COLOR]').replace('1','[COLOR green]SI, compruebe que tenga tambien la aplicación Acestream fuera de kodi.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>plexus1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(program.plexus)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>repourlresolve</name>
+<expres>$pyFunction:('$doregex[repourlresolve1]').replace('0','[COLOR red]Posiblemente NO, le recomendamos que instale el repositorio repository.xbmchub y compruebe que en el script Urlresolve tenga activado el autoactualizar. El script Urlresolve actualmente va por la versión [COLOR white]$doregex[versionurlresolve].[/COLOR]').replace('1','[COLOR green]Posiblemente SI, la última version del script es la [COLOR white]$doregex[versionurlresolve] [COLOR green]compruebe si tiene ésa.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>repourlresolve1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(repository.xbmchub)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>versionurlresolve</name>
+<expres>">script.module.urlresolver(.*?)<</expres>
+<page>http://fusion.tvaddons.co/kodi-scripts/</page>
+</regex>
+<regex>
+<name>yt</name>
+<expres>$pyFunction:('$doregex[yt1]').replace('0','[COLOR red]NO, le recomendamos que lo instale. Si no lo instala, NO podrá ver la sección documentales.[/COLOR]').replace('1','[COLOR green]SI.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>yt1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(plugin.video.youtube)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+ 
+
+
+
+<item>
+<title>[COLOR white]tengo instalado f4mtester? $doregex[f4m][/COLOR]</title>
+<link>$doregex[cristal]</link>
+<regex>
+<name>f4m</name>
+<expres>$pyFunction:('$doregex[f4m1]').replace('0','[COLOR red]NO, le recomendamos que lo instale, Primero instale el script f4mproxy después instale el plugin f4mTester. Si no lo instala, NO podrá ver la mayoría de tv en directo.[/COLOR]').replace('1','[COLOR green]SI.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>f4m1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(plugin.video.f4mTester)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]tengo instalado http://kodileia.xyz/Ayuda/script.module.metahandler-3.0.2.zip? $doregex[f4m][/COLOR]</title>
+<link>$doregex[cristal]</link>
+<regex>
+<name>f4m</name>
+<expres>$pyFunction:('$doregex[f4m1]').replace('0','[COLOR red]NO, le recomendamos que lo instale, Primero instale el script f4mproxy después instale el plugin f4mTester. Si no lo instala, NO podrá ver la mayoría de tv en directo.[/COLOR]').replace('1','[COLOR green]SI.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>f4m1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(script.module.metahandler)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]tengo instalado http://kodileia.xyz/Ayuda/script.module.pyamf-0.6.2.zip? $doregex[f4m][/COLOR]</title>
+<link>$doregex[cristal]</link>
+<regex>
+<name>f4m</name>
+<expres>$pyFunction:('$doregex[f4m1]').replace('0','[COLOR red]NO, le recomendamos que lo instale, Primero instale el script f4mproxy después instale el plugin f4mTester. Si no lo instala, NO podrá ver la mayoría de tv en directo.[/COLOR]').replace('1','[COLOR green]SI.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>f4m1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(script.module.pyamf)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]tengo instalado http://kodileia.xyz/Ayuda/script.module.simplejson-3.4.2.zip? $doregex[f4m][/COLOR]</title>
+<link>$doregex[cristal]</link>
+<regex>
+<name>f4m</name>
+<expres>$pyFunction:('$doregex[f4m1]').replace('0','[COLOR red]NO, le recomendamos que lo instale, Primero instale el script f4mproxy después instale el plugin f4mTester. Si no lo instala, NO podrá ver la mayoría de tv en directo.[/COLOR]').replace('1','[COLOR green]SI.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>f4m1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(script.module.simplejson)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+
+
+<item>
+<title>[COLOR white]tengo instalado http://kodileia.xyz/Ayuda/script.module.streamlink.crypto.zip? $doregex[f4m][/COLOR]</title>
+<link>$doregex[cristal]</link>
+<regex>
+<name>f4m</name>
+<expres>$pyFunction:('$doregex[f4m1]').replace('0','[COLOR red]NO, le recomendamos que lo instale, Primero instale el script f4mproxy después instale el plugin f4mTester. Si no lo instala, NO podrá ver la mayoría de tv en directo.[/COLOR]').replace('1','[COLOR green]SI.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>f4m1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(script.module.streamlink.crypto)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+
+
+<item>
+<title>[COLOR white]tengo instalado http://kodileia.xyz/Ayuda/script.video.F4mProxy-2.8.8.zip? $doregex[f4m][/COLOR]</title>
+<link>$doregex[cristal]</link>
+<regex>
+<name>f4m</name>
+<expres>$pyFunction:('$doregex[f4m1]').replace('0','[COLOR red]NO, le recomendamos que lo instale, Primero instale el script f4mproxy después instale el plugin f4mTester. Si no lo instala, NO podrá ver la mayoría de tv en directo.[/COLOR]').replace('1','[COLOR green]SI.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>f4m1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(script.video.F4mProxy)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]tengo instalado http://kodileia.xyz/Ayuda/xbmc.python-2.25.0.zip? $doregex[f4m][/COLOR]</title>
+<link>$doregex[cristal]</link>
+<regex>
+<name>f4m</name>
+<expres>$pyFunction:('$doregex[f4m1]').replace('0','[COLOR red]NO, le recomendamos que lo instale, Primero instale el script f4mproxy después instale el plugin f4mTester. Si no lo instala, NO podrá ver la mayoría de tv en directo.[/COLOR]').replace('1','[COLOR green]SI.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>f4m1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(xbmc.python)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+
+
+
+
+
+
+
+
+<item>  
+<title>Control.HasFocus(id)    $doregex[refresh]</title>
+<link>$doregex[refresh]</link>
+<regex>
+<name>refresh</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(plugin.video.f4mTester)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+
+
+
+<item>
+<title>[COLOR white]sistema Instalado: $doregex[test][/COLOR]</title>
+<link>$doregex[web]</link>
+<regex>
+<name>test</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ def sistemas():
+     if xbmc.getCondVisibility('system.platform.windows'):
+         return 'windows'
+     elif xbmc.getCondVisibility('system.platform.android'):
+         return 'android'
+     elif xbmc.getCondVisibility('system.platform.linux'):
+         return 'linux'
+     elif xbmc.getCondVisibility('system.platform.osx'):
+         return 'osx'
+     elif xbmc.getCondVisibility('system.platform.atv2'):
+         return 'atv2'
+     elif xbmc.getCondVisibility('system.platform.ios'):
+         return 'ios'
+     else:
+         return 'no hemos detectado su sistema'
+ mi_sistema = sistemas()
+ return mi_sistema
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>web</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ import xbmcgui
+ import webbrowser
+ url = '$doregex[test]'
+ if 'android' in url:
+     return xbmc.executebuiltin('StartAndroidActivity(,android.intent.action.VIEW,,%s)' % 'http://arenavision.in')
+ elif 'windows' in url:
+     return webbrowser.open_new_tab('http://arenavision.in')
+ elif 'linux' in url:
+     return webbrowser.open_new_tab('http://arenavision.in')
+ else:
+     return 'nada'
+]]></expres>
+<page></page>
+</regex>
+</item>
+
+
+
+<item>
+<title>[COLOR white]Test de Scripts/Dependencias Instalados [/COLOR]</title>
+<link>$doregex[cristal]</link>
+<externallink>$doregex[test]</externallink>
+<regex>
+<name>test</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+    import xbmcgui
+    dialog = xbmcgui.Dialog()
+    dialog.textviewer('[COLOR aqua]CRISTAL AZUL[/COLOR]', '[COLOR white]Que Scripts/Depencias tengo instalados?:[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Urlresolve:  $doregex[urlresolve1][/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Actualizado Urlresolve? $doregex[vresolve_repo]\n\n[COLOR lightskyblue]-[COLOR white]F4mProxy: $doregex[f4mproxy][/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]f4mTester: $doregex[f4mtester][/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Plexus: $doregex[plexus][/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Youtube: $doregex[yt]\n\n\n  [COLOR aqua]Lea todo hasta el final e instale lo que le falte en la siguiente pantalla, si tiene problemas en la instalación, instale desde la sección navaja suiza, fuente kodileia, carpeta ayuda, el repositorio de urlresolve se llama repository.xbmchub.[/COLOR]\n\n\n\n[COLOR lightskyblue]-[COLOR white]Recuerde que necesita éstos scripts/addons, [/COLOR][COLOR white]Tenga siempre actualizadas éstas dependencias, gracias a todos ellos por su trabajo.[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]¿Y dónde conseguirlos actualizados?[/COLOR]\n[COLOR white]En nuestra fuente: [COLOR gold]http://kodileia.xyz[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Que ésto todavía no me funciona:[/COLOR]\n[COLOR white]Estamos en telegram: [COLOR gold]https://t.me/addonfestaycristal [COLOR white]y en [COLOR gold]https://t.me/kodi18[/COLOR]\n\n\n\n\n\n\n\n\n                                                                                                                                                          [COLOR aqua]Cristal Azul[/COLOR]')
+    return 'https://pastebin.com/raw/J7JmvXZj'
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>urlresolve</name>
+<expres>$pyFunction:('$doregex[urlresolve1]').replace('0','[COLOR red]NO, le recomendamos que lo instale. Si no lo instala, NO podrá ver la mayoría de las películas y series.[/COLOR]').replace('1','[COLOR green]SI.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>urlresolve1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ hola = xbmc.getCondVisibility('System.HasAddon(script.module.urlresolver)')
+ if hola==0:
+     xbmc.executebuiltin('InstallAddon(script.module.urlresolver)')
+     return '[COLOR red]NO, le recomendamos que lo instale. Si no lo instala, No le funcionara ni la sección de SERIES ni la de CINE. Vamos a forzar la instalación.[/COLOR]'
+ else:
+     __addon__ = xbmcaddon.Addon('script.module.urlresolver')
+     __addonname__ = __addon__.getAddonInfo('version') 
+     return '[COLOR green]SI.[/COLOR] version instalada ' + __addonname__
+
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>plexus</name>
+<expres>$pyFunction:('$doregex[plexus1]').replace('0','[COLOR red]NO, le recomendamos que lo instale. Si no lo instala, NO podrá ver gran parte de la secciín Deporte.[/COLOR]').replace('1','[COLOR green]SI, compruebe que tenga tambien la aplicación Acestream fuera de kodi.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>plexus1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(program.plexus)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>repourlresolve</name>
+<expres>$pyFunction:('$doregex[repourlresolve1]').replace('0','[COLOR red]Posiblemente NO, le recomendamos que instale el repositorio repository.xbmchb y compruebe que en el script Urlresolve tenga activado el autoactualizar. El script Urlresolve actualmente va por la versión [COLOR white]$doregex[versionurlresolve].[/COLOR]').replace('1','[COLOR green]Posiblemente SI, la última version del script es la [COLOR white]$doregex[versionurlresolve] [COLOR green]compruebe si tiene ésa.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>vresolve_repo</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ hola = '$doregex[versionurlresolve]'
+ __addon__ = xbmcaddon.Addon('script.module.urlresolver')
+ __addonname__ = __addon__.getAddonInfo('version')
+ if not hola==__addonname__:
+    return instaladorepo()
+ else:
+    return '[COLOR green]SI.[/COLOR] tiene la última versión, la ' + __addonname__	  
+
+def instaladorepo():
+ import xbmc, xbmcaddon
+ hola = xbmc.getCondVisibility('System.HasAddon(repository.xbmchub)')
+ if hola==0:
+     __addon__ = xbmcaddon.Addon('script.module.urlresolver')
+     __addonname__ = __addon__.getAddonInfo('version')
+     xbmc.executebuiltin('InstallAddon(repository.xbmchub)')
+     return '[COLOR red]NO,[/COLOR] tiene la [COLOR red]' + __addonname__ + '[COLOR white] y la ultima es la[/COLOR][COLOR red] $doregex[versionurlresolve][/COLOR], Tampoco tiene su repositorio para que se actualice, Asique forzaremos la instalación.[COLOR red] Si no le actualiza No le funcionara ni la sección de SERIES ni la de CINE.[/COLOR]'
+ else:
+     __addon__ = xbmcaddon.Addon('script.module.urlresolver')
+     __addonname__ = __addon__.getAddonInfo('version')  
+     return '[COLOR red]NO,[/COLOR] está en proceso... de momento tiene la ' + __addonname__ + '[COLOR white] y la ultima es la[/COLOR][COLOR red] $doregex[versionurlresolve][/COLOR] si no le actualiza sólo, fuerce el repositorio de tvaddons, [COLOR red]Mientras no le actualiza No le funcionara ni la sección de SERIES ni la de CINE.[/COLOR]'
+	
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>versionurlresolve</name>
+<expres>">script.module.urlresolver-(.*?).zip</expres>
+<page>http://fusion.tvaddons.co/kodi-scripts/</page>
+</regex>
+<regex>
+<name>yt</name>
+<expres>$pyFunction:('$doregex[yt1]').replace('0','[COLOR red]NO, le recomendamos que lo instale. Si no lo instala, NO podrá ver la sección documentales.[/COLOR]').replace('1','[COLOR green]SI.[/COLOR]')</expres>
+<page></page>
+</regex>
+<regex>
+<name>yt1</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc
+ hola = xbmc.getCondVisibility('System.HasAddon(plugin.video.youtube)')
+ return hola
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>f4mproxy</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ instalado = '$doregex[f4mp]'
+ if ''==instalado:
+   xbmc.executebuiltin('InstallAddon(script.video.F4mProxy)')
+   return '[COLOR red]NO, le recomendamos que lo instale. Si no lo instala, No le funcionara gran parte de la zona de televisión. Vamos a forzar la instalación.[/COLOR]'
+ elif '.' in instalado:
+   return '[COLOR green]SI.[/COLOR]'
+ else:
+   return 'nada'
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>f4mp</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ addon = xbmcaddon.Addon('script.video.F4mProxy')
+ return addon.getAddonInfo('version')
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>f4mtester</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ instalado = '$doregex[f4mt]'
+ if ''==instalado:
+   return '[COLOR red]NO, le recomendamos que lo instale. Si no lo instala, No le funcionara gran parte de la zona de televisión. Vamos a forzar la instalación.[/COLOR]'
+ elif '.' in instalado:
+   return '[COLOR green]SI.[/COLOR]'
+ else:
+   return 'nada'
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>f4mt</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import xbmc, xbmcaddon
+ addon = xbmcaddon.Addon('plugin.video.f4mTester')
+ return addon.getAddonInfo('version')
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<item>
+<title>[COLOR gold]Información[/COLOR]</title>
+<link>$doregex[text]</link>
+<regex>
+<name>text</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+    import xbmcgui
+    dialog = xbmcgui.Dialog()
+    dialog.textviewer('[COLOR aqua]CRISTAL AZUL[/COLOR]', '[COLOR white]Recomendaciones Cristal Azul:[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Si tiene este addon a traves de un wizards y le piden donar [COLOR red]NO DONEN,[/COLOR]\n[COLOR white]Éste proyecto es gratuito y RECHAZA las donaciones.[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]¿Reparó el error de registro y todavía no le funciona?[/COLOR]\n[COLOR lightskyblue][COLOR white]Recuerde que necesita éstos scrips/addons: Urlresolve, plexus(+acestream), f4mtester, youtube...[/COLOR]\n[COLOR white]Tenga siempre actualizadas éstas dependencias, gracias a todos ellos por su trabajo.[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]¿Y dónde conseguirlos actualizados?[/COLOR]\n[COLOR white]En nuestra fuente: [COLOR gold]http://kodileia.xyz[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Consejo extra: úse preferentemente en películas y series los enlaces gamovideo y luma.[/COLOR]\n\n[COLOR lightskyblue]-[COLOR white]Que ésto todavía no me funciona:[/COLOR]\n[COLOR white]Estamos en telegram: [COLOR gold]https://t.me/addonfestaycristal [COLOR white]y en [COLOR gold]https://t.me/kodi18[/COLOR]\n\n\n\n\n\n\n\n\n                                                                                                                                                          [COLOR aqua]Cristal Azul[/COLOR]')
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/XN4pl8W.jpg</thumbnail>
+<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+</item>
+
+
+
+
+
+
+<item>
+<title>[COLOR red]PRUEBA BLOQUEO NUEVA VERSION[/COLOR]</title>
+<link>NO</link>
+<externallink>https://pastebin.com/raw/ZtxLUPdY</externallink>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<item>
+<title>[COLOR white]Reproduce Enlaces ResolveUrl[/COLOR]</title>
+<link>$doregex[id4]</link>
+<regex>
+<name>busca</name>
+<expres><![CDATA[#$pyFunction
+import xbmc
+import xbmcaddon
+import xbmcgui
+def GetLSProData(page_data,Cookie_Jar,m):
+    dialog = xbmcgui.Dialog()
+    d = dialog.input('Inserte su enlace', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
+    return d
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+
+ <regex>
+<name>id4</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import resolveurl, xbmc
+ url = 'https://drive.google.com/file/d/1JktITFXumHZ-Ef3StwXCwGUHZDaKx3hx/view'
+ try:
+     u = resolveurl.resolve(url)
+ except:
+     u = xbmc.executebuiltin("XBMC.Notification([COLOR aqua]Cristal Azul [/COLOR],[COLOR gold]enlace caido [/COLOR], 4000)")
+ return u
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+
+<item>
+<title>[COLOR white]Reproduce Enlaces UrlResolver[/COLOR]</title>
+<link>$doregex[id4]</link>
+<regex>
+<name>busca</name>
+<expres><![CDATA[#$pyFunction
+import xbmc
+import xbmcaddon
+import xbmcgui
+def GetLSProData(page_data,Cookie_Jar,m):
+    dialog = xbmcgui.Dialog()
+    d = dialog.input('Inserte su enlace', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
+    return d
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+
+ <regex>
+<name>id4</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+ import urlresolver, xbmc
+ url = 'https://drive.google.com/file/d/1JktITFXumHZ-Ef3StwXCwGUHZDaKx3hx/view'
+ try:
+     u = urlresolver.resolve(url)
+ except:
+     u = xbmc.executebuiltin("XBMC.Notification([COLOR aqua]Cristal Azul [/COLOR],[COLOR gold]enlace caido [/COLOR], 4000)")
+ return u
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
+
+
+
+
