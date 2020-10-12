@@ -2477,7 +2477,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 
 <item>
-<title>[COLOR white]Reproduce Enlaces UrlResolver[/COLOR]</title>
+<title>[COLOR white]prueba atresplayer[/COLOR]</title>
 <link>$doregex[id4]</link>
 <regex>
 <name>busca</name>
@@ -2513,5 +2513,34 @@ def GetLSProData(page_data,Cookie_Jar,m):
 </item>
 
 
-probando
+
+<item>
+<title>[COLOR white]Enlaces m3u8, mp4, mp3...[/COLOR]</title>
+<link>$doregex[id2]</link>
+<regex>
+<name>busca</name>
+<expres><![CDATA[#$pyFunction
+import xbmc
+import xbmcaddon
+import xbmcgui
+def GetLSProData(page_data,Cookie_Jar,m):
+    dialog = xbmcgui.Dialog()
+    d = dialog.input('Inserte su enlace', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
+    return d
+]]></expres>
+<page></page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>id2</name>
+<expres><![CDATA[#$pyFunction
+from urlresolver.plugins.lib import jsunpack
+def GetLSProData(page_data,Cookie_Jar,m):
+    return 'https://deswowa3player.akamaized.net/vsg/_definst_/assets8/2018/02/26/59D4D272-983B-4EDD-AEAF-FF2D9EE7A3E6/es.smil/playlist.m3u8?pulse=assets8/2018/02/26/59D4D272-983B-4EDD-AEAF-FF2D9EE7A3E6/|1602547200|69cce9715c9087b55f5bfcafa71174ad|user-agent=mozilla5.0'
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/jpPDGCr.jpg</thumbnail>
+<fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
+</item>
 
