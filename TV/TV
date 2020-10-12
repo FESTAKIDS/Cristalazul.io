@@ -81,25 +81,25 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <page></page>
 </regex>
 <thumbnail>https://i.imgur.com/yGTsSPk.jpg</thumbnail>  
-<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+<fanart>https://i.imgur.com/1dZv6kC.jpg</fanart>
  </item>
 
 
 
 <item>
-<title>[COLOR lightskyblue]Cristal Tv [COLOR white]HD[/COLOR]</title>
+<title>[COLOR lightskyblue]TV [COLOR orangered]Chikiry_Cristal [COLOR white]Premium HD[/COLOR]</title>
 <externallink>https://pastebin.com/raw/5ABHpu6R$$LSProEncKey= $$</externallink>
 <link>na</link>
-<thumbnail>https://i.imgur.com/r28Quy9.jpg</thumbnail>  
-<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+<thumbnail>https://i.imgur.com/DnsRmEF.png</thumbnail>  
+<fanart>https://i.imgur.com/1dZv6kC.jpg</fanart>
 </item>
 
 
 
 
-
+<!--
 <item>
-<title>[COLOR lightskyblue]Estable [COLOR orangered]Chikiry_Cristal TV HD[/COLOR]</title>
+<title>[COLOR lightskyblue]TV [COLOR orangered]Chikiry_Cristal [COLOR white]Premium [COLOR gold](VPN Necesario para algunas operadoras)[/COLOR]</title>[/COLOR]</title>
 <link>$doregex[A]</link>
 <regex>
 <name>A</name>
@@ -161,9 +161,160 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 
 
 
+<item>
+<title>[COLOR lightskyblue]TV [COLOR orangered]Chikiry_Cristal [COLOR white]VER TELE [COLOR gold](VPN Necesario para algunas operadoras)[/COLOR]</title>[/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[makelist.param3]</title> 
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist.param2]</thumbnail>
+<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  gtitle=re.findall('class="blocks-gallery-item".+?alt="([^"]+)',page_data)
+  for t in gtitle:
+    title=t.title()
+    page_data=page_data.replace(t,title)
+  return re.findall('class="blocks-gallery-item".+?href="([^"]+).+?data-src="([^"]+).\s*alt="([^"]+)',page_data)
+]]></expres>
+<page>https://pastebin.com/raw/psmy4KcP</page>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,jsunpack
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  murl='[makelist.param1]';murl='https://www.verlatele.net'+murl if murl.startswith('/') else murl
+  msource=requests.get(murl,headers={'user-agent':'Mozilla/5.0','referer':'https://www.verlatele.net','accept':'*/*'}).content
+  url=re.findall('(?:(?:data-|src)|href)="(.+?/TV[^"]+)|$',msource)[0];url='https:'+url if url.startswith('//') else url
+  source=requests.get(url,headers={'user-agent':'Mozilla/5.0','referer':'[makelist.param1]','accept':'*/*'},cookies=Cookie_Jar).content
+  if 'm3u8' in source:
+    return re.findall('(?:P|p)layer[\w\W]*?(?:source|src|file):\s*[\'"]([^\'"]+)',source)[0]+'|user-agent=ipad&referer='+url
+  elif 'wstream' in source:
+    link=re.findall('iframe.+?src=[\'"]([^\'"]+)',source)[0]
+    source=requests.get(link,headers={'user-agent':'Mozilla/5.0','referer':url,'accept':'*/*'}).content
+    gm3u8=jsunpack.unpack(re.findall('(eval.*m3u8.*)',source)[0])
+    return re.findall('(?:P|p)layer[\w\W]*?(?:source|src|file):\s*[\'"]([^\'"]+)',gm3u8)[0]+'|user-agent=ipad&referer='+link
+  else:
+    link=re.findall('(?:(?:data-|src)|href)="(.+?/TV[^"]+)',source)[0];link='https:'+link if link.startswith('//') else link
+    source=requests.get(link,headers={'user-agent':'Mozilla/5.0','referer':url,'accept':'*/*'},cookies=Cookie_Jar).content
+    if 'wstream.to' in source:
+      turl=re.findall('src=[\'"](.+?wstream[^\'"]+)',source)[0];turl='https:'+turl if turl.startswith('//') else turl
+      source=requests.get(turl,headers={'user-agent':'Mozilla/5.0','referer':link,'accept':'*/*'}).content
+      gm3u8=jsunpack.unpack(re.findall('(eval.*m3u8.*)',source)[0])
+      return re.findall('(?:P|p)layer[\w\W]*?(?:source|src|file):\s*[\'"]([^\'"]+)',gm3u8)[0]+'|user-agent=ipad&referer='+turl
+    elif 'wstream' not in source:
+      turl=re.findall('iframe.+?src=[\'"]([^\'"]+)',source)[0];turl='https:'+turl if turl.startswith('//') else turl
+      source=requests.get(turl,headers={'user-agent':'Mozilla/5.0','referer':link,'accept':'*/*'},cookies=Cookie_Jar).content
+      html=re.findall('iframe.+?src=[\'"]([^\'"]+)',source)[0];html='https:'+html if html.startswith('//') else html
+      source=requests.get(html,headers={'user-agent':'Mozilla/5.0','referer':turl,'accept':'*/*'},cookies=Cookie_Jar).content
+      gm3u8=jsunpack.unpack(re.findall('(eval.*m3u8.*)',source)[0])
+      return re.findall('(?:P|p)layer[\w\W]*?(?:source|src|file):\s*[\'"]([^\'"]+)',gm3u8)[0]+'|user-agent=ipad&referer='+html
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/Z2uD47a.jpg</thumbnail>  
+<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+<info>Credits to streamwatcher2013. Thanks for all</info>
+</item>
 
 
-<!--
+
+
+
+<item> 
+<title>[COLOR lightskyblue]TV [COLOR orangered]Chikiry_Cristal [COLOR white]LATINA [COLOR gold](VPN Necesario para algunas operadoras)[/COLOR]</title>
+<link>$doregex[makelist]</link>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+  <title>[makelist.param2]</title>
+  <link>$doregex[makelist2]</link>
+]]></listrepeat>
+<expres><![CDATA[id="menu-item.+?href="([^"]+).>((?:In|L|P)[^<]+)]]></expres>
+<page>http://www.televall.online/</page>
+</regex>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+  <title>[makelist2.param2]</title>
+  <link>$doregex[getUrl]</link>
+  <thumbnail>[makelist2.param3]</thumbnail>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,urllib
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  if 'LIBRE' in '[makelist.param2]' or 'PREMIUM' in '[makelist.param2]':
+    glink=re.findall('utils.location.[\'"]([^\'"]+)',page_data)
+    for l in glink:
+      link='http://mitv.radiotormentamx.com/'+l
+      page_data=page_data.replace(l,link)
+    gthumb=re.findall('utils.location.+?src="([^"]+)',page_data)
+    for t in gthumb:
+      thumb='http://mitv.radiotormentamx.com/'+t
+      page_data=page_data.replace(t,link)
+    thumb=re.findall('utils.location.+?src="([^"]+)',page_data)
+    title=re.findall('utils.location.+?text:\s*[\'"]([^\'"]+)',page_data)
+    link=re.findall('utils.location.[\'"]([^\'"]+)',page_data)
+    return zip(link,title,thumb)
+  else:
+    gtitle=re.findall('"fg-item-inner".+?href.+?/([^\.]+)\.php',page_data)
+    for t in gtitle:
+      title=t.title()
+      page_data=page_data.replace(t,title)
+    return re.findall('"fg-item-inner".+?href="(.+?/([^\.]+)\.php).+?src-fg="([^"]+)',page_data)
+]]></expres>
+<page>[makelist.param1]</page>
+<referer>http://www.televall.online/</referer>
+</regex>
+<regex>
+<name>getUrl</name>
+<expres><![CDATA[#$pyFunction
+import re,urllib
+def GetLSProData(page_data,Cookie_Jar,m):#streamwatcher2013
+  link='[makelist2.param1]'.lower();source=urllib.urlopen(link).read()
+  if 'm3u8' in source:
+    return re.findall('player[\w\W]*?(?:source|src|file):\s*[\'"]([^\'"]+)',source)[0]+'|user-agent=ipad&referer='+link
+  elif 'fid2=' in source:
+    cid,cid2,jsurl=re.findall('fid=[\'"]([^\'"]+).{2,4}fid2=[\'"]([^\'"]+)[\w\W]*?src=[\'"]([^\'"]+)',source)[0]
+    source=urllib.urlopen(jsurl).read()
+    url=re.findall('src=[\'"]([^\'"]+)',source)[0]
+    if 'ligatv.net' in url:
+      lurl='%s%s &id2=%s'%(url,cid,cid2)
+      source=urllib.urlopen(lurl).read()
+      return re.findall('player[\w\W]*?(?:source|src|file):\s*[\'"]([^\'"]+)',source)[0]+'|user-agent=ipad&referer='+lurl
+    else:
+      nurl='%s%s_'%(url,cid)
+      source=urllib.urlopen(nurl).read()
+      return re.findall('player[\w\W]*?(?:source|src|file):\s*[\'"]([^\'"]+)',source)[0]+'|user-agent=ipad&referer='+nurl
+  else:
+    cid,jsurl=re.findall('fid=[\'"]([^\'"]+)[\w\W]*?src=[\'"]([^\'"]+)',source)[0]
+    source=urllib.urlopen(jsurl).read()
+    url=re.findall('src=[\'"]([^\'"]+)',source)[0]
+    if 'ligatv.net' in url:
+      lurl='%s%s &id2=%s'%(url,cid,cid2)
+      source=urllib.urlopen(lurl).read()
+      return re.findall('player[\w\W]*?(?:source|src|file):\s*[\'"]([^\'"]+)',source)[0]+'|user-agent=ipad&referer='+lurl
+    else:
+      nurl='%s%s_'%(url,cid)
+      source=urllib.urlopen(nurl).read()
+      return re.findall('player[\w\W]*?(?:source|src|file):\s*[\'"]([^\'"]+)',source)[0]+'|user-agent=ipad&referer='+nurl
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/Z2uD47a.jpg</thumbnail>  
+<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+<info>Credits to streamwatcher2013. Thanks for all</info>
+</item>
+
+
+
+
+
 <item>
 <title>[COLOR lightskyblue]Estable [COLOR orangered]Chikiry_Cristal TV HD[/COLOR]</title>
 <externallink>https://pastebin.com/raw/nqTEfJ9V$$LSProEncKey= $$</externallink>
@@ -177,30 +328,17 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 
 
 
-<!--
-<tem>
-<title>[COLOR orangered][COLOR white][/COLOR]</title>
-<link>na</link>
-<jsonrpc>plugin://plugin.video.cristalazul/?iconimage=https%3a%2f%2fi.imgur.com%2fWyyhjy7.jpg&amp;mode=17&amp;regexs=%7bu%27canal%27%3a%20%7b%27cookiejar%27%3a%20%27%27%2c%20%27name%27%3a%20u%27canal%27%2c%20%27agent%27%3a%20u%27Mozilla%2f5.0%20(Windows%20NT%2010.0%3b%20WOW64%3b%20rv%3a52.0)%20Gecko%2f20100101%20Firefox%2f52.0%27%2c%20%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cnimport%20urlresolver%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20%20%20url%20%3d%20%27https%3a%2f%2fdrive.google.com%2ffile%2fd%2f%5blou.param1%5d%2fview%27%5cr%5cn%20%20%20streamLink%20%3d%20urlresolver.resolve(url)%5cr%5cn%20%20%20return%20streamLink%5cr%5cn%22%2c%20%27referer%27%3a%20u%27None%27%2c%20%27accept%27%3a%20u%27%2a%2f%2a%27%2c%20%27page%27%3a%20u%27None%27%7d%2c%20u%27comecristal%27%3a%20%7b%27expres%27%3a%20u%27%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20requests%2cre%5cr%5cn%20url%3d%20%5c%27https%3a%2f%2fdocs.google.com%2fuc%3fid%3d%5blou.param1%5d%26export%3ddownload%5c%27.replace(%5c%27https%3a%2f%2fluma.com%2ff%2f%5c%27%2c%20%5c%27%5c%27)%5cr%5cn%20headers%20%3d%20%7b%5c%27User-Agent%5c%27%3a%20%5c%27Mozilla%2f5.0%20(X11%3b%20Linux%20i686%3b%20rv%3a44.0)%20Gecko%2f20100101%20Firefox%2f44.0%20Iceweasel%2f44.0%5c%27%7d%5cr%5cn%20source0%3d%20requests.get(url%2cheaders%3dheaders)%5cr%5cn%20pageUrl%20%3d%20%5c%27https%3a%2f%2fdocs.google.com%5c%27%20%2b%20re.findall(%5c%27goog-inline-block%20jfk-button%20jfk-button-action%22%20href%3d%22(.%2a%3f)%22%5c%27%2c%20source0.text)%5b0%5d.replace(%5c%27amp%3b%5c%27%2c%20%5c%27%5c%27)%5cr%5cn%20cookies%20%3d%20%20source0.cookies.get_dict()%5cr%5cn%5cr%5cn%20headers%20%3d%20%7b%5c%27User-Agent%5c%27%3a%20%5c%27Mozilla%2f5.0%20(X11%3b%20Linux%20i686%3b%20rv%3a44.0)%20Gecko%2f20100101%20Firefox%2f44.0%20Iceweasel%2f44.0%5c%27%2c%5c%27Referer%5c%27%3a%20url%7d%5cr%5cn%20source%3d%20requests.get(pageUrl%2c%20headers%3dheaders%2c%20cookies%3dcookies%2c%20allow_redirects%3dFalse)%5cr%5cn%5cr%5cn%20cristalUrl%20%3d%20re.findall(%5c%27HREF%3d%22(.%2a%3f)%22%5c%27%2csource.text)%5b0%5d%5cr%5cn%5cr%5cn%20return%20cristalUrl%5cr%5cn%27%2c%20%27cookiejar%27%3a%20%27%27%2c%20%27name%27%3a%20u%27comecristal%27%2c%20%27page%27%3a%20u%27None%27%7d%2c%20u%27img%27%3a%20%7b%27expres%27%3a%20u%22%24pyFunction%3a(%27%5blou.param4%5d%27).replace(%27%5c%5c%2f%27%2c%27%2f%27)%22%2c%20%27name%27%3a%20u%27img%27%2c%20%27page%27%3a%20u%27None%27%7d%2c%20u%27lou%27%3a%20%7b%27cookiejar%27%3a%20%27%27%2c%20%27name%27%3a%20u%27lou</item><item><title>[COLOR lightskyblue]Estable [COLOR orangered]Chikiry_Cristal [COLOR white]TV[/COLOR]</title><link>na</link>
-<thumbnail>https://i.imgur.com/Z2uD47a.jpg</thumbnail><fanart>https://i.imgur.com/yNfc6m7.jpg</fanart>
-<externallink>https://pastebin.com/raw/pQuRGEsX</externallink></item>%27%2c%20%27listrepeat%27%3a%20u%27%5cr%5cn%3ctitle%3e%5bCOLOR%20white%5d%5blou.param2%5d%20%5bCOLOR%20gold%5d%5blou.param3%5d%5b%2fCOLOR%5d%3c%2ftitle%3e%5cr%5cn%3clink%3e%24doregex%5bid3%5d%3c%2flink%3e%5cr%5cn%3cthumbnail%3e%24doregex%5bimg1%5d%3c%2fthumbnail%3e%5cr%5cn%3cfanart%3ehttps%3a%2f%2fi.imgur.com%2fRsLj1lh.jpg%3c%2ffanart%3e%5cr%5cn%27%2c%20%27agent%27%3a%20u%27Mozilla%2f5.0%20(Windows%20NT%2010.0%3b%20Win64%3b%20x64%3b%20rv%3a61.0)%20Gecko%2f20100101%20Firefox%2f61.0%27%2c%20%27expres%27%3a%20u%27(%3fs)x22(.%7b33%7d)%5c%5c%5c%5cx22.%2a%3f%5c%5c%5c%5cn%2c%5c%5c%5c%5cx22(.%2a%3f)-(.%2a%3f)-(.%2a%3f)%5c%5c.mkv%27%2c%20%27referer%27%3a%20u%27https%3a%2f%2fdrive.google.com%2fdrivefolders%27%2c%20%27page%27%3a%20u%27https%3a%2f%2fdrive.google.com%2fdrive%2ffolders%2f19Gadpbi6f6gMOIHGr2Yfnm_7QGH9DkUc%27%7d%2c%20u%27id3%27%3a%20%7b%27expres%27%3a%20u%22%24pyFunction%3a%20%27%24doregex%5bcanal%5d%27%20if%20not%20%27%24doregex%5bcanal%5d%27%3d%3d%27%27%20else%20%27%24doregex%5bcomecristal%5d%27%20if%20not%20%27%24doregex%5bcomecristal%5d%27%3d%3d%27%27%20else%20%27%24doregex%5bgamo%5d%27%22%2c%20%27name%27%3a%20u%27id3%27%2c%20%27page%27%3a%20u%27None%27%7d%2c%20u%27empaquetado%27%3a%20%7b%27cookiejar%27%3a%20%27%27%2c%20%27name%27%3a%20u%27empaquetado%27%2c%20%27agent%27%3a%20u%27Mozilla%2f5.0%20(Windows%20NT%2010.0%3b%20Win64%3b%20x64%3b%20rv%3a61.0)%20Gecko%2f20100101%20Firefox%2f61.0%27%2c%20%27connection%27%3a%20u%27keep-alive%27%2c%20%27expres%27%3a%20u%22%24pyFunction%3aget_unpacked(page_data%2c%27javascript.%2a%3f(eval%5c%5c(function%5c%5c(p%2ca%2cc%2ck%2ce%2cd.%2a)%27%20)%22%2c%20%27referer%27%3a%20u%27http%3a%2f%2fgamovideo.com%2f%27%2c%20%27page%27%3a%20u%27%5blou.param1%5d%27%7d%2c%20u%27gamo%27%3a%20%7b%27expres%27%3a%20u%27file%3a%22(h(.%2a%3f))%22%27%2c%20%27cookiejar%27%3a%20%27%27%2c%20%27name%27%3a%20u%27gamo%27%2c%20%27agent%27%3a%20u%27Mozilla%2f5.0%20(Windows%20NT%2010.0%3b%20Win64%3b%20x64%3b%20rv%3a61.0)%20Gecko%2f20100101%20Firefox%2f61.0%27%2c%20%27page%27%3a%20u%27%24doregex%5bempaquetado%5d%27%7d%2c%20u%27img1%27%3a%20%7b%27expres%27%3a%20u%22%24pyFunction%3a(%27https%3a%5c%5c%2f%5c%5c%2fi.imgur.com%5c%5c%2fWyyhjy7.jpg%27).replace(%27%5c%5c%2f%27%2c%27%2f%27)%22%2c%20%27name%27%3a%20u%27img1%27%2c%20%27page%27%3a%20u%27None%27%7d%7d&amp;url=%24doregex%5blou%5d</jsonrpc>
-<thumbnail>https://i.imgur.com/Z2uD47a.jpg</thumbnail>
-<fanart>https://i.imgur.com/yNfc6m7.jpg</fanart>
-</item>
--->
-
-
 
 
 
 
 
 <item>
-<title>[COLOR lightskyblue]Estable [COLOR white]Movistar + Tdt Hd Lista 1 Pro[/COLOR]</title>
+<title>[COLOR lightskyblue]Estable [COLOR white]Movistar + Tdt Hd Lista 1 Pro [COLOR gold](Necesario vpn para algunas operadoras)[/COLOR]</title>[/COLOR]</title>
 <link>http://Ignoreme</link>
 <jsonrpc>plugin://plugin.video.cristalazul/?iconimage=https%3a%2f%2fi.imgur.com%2fyGTsSPk.jpg&amp;mode=17&amp;regexs=%7bu%27vergol%27%3a%20%7b%27expres%27%3a%20u%27%23%24pyFunction%5cr%5cnimport%20re%2crequests%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%23CpRdIsSaTvAmL%5cr%5cn%20s%3drequests.get(%5c%27%5bmakelist2.param3%5d%5c%27%2cheaders%3d%7b%5c%27user-agent%5c%27%3a%5c%27Dalvik%2f2.1.0%20(Linux%3b%20U%3b%20Android%205.1.1%3b%20AFTS%20Build%2fLVY48F)%5c%27%2c%5c%27referer%5c%27%3a%5c%27https%3a%2f%2fverliga1.net%2ftv%2fnacionales%2fplus1.php%5c%27%7d)%3btok%3dre.findall(%5c%27%3ch2%3e.%2b%3fred.%2b%3f(%5c%5cd%2b)%5c%27%2cs.text)%5b0%5d%5cr%5cn%20return%20%5c%27https%3a%5c%27%2bre.findall(%5c%27Clappr.Player%5b%5c%5cw%5c%5cW%5d%2a%3fsource.%2b%3f%5b%5c%5c%5c%27%22%5d(%5b%5e%5c%5c%5c%27%22%5d%2b)%5c%27%2crequests.post(%5c%27%5bmakelist2.param3%5d%5c%27%2cheaders%3d%7b%5c%27referer%5c%27%3a%5c%27%5bmakelist2.param3%5d%5c%27%2c%5c%27user-agent%5c%27%3a%5c%27Dalvik%2f2.1.0%20(Linux%3b%20U%3b%20Android%205.1.1%3b%20AFTS%20Build%2fLVY48F)%5c%27%7d%2ccookies%3ds.cookies%2cdata%3d%7b%5c%27%24doregex%5bpass%5d%5c%27%3atok%7d).content.decode(%5c%27ascii%5c%27%2c%5c%27ignore%5c%27))%5b0%5d%2b%5c%27%7cuser-agent%3dMozilla%2f5.0%26referer%3d%5bmakelist2.param3%5d%5c%27%5cr%5cn%27%2c%20%27name%27%3a%20u%27vergol%27%2c%20%27page%27%3a%20None%7d%2c%20u%27goltv%27%3a%20%7b%27expres%27%3a%20u%27manifest%22%3a%22(%5b%5e%22%5d%2b)%27%2c%20%27name%27%3a%20u%27goltv%27%2c%20%27page%27%3a%20u%27%5bmakelist2.param3%5d%27%7d%2c%20u%27makelist2%27%3a%20%7b%27listrepeat%27%3a%20u%27%5cr%5cn%3ctitle%3e%5bCOLOR%20lightskyblue%5d%24doregex%5bcoloreando%5d%5bCAPITALIZE%5d%5bmakelist2.param1%5d%5b%2fCAPITALIZE%5d%20-%20%5bCOLOR%20white%5d%24doregex%5bemitiendo%5d%5b%2fCOLOR%5d%3c%2ftitle%3e%5cr%5cn%3cinputstream%3e%24doregex%5blink_inteligente%5d%3c%2finputstream%3e%5cr%5cn%3cthumbnail%3e%5bmakelist2.param2%5d%3c%2fthumbnail%3e%5cr%5cn%3cfanart%3ehttp%3a%2f%2fwww.arturogoga.com%2fwp-content%2fuploads%2f2009%2f12%2fimage4.png%3c%2ffanart%3e%5cr%5cn%27%2c%20%27expres%27%3a%20u%27(%3fs)%22name%22%3a%20%22(.%2a%3f)%22.%2a%3f%22image%22%3a%20%22(.%2a%3f)%22.%2a%3f%22url%22%3a%20%22(.%2a%3f)%22.%2a%3f%22embed%22%3a%20%22(.%2a%3f)%5c%27%27%2c%20%27name%27%3a%20u%27makelist2%27%2c%20%27page%27%3a%20u%27https%3a%2f%2fpastebin.com%2fraw%2fB0RGkkun%27%7d%2c%20u%27colores%27%3a%20%7b%27expres%27%3a%20u%22%23%24pyFunction%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm)%3a%5cr%5cn%20import%20xbmc%2c%20xbmcaddon%5cr%5cn%20addon%20%3d%20xbmcaddon.Addon(%27plugin.video.cristalazul%27)%5cr%5cn%20return%20addon.getSetting(%27ColoreandoPrincipal%27)%5cr%5cn%22%2c%20%27name%27%3a%20u%27colores%27%2c%20%27page%27%3a%20None%7d%2c%20u%27emitiendo%27%3a%20%7b%27expres%27%3a%20u%27(%3fs)%5bmakelist2.param4%5d.%2a%3fahora%22%3e%5c%5cs%2a(.%2a%3f)%3c%27%2c%20%27name%27%3a%20u%27emitiendo%27%2c%20%27page%27%3a%20u%27http%3a%2f%2fwww.formulatv.com%2fprogramacion%2fmovistarplus%2f%27%7d%2c%20u%27pass%27%3a%20%7b%27expres%27%3a%20u%27name%3d%22(.%2a%3f)%22%27%2c%20%27referer%27%3a%20u%27https%3a%2f%2fverliga1.net%2f%27%2c%20%27name%27%3a%20u%27pass%27%2c%20%27agent%27%3a%20u%27iPad%27%2c%20%27page%27%3a%20u%27https%3a%2f%2fpastebin.com%2fraw%2fSCfMa39V%27%7d%2c%20u%27link_inteligente%27%3a%20%7b%27expres%27%3a%20u%27%23%24pyFunction%5cr%5cnimport%20re%2crequests%2cxbmc%5cr%5cndef%20GetLSProData(page_data%2cCookie_Jar%2cm%2curl%3d%5c%27%5bmakelist2.param3%5d%5c%27)%3a%23cPrLItsLTfakl%5cr%5cn%5cr%5cn%20%20if%20not%20%5c%27http%5c%27%20in%20url%3a%5cr%5cn%20%20%20%20xbmc.executebuiltin(%5c%27XBMC.Notification(%5bCOLOR%20aqua%5dNo%20Existe%20enlace%5b%2fCOLOR%5d%2c%5bCOLOR%20white%5dNo%20Existe%20enlace%5b%2fCOLOR%5d%2c%205000)%5c%27)%5cr%5cn%20%20elif%20%5c%27vergol%5c%27%20in%20url%3a%5cr%5cn%20%20%20%20xbmc.executebuiltin(%5c%27XBMC.Notification(%5bCOLOR%20white%5dIntentando%20Reproducir%5bCOLOR%20gold%5d%20%5bmakelist2.param1%5d%5b%2fCOLOR%5d%2c%5bCOLOR%20gold%5d%5b%2fCOLOR%5d%2c%205000)%5c%27)%5cr%5cn%20%20%20%20return%20%5c%27https%3a%24doregex%5bsecure%5d%7cUser-Agent%3dMozilla%2f5.0%20(Android%207.0%3b%20Tablet%3b%20rv%3a58.0.2)%20Gecko%2f58.0.2%20Firefox%2f58.0.2%5c%27%5cr%5cn%20%20elif%20%5c%27goltelevision%5c%27%20in%20url%3a%5cr%5cn%20%20%20%20xbmc.executebuiltin(%5c%27XBMC.Notification(%5bCOLOR%20white%5dIntentando%20Reproducir%5bCOLOR%20gold%5d%20%5bmakelist2.param1%5d%5b%2fCOLOR%5d%2c%5bCOLOR%20gold%5d%5b%2fCOLOR%5d%2c%205000)%5c%27)%5cr%5cn%20%20%20%20html%20%3d%20requests.get(url%2c%20headers%3d%7b%5c%27User-Agent%5c%27%3a%20%5c%27Mozilla%2f5.0%20(Windows%20NT%206.3%3b%20WOW64%3b%20rv%3a55.0)%20Gecko%2f20100101%20Firefox%2f55.0%5c%27%2c%20%5c%27Referer%5c%27%3a%20%5c%27%5bmakelist2.param3%5d%5c%27%7d%2c%20verify%3dFalse).text%5cr%5cn%20%20%20%20return%20re.findall(%5c%27manifest%22%3a%22(%5b%5e%22%5d%2b)%5c%27%2c%20html)%5b0%5d%5cr%5cn%20%20elif%20%5c%27m3u8%5c%27%20in%20url%3a%5cr%5cn%20%20%20%20xbmc.executebuiltin(%5c%27XBMC.Notification(%5bCOLOR%20white%5dIntentando%20Reproducir%5bCOLOR%20gold%5d%20%5bmakelist2.param1%5d%5b%2fCOLOR%5d%2c%5bCOLOR%20gold%5d%5b%2fCOLOR%5d%2c%205000)%5c%27)%5cr%5cn%20%20%20%20return%20url%20%2b%20%5c%27%7cUser-Agent%3diPad%5c%27%5cr%5cn%20%20else%3a%5cr%5cn%20%20%20%20xbmc.executebuiltin(%5c%27XBMC.Notification(%5bCOLOR%20white%5dIntentando%20Reproducir%5bCOLOR%20gold%5d%20%5bmakelist2.param1%5d%5b%2fCOLOR%5d%2c%5bCOLOR%20gold%5d%5b%2fCOLOR%5d%2c%205000)%5c%27)%5cr%5cn%20%20%20%20return%20url%20%2b%20%5c%27%7cUser-Agent%3diPad%5c%27%5cr%5cn%27%2c%20%27name%27%3a%20u%27link_inteligente%27%2c%20%27page%27%3a%20None%7d%2c%20u%27coloreando%27%3a%20%7b%27expres%27%3a%20u%22%24pyFunction%3a(%27%24doregex%5bcolores%5d%27).replace(%27Predeterminado%27%2c%27%27).replace(%27%5bCOLOR%20lightskyblue%5dlightskyblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightskyblue%5d%27).replace(%27%5bCOLOR%20aliceblue%5daliceblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20aliceblue%5d%27).replace(%27%5bCOLOR%20antiquewhite%5dantiquewhite%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20antiquewhite%5d%27).replace(%27%5bCOLOR%20aqua%5daqua%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20aqua%5d%27).replace(%27%5bCOLOR%20aquamarine%5daquamarine%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20aquamarine%5d%27).replace(%27%5bCOLOR%20azure%5dazure%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20azure%5d%27).replace(%27%5bCOLOR%20beige%5dbeige%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20beige%5d%27).replace(%27%5bCOLOR%20bisque%5dbisque%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20bisque%5d%27).replace(%27%5bCOLOR%20black%5dblack%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20black%5d%27).replace(%27%5bCOLOR%20blanchedalmond%5dblanchedalmond%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20blanchedalmond%5d%27).replace(%27%5bCOLOR%20blue%5dblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20blue%5d%27).replace(%27%5bCOLOR%20blueviolet%5dblueviolet%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20blueviolet%5d%27).replace(%27%5bCOLOR%20brown%5dbrown%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20brown%5d%27).replace(%27%5bCOLOR%20burlywood%5dburlywood%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20burlywood%5d%27).replace(%27%5bCOLOR%20cadetblue%5dcadetblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20cadetblue%5d%27).replace(%27%5bCOLOR%20chartreuse%5dchartreuse%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20chartreuse%5d%27).replace(%27%5bCOLOR%20chocolate%5dchocolate%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20chocolate%5d%27).replace(%27%5bCOLOR%20coral%5dcoral%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20coral%5d%27).replace(%27%5bCOLOR%20cornflowerblue%5dcornflowerblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20cornflowerblue%5d%27).replace(%27%5bCOLOR%20crimson%5dcrimson%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20crimson%5d%27).replace(%27%5bCOLOR%20cyan%5dcyan%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20cyan%5d%27).replace(%27%5bCOLOR%20darkblue%5ddarkblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkblue%5d%27).replace(%27%5bCOLOR%20darkcyan%5ddarkcyan%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkcyan%5d%27).replace(%27%5bCOLOR%20darkgoldenrod%5ddarkgoldenrod%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkgoldenrod%5d%27).replace(%27%5bCOLOR%20darkgray%5ddarkgray%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkgray%5d%27).replace(%27%5bCOLOR%20darkgreen%5ddarkgreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkgreen%5d%27).replace(%27%5bCOLOR%20darkgrey%5ddarkgrey%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkgrey%5d%27).replace(%27%5bCOLOR%20darkkhaki%5ddarkkhaki%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkkhaki%5d%27).replace(%27%5bCOLOR%20darkmagenta%5ddarkmagenta%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkmagenta%5d%27).replace(%27%5bCOLOR%20darkolivegreen%5ddarkolivegreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkolivegreen%5d%27).replace(%27%5bCOLOR%20darkorange%5ddarkorange%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkorange%5d%27).replace(%27%5bCOLOR%20darkorchid%5ddarkorchid%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkorchid%5d%27).replace(%27%5bCOLOR%20darkred%5ddarkred%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkred%5d%27).replace(%27%5bCOLOR%20darksalmon%5ddarksalmon%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darksalmon%5d%27).replace(%27%5bCOLOR%20darkseagreen%5ddarkseagreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkseagreen%5d%27).replace(%27%5bCOLOR%20darkslateblue%5ddarkslateblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkslateblue%5d%27).replace(%27%5bCOLOR%20darkslategray%5ddarkslategray%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkslategray%5d%27).replace(%27%5bCOLOR%20darkslategrey%5ddarkslategrey%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkslategrey%5d%27).replace(%27%5bCOLOR%20darkturquoise%5ddarkturquoise%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20darkturquoise%5d%27).replace(%27%5bCOLOR%20deeppink%5ddeeppink%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20deeppink%5d%27).replace(%27%5bCOLOR%20deepskyblue%5ddeepskyblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20deepskyblue%5d%27).replace(%27%5bCOLOR%20dimgray%5ddimgray%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20dimgray%5d%27).replace(%27%5bCOLOR%20dimgrey%5ddimgrey%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20dimgrey%5d%27).replace(%27%5bCOLOR%20dodgerblue%5ddodgerblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20dodgerblue%5d%27).replace(%27%5bCOLOR%20firebrick%5dfirebrick%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20firebrick%5d%27).replace(%27%5bCOLOR%20floralwhite%5dfloralwhite%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20floralwhite%5d%27).replace(%27%5bCOLOR%20forestgreen%5dforestgreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20forestgreen%5d%27).replace(%27%5bCOLOR%20fuchsia%5dfuchsia%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20fuchsia%5d%27).replace(%27%5bCOLOR%20gainsboro%5dgainsboro%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20gainsboro%5d%27).replace(%27%5bCOLOR%20ghostwhite%5dghostwhite%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20ghostwhite%5d%27).replace(%27%5bCOLOR%20gold%5dgold%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20gold%5d%27).replace(%27%5bCOLOR%20goldenrod%5dgoldenrod%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20goldenrod%5d%27).replace(%27%5bCOLOR%20gray%5dgray%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20gray%5d%27).replace(%27%5bCOLOR%20green%5dgreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20green%5d%27).replace(%27%5bCOLOR%20greenyellow%5dgreenyellow%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20greenyellow%5d%27).replace(%27%5bCOLOR%20grey%5dgrey%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20grey%5d%27).replace(%27%5bCOLOR%20honeydew%5dhoneydew%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20honeydew%5d%27).replace(%27%5bCOLOR%20hotpink%5dhotpink%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20hotpink%5d%27).replace(%27%5bCOLOR%20indianred%5dindianred%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20indianred%5d%27).replace(%27%5bCOLOR%20indigo%5dindigo%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20indigo%5d%27).replace(%27%5bCOLOR%20ivory%5divory%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20ivory%5d%27).replace(%27%5bCOLOR%20khaki%5dkhaki%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20khaki%5d%27).replace(%27%5bCOLOR%20lavender%5dlavender%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lavender%5d%27).replace(%27%5bCOLOR%20lavenderblush%5dlavenderblush%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lavenderblush%5d%27).replace(%27%5bCOLOR%20lawngreen%5dlawngreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lawngreen%5d%27).replace(%27%5bCOLOR%20lemonchiffon%5dlemonchiffon%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lemonchiffon%5d%27).replace(%27%5bCOLOR%20lightblue%5dlightblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightblue%5d%27).replace(%27%5bCOLOR%20lightcoral%5dlightcoral%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightcoral%5d%27).replace(%27%5bCOLOR%20lightcyan%5dlightcyan%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightcyan%5d%27).replace(%27%5bCOLOR%20lightgoldenrodyellow%5dlightgoldenrodyellow%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightgoldenrodyellow%5d%27).replace(%27%5bCOLOR%20lightgray%5dlightgray%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightgray%5d%27).replace(%27%5bCOLOR%20lightgreen%5dlightgreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightgreen%5d%27).replace(%27%5bCOLOR%20lightgrey%5dlightgrey%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightgrey%5d%27).replace(%27%5bCOLOR%20lightpink%5dlightpink%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightpink%5d%27).replace(%27%5bCOLOR%20lightsalmon%5dlightsalmon%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightsalmon%5d%27).replace(%27%5bCOLOR%20lightseagreen%5dlightseagreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightseagreen%5d%27).replace(%27%5bCOLOR%20lightslategray%5dlightslategray%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightslategray%5d%27).replace(%27%5bCOLOR%20lightslategrey%5dlightslategrey%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightslategrey%5d%27).replace(%27%5bCOLOR%20lightsteelblue%5dlightsteelblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightsteelblue%5d%27).replace(%27%5bCOLOR%20lightyellow%5dlightyellow%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lightyellow%5d%27).replace(%27%5bCOLOR%20lime%5dlime%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20lime%5d%27).replace(%27%5bCOLOR%20limegreen%5dlimegreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20limegreen%5d%27).replace(%27%5bCOLOR%20linen%5dlinen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20linen%5d%27).replace(%27%5bCOLOR%20magenta%5dmagenta%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20magenta%5d%27).replace(%27%5bCOLOR%20maroon%5dmaroon%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20maroon%5d%27).replace(%27%5bCOLOR%20mediumaquamarine%5dmediumaquamarine%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20mediumaquamarine%5d%27).replace(%27%5bCOLOR%20mediumblue%5dmediumblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20mediumblue%5d%27).replace(%27%5bCOLOR%20mediumorchid%5dmediumorchid%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20mediumorchid%5d%27).replace(%27%5bCOLOR%20mediumpurple%5dmediumpurple%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20mediumpurple%5d%27).replace(%27%5bCOLOR%20mediumseagreen%5dmediumseagreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20mediumseagreen%5d%27).replace(%27%5bCOLOR%20mediumslateblue%5dmediumslateblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20mediumslateblue%5d%27).replace(%27%5bCOLOR%20mediumspringgreen%5dmediumspringgreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20mediumspringgreen%5d%27).replace(%27%5bCOLOR%20mediumturquoise%5dmediumturquoise%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20mediumturquoise%5d%27).replace(%27%5bCOLOR%20mediumvioletred%5dmediumvioletred%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20mediumvioletred%5d%27).replace(%27%5bCOLOR%20midnightblue%5dmidnightblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20midnightblue%5d%27).replace(%27%5bCOLOR%20mintcream%5dmintcream%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20mintcream%5d%27).replace(%27%5bCOLOR%20mistyrose%5dmistyrose%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20mistyrose%5d%27).replace(%27%5bCOLOR%20moccasin%5dmoccasin%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20moccasin%5d%27).replace(%27%5bCOLOR%20navajowhite%5dnavajowhite%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20navajowhite%5d%27).replace(%27%5bCOLOR%20navy%5dnavy%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20navy%5d%27).replace(%27%5bCOLOR%20none%5dnone%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20none%5d%27).replace(%27%5bCOLOR%20oldlace%5doldlace%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20oldlace%5d%27).replace(%27%5bCOLOR%20olive%5dolive%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20olive%5d%27).replace(%27%5bCOLOR%20olivedrab%5dolivedrab%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20olivedrab%5d%27).replace(%27%5bCOLOR%20orange%5dorange%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20orange%5d%27).replace(%27%5bCOLOR%20orangered%5dorangered%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20orangered%5d%27).replace(%27%5bCOLOR%20orchid%5dorchid%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20orchid%5d%27).replace(%27%5bCOLOR%20palegoldenrod%5dpalegoldenrod%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20palegoldenrod%5d%27).replace(%27%5bCOLOR%20palegreen%5dpalegreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20palegreen%5d%27).replace(%27%5bCOLOR%20paleturquoise%5dpaleturquoise%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20paleturquoise%5d%27).replace(%27%5bCOLOR%20palevioletred%5dpalevioletred%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20palevioletred%5d%27).replace(%27%5bCOLOR%20papayawhip%5dpapayawhip%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20papayawhip%5d%27).replace(%27%5bCOLOR%20peachpuff%5dpeachpuff%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20peachpuff%5d%27).replace(%27%5bCOLOR%20peru%5dperu%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20peru%5d%27).replace(%27%5bCOLOR%20pink%5dpink%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20pink%5d%27).replace(%27%5bCOLOR%20plum%5dplum%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20plum%5d%27).replace(%27%5bCOLOR%20powderblue%5dpowderblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20powderblue%5d%27).replace(%27%5bCOLOR%20purple%5dpurple%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20purple%5d%27).replace(%27%5bCOLOR%20red%5dred%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20red%5d%27).replace(%27%5bCOLOR%20rosybrown%5drosybrown%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20rosybrown%5d%27).replace(%27%5bCOLOR%20royalblue%5droyalblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20royalblue%5d%27).replace(%27%5bCOLOR%20saddlebrown%5dsaddlebrown%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20saddlebrown%5d%27).replace(%27%5bCOLOR%20salmon%5dsalmon%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20salmon%5d%27).replace(%27%5bCOLOR%20sandybrown%5dsandybrown%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20sandybrown%5d%27).replace(%27%5bCOLOR%20seagreen%5dseagreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20seagreen%5d%27).replace(%27%5bCOLOR%20seashell%5dseashell%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20seashell%5d%27).replace(%27%5bCOLOR%20sienna%5dsienna%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20sienna%5d%27).replace(%27%5bCOLOR%20silver%5dsilver%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20silver%5d%27).replace(%27%5bCOLOR%20skyblue%5dskyblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20skyblue%5d%27).replace(%27%5bCOLOR%20slateblue%5dslateblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20slateblue%5d%27).replace(%27%5bCOLOR%20slategray%5dslategray%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20slategray%5d%27).replace(%27%5bCOLOR%20slategrey%5dslategrey%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20slategrey%5d%27).replace(%27%5bCOLOR%20snow%5dsnow%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20snow%5d%27).replace(%27%5bCOLOR%20springgreen%5dspringgreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20springgreen%5d%27).replace(%27%5bCOLOR%20steelblue%5dsteelblue%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20steelblue%5d%27).replace(%27%5bCOLOR%20tan%5dtan%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20tan%5d%27).replace(%27%5bCOLOR%20teal%5dteal%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20teal%5d%27).replace(%27%5bCOLOR%20thistle%5dthistle%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20thistle%5d%27).replace(%27%5bCOLOR%20transparent%5dtransparent%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20transparent%5d%27).replace(%27%5bCOLOR%20turquoise%5dturquoise%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20turquoise%5d%27).replace(%27%5bCOLOR%20violet%5dviolet%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20violet%5d%27).replace(%27%5bCOLOR%20wheat%5dwheat%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20wheat%5d%27).replace(%27%5bCOLOR%20white%5dwhite%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20white%5d%27).replace(%27%5bCOLOR%20whitesmoke%5dwhitesmoke%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20whitesmoke%5d%27).replace(%27%5bCOLOR%20yellow%5dyellow%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20yellow%5d%27).replace(%27%5bCOLOR%20yellowgreen%5dyellowgreen%5b%2fCOLOR%5d%27%2c%27%5bCOLOR%20yellowgreen%5d%27)%22%2c%20%27name%27%3a%20u%27coloreando%27%2c%20%27page%27%3a%20None%7d%2c%20u%27secure%27%3a%20%7b%27post%27%3a%20u%27manzana66%3a12345%27%2c%20%27expres%27%3a%20u%22player.js.%2a%5c%5cn.%2aplayer.%2a%5c%5cn.%2ajavascript.%2a%5c%5cn.%2a%3fClappr.Player.%2a%5c%5cn.%2asource%3a.%27(.%2a%3f)%27%22%2c%20%27referer%27%3a%20u%27https%3a%2f%2fvergol.com%2f%27%2c%20%27name%27%3a%20u%27secure%27%2c%20%27page%27%3a%20u%27%5bmakelist2.param3%5d%27%7d%7d&amp;url=%24doregex%5bmakelist2%5d</jsonrpc>
-<thumbnail>https://i.imgur.com/yGTsSPk.jpg</thumbnail>  
-<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+<thumbnail>https://i.imgur.com/w3nidP4.png</thumbnail>  
+<fanart>https://i.imgur.com/1dZv6kC.jpg</fanart>
 </item>
 
 
@@ -222,6 +360,17 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 <title>[COLOR lightskyblue]Estable [COLOR white]Tdt España[/COLOR]</title>
 <externallink>https://www.tdtchannels.com/lists/tv.m3u8</externallink>
 <link>na</link>
-<thumbnail>https://i.imgur.com/yGTsSPk.jpg</thumbnail>  
-<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+<thumbnail>https://i.imgur.com/BTpoXYQ.png</thumbnail>  
+<fanart>https://i.imgur.com/1dZv6kC.jpg</fanart>
 </item>
+
+
+
+
+
+
+
+
+
+
+
