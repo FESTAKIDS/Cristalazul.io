@@ -1214,21 +1214,13 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 
 <item>
-
 <title> </title>
 <link>http://ignorame</link>
 <thumbnail></thumbnail>
 <fanart></fanart>
-
 <externallink>http://bit.ly/submenus$doregex[search]$$LSProEncKey= $$</externallink>
-
-</regex>
- 
-
 <regex>
-
 <name>search</name>
-
 <expres><![CDATA[#$pyFunction
 
 import xbmc
@@ -1248,9 +1240,6 @@ def GetLSProData(page_data,Cookie_Jar,m):
 ]]></expres>
 
 <page></page>
-
 <cookieJar></cookieJar>
-
 </regex>
-
  </item>
