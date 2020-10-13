@@ -1215,7 +1215,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 <item>
 
-<title></title>
+<title> </title>
 <link>http://ignorame</link>
 <thumbnail></thumbnail>
 <fanart></fanart>
