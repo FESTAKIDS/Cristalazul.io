@@ -1215,9 +1215,9 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 <item>
 
-<title>[COLOR cyan]CRISTAL AZUL[/COLOR]</title>
+<title></title>
 <link>http://ignorame</link>
-<thumbnail>https://i.imgur.com/JOLdElw.jpg</thumbnail>
+<thumbnail></thumbnail>
 <fanart></fanart>
 
 <externallink>http://bit.ly/submenus$doregex[search]$$LSProEncKey= $$</externallink>
