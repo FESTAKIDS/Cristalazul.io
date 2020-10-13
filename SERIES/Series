@@ -1214,7 +1214,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 
 <item>
-<title> </title>
+<title>[COLOR aqua]@addonfestaycristal[/COLOR]</title>
 <link>http://ignorame</link>
 <thumbnail></thumbnail>
 <fanart></fanart>
@@ -1238,8 +1238,6 @@ def GetLSProData(page_data,Cookie_Jar,m):
     return d
 
 ]]></expres>
-
 <page></page>
-<cookieJar></cookieJar>
 </regex>
  </item>
