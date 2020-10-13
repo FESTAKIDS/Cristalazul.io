@@ -1162,7 +1162,34 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 
 
 
+<item>
+<title>[COLOR gold]*^SeriesDanko^*[/COLOR]</title>
+<link>cristal</link>
+<externallink>http://bit.ly/submenus$doregex[search]$$LSProEncKey= $$</externallink>
+<regex>
+<name>search</name>
+<expres><![CDATA[#$pyFunction
 
+import xbmc
+
+import xbmcaddon
+
+import xbmcgui
+
+def GetLSProData(page_data,Cookie_Jar,m):
+
+    dialog = xbmcgui.Dialog()
+
+    d = dialog.input('contraseña privada: ', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
+
+    return d
+
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/UzBYB4P.jpg</thumbnail>
+<fanart>https://i.imgur.com/tfdPOT5.jpg</fanart>
+ </item>
 
 <item>
 <title>[COLOR gold]*^SeriesDanko^*[/COLOR]</title>
@@ -1216,8 +1243,6 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <item>
 <title>[COLOR aqua]@addonfestaycristal[/COLOR]</title>
 <link>http://ignorame</link>
-<thumbnail></thumbnail>
-<fanart></fanart>
 <externallink>http://bit.ly/submenus$doregex[search]$$LSProEncKey= $$</externallink>
 <regex>
 <name>search</name>
@@ -1240,4 +1265,6 @@ def GetLSProData(page_data,Cookie_Jar,m):
 ]]></expres>
 <page></page>
 </regex>
+<thumbnail>https://i.imgur.com/UzBYB4P.jpg</thumbnail>
+<fanart>https://i.imgur.com/tfdPOT5.jpg</fanart>
  </item>
