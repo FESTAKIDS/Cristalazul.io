@@ -1240,6 +1240,37 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 
 
+
+
+
+ <item>
+<title>[COLOR white]FESTA KIDS[/COLOR]</title>
+<link>cristalazul</link>
+<externallink>$doregex[distancia]$$LSProEncKey= $$</externallink>
+<regex>
+<name>distancia</name>
+<expres><![CDATA[#$pyFunction
+import re,requests,xbmc,xbmcaddon,xbmcgui,shutil,urllib2
+def GetLSProData(page_data,Cookie_Jar,m):
+      pasta = requests.get('http://bit.ly/cristal_menus_distancia', headers={'User-Agent': 'Mozilla/5.0'}).content
+      return re.findall('="(.*?)"', pasta)[8]
+]]></expres>
+<page></page>
+</regex>
+<info>[COLOR lightblue]FESTA KIDS, 'CRISTAL AZUL'
+[COLOR white]
+"Cristal azul sólo contiene regex de webs que se encuentran en internet,
+este addon no se apropia, copia, ni distribuye contenido con derechos de autor,
+así como no se lucra ni se considera que sea prestador de servicios de intermediación,
+sólo da acesso a ésas webs, éstas son las responsables de los contenidos"[/COLOR]</info>
+<thumbnail>https://i.imgur.com/sFAQiMd.jpg</thumbnail>
+<fanart>https://i.imgur.com/bg6n3AV.png</fanart>
+</item>
+
+
+
+
+
 <item>
 <title>[COLOR aqua]@addonfestaycristal[/COLOR]</title>
 <link>http://ignorame</link>
