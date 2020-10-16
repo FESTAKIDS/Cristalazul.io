@@ -71,7 +71,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <regex>
 <name>makelist2</name>
 <listrepeat><![CDATA[
-<title>[COLOR lightskyblue][makelist2.param3][/COLOR]</title>
+<title>[makelist2.param2]  [COLOR lightskyblue][makelist2.param3][/COLOR]</title>
 <thumbnail>$pyFunction:('http://www.seriespapaya.net/[makelist2.param2]').replace('\u00f1','%C3%B1').replace('\/','/')</thumbnail>
 <fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
 <link>$doregex[makelist]</link>
