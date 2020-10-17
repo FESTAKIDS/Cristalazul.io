@@ -154,7 +154,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <item>
 <title>[COLOR gold]* [COLOR lightgreen]Agendas [COLOR white]SIN Acestream TODAS[/COLOR]</title>
 <link>cristalazul</link>
-<externallink>https://pastebin.com/raw/u8DStpHH</externallink>
+<externallink>http://bit.ly/menu_agendas_sincestream</externallink>
 <thumbnail>https://i.imgur.com/g5mWd6g.jpg</thumbnail>
 <fanart>https://ugc.kn3.net/i/origin/http://3.bp.blogspot.com/-7Sq_1Ap72R0/TcnvEtT2eyI/AAAAAAAAA_Y/HWSWReXQsmI/s1600/camp-nou.jpg</fanart>
 </item>
