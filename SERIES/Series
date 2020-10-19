@@ -86,7 +86,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 <name>makelist</name>
 <listrepeat><![CDATA[
 <title>[COLOR lightskyblue][B] [makelist.param4][/B] [COLOR white]entra en los servidores[/COLOR]</title>
-<thumbnail>$pyFunction:('http://www.seriespapaya.net/[makelist2.param2]').replace('\u00f1','%C3%B1').replace('\/','/')</thumbnail>
+<thumbnail>$pyFunction:('https://www2.seriespapaya.nu/[makelist2.param2]').replace('\u00f1','%C3%B1').replace('\/','/')</thumbnail>
 <fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
 <link>$doregex[picapau2]</link>
 <name>makelist</name>
@@ -114,7 +114,7 @@ def AgenteCristal():
 <name>picapau2</name>
 <listrepeat><![CDATA[
 <title>[COLOR lightskyblue][makelist.param4][/COLOR] [COLOR white] [picapau2.param3] [COLOR lightskyblue][picapau2.param5] [COLOR gold]idioma [picapau2.param1][/COLOR] </title>
-<thumbnail>$pyFunction:('http://www.seriespapaya.net/[makelist2.param2]').replace('\u00f1','%C3%B1').replace('\/','/')</thumbnail>
+<thumbnail>$pyFunction:('https://www2.seriespapaya.nu/[makelist2.param2]').replace('\u00f1','%C3%B1').replace('\/','/')</thumbnail>
 <fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
 <link>$doregex[selecion_inteligente]</link>
 ]]></listrepeat>
