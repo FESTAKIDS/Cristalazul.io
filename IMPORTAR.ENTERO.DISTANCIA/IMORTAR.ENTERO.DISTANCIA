@@ -1,2 +1,0 @@
-import re,requests,xbmc,xbmcaddon,resolveurl,cookielib,urllib,urllib2,HTMLParser,cfscrape,urlparse
-from lib.megaserver import Client
