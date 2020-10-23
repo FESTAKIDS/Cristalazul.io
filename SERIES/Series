@@ -198,7 +198,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 
 
 
-
+<!--
 
 <item>
 <title>[COLOR gold][/COLOR][COLOR lightseagreen]Series Cristal [COLOR white]Pidepalomitas (Necesario API Drive)[/COLOR]</title>
@@ -282,7 +282,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 <thumbnail>https://i.imgur.com/H9Lcmk9.jpg</thumbnail>
 <fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
 </item>
-
+-->
 
 
 <!--
@@ -293,7 +293,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 <fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
 <externallink>https://pastebin.com/raw/4itpu08A</externallink>
 </item>
--->
+
 
  <item>
 <title>[COLOR gold][/COLOR][COLOR lightseagreen]Miniseries Cristal [COLOR white]Pidepalomitas [COLOR gold][/COLOR]</title>
@@ -302,7 +302,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 <fanart>https://i.imgur.com/RsLj1lh.jpg</fanart>
 <externallink>https://pastebin.com/raw/W3UBNKca</externallink>
 </item>
-
+-->
 
 
 
