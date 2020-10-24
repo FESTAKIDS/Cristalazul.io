@@ -7,7 +7,7 @@
 
 
 <item>
-<title>[COLOR gold]* [COLOR lightgreen]Cristal [COLOR white]SEGUNDA B[/COLOR]</title>
+<title>[COLOR gold]* [COLOR lightgreen]Cristal Azul [COLOR white]SEGUNDA B[/COLOR]</title>
  <link>$doregex[makelist2]</link>
  <regex>
  <name>makelist2</name>
@@ -123,7 +123,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 
 
 <item>
-<title>[COLOR gold]* [COLOR lightgreen]Cristal [COLOR white]TERCERA[/COLOR]</title>
+<title>[COLOR gold]* [COLOR lightgreen]Cristal Azul [COLOR white]TERCERA[/COLOR]</title>
  <link>$doregex[makelist2]</link>
  <regex>
  <name>makelist2</name>
