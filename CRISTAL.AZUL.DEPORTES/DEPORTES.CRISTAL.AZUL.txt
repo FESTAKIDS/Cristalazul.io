@@ -35,7 +35,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <item>
 <title>[COLOR gold]* [COLOR lightgreen]Cristal [COLOR gold]Footers[/COLOR]</title>
 <link>https://ignoreme</link>
-<externallink>https://raw.githubusercontent.com/Cristalazul/Cristalazul.io/main/CRISTAL.AZUL.DEPORTES/FOOTRS/footrs</externallink>
+<externallink>http://bit.ly/Cristal_Footers</externallink>
 <thumbnail>https://i.imgur.com/z9XBFGC.png</thumbnail>
 <fanart>https://i.imgur.com/sv5yRUU.jpg</fanart>
 </item>
