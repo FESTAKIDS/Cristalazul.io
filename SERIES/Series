@@ -377,7 +377,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 
 
 <item>
-<title>[COLOR red]NETFLIX [COLOR white]cristal Series[/COLOR] </title>
+<title>[COLOR gold]* [COLOR red]NETFLIX [COLOR white]cristal Series[/COLOR] </title>
 <link>$doregex[makelist2]</link>
 <regex>
 <name>makelist2</name>
@@ -504,7 +504,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 
 
 <item>
-<title>[COLOR deepskyblue]HBO [COLOR white]cristal Series[/COLOR] </title>
+<title>[COLOR gold]* [COLOR deepskyblue]HBO [COLOR white]cristal Series[/COLOR] </title>
 <link>$doregex[makelist2]</link>
 <regex>
 <name>makelist2</name>
@@ -630,7 +630,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 
 
 <item>
-<title>[COLOR yellow]SYFY [COLOR white]cristal Series[/COLOR]</title>
+<title>[COLOR gold]* [COLOR yellow]SYFY [COLOR white]cristal Series[/COLOR]</title>
 <link>$doregex[makelist2]</link>
 <regex>
 <name>makelist2</name>
@@ -756,7 +756,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 
 
 <item>
-<title>[COLOR pink]AMC [COLOR white]cristal Series[/COLOR] </title>
+<title>[COLOR gold]* [COLOR pink]AMC [COLOR white]cristal Series[/COLOR] </title>
 <link>$doregex[makelist2]</link>
 <regex>
 <name>makelist2</name>
@@ -882,7 +882,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 
 
 <item>
-<title>[COLOR deepskyblue]AMAZON PRIME [COLOR white]cristal Series[/COLOR]</title>
+<title>[COLOR gold]* [COLOR deepskyblue]AMAZON PRIME [COLOR white]cristal Series[/COLOR]</title>
 <link>$doregex[makelist2]</link>
 <regex>
 <name>makelist2</name>
@@ -1008,7 +1008,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 
 
 <item>
-<title>[COLOR orangered]SERIES TURCAS[/COLOR] [COLOR white]Cristal Azul[/COLOR]</title>
+<title>[COLOR gold]* [COLOR orangered]SERIES TURCAS[/COLOR] [COLOR white]Cristal Azul[/COLOR]</title>
 <link>$doregex[makelist2]</link>
 <regex>
 <name>makelist2</name>
@@ -1134,7 +1134,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 
 
 <item>
-<title>[COLOR gold]MADE IN SPAIN [COLOR white]cristal Series[/COLOR]</title>
+<title>[COLOR gold]* [COLOR gold]MADE IN SPAIN [COLOR white]cristal Series[/COLOR]</title>
 <link>$doregex[makelist2]</link>
 <regex>
 <name>makelist2</name>
@@ -1260,7 +1260,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 
 
 <item>
-<title>[COLOR aqua]TOP 20 [COLOR white]cristal Series[/COLOR]</title>
+<title>[COLOR gold]* [COLOR aqua]TOP 20 [COLOR white]cristal Series[/COLOR]</title>
 <link>$doregex[makelist2]</link>
 <regex>
 <name>makelist2</name>
@@ -1386,7 +1386,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 
 
 <item>
-<title>[COLOR orange]RETRO [COLOR white]Cristal Series[/COLOR]</title>
+<title>[COLOR gold]* [COLOR orange]RETRO [COLOR white]Cristal Series[/COLOR]</title>
 <link>$doregex[makelist2]</link>
 <regex>
 <name>makelist2</name>
@@ -1635,31 +1635,24 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 <link>NOLINK</link>
 <thumbnail>https://i.imgur.com/SXSU3U8.jpg</thumbnail>
 <fanart>https://i.imgur.com/tfdPOT5.jpg</fanart>
- <externallink></externallink>
+ <externallink>https://raw.githubusercontent.com/Cristalazul/Cristalazul.io/main/SERIES/Series.Dilo</externallink>
 </item>
  
+
 <item>
 <title>[COLOR gold]* [COLOR lightseagreen]SeriesPapaya[/COLOR]</title>
 <link>NOLINK</link>
 <thumbnail>https://i.imgur.com/DQ6pwJt.jpg</thumbnail>
 <fanart>https://i.imgur.com/tfdPOT5.jpg</fanart>
- <externallink></externallink>
-</item> 
- 
-<item>
-<title>[COLOR gold]* [COLOR lightseagreen]SeriesPapaya[/COLOR]</title>
-<link>NOLINK</link>
-<thumbnail>https://i.imgur.com/DQ6pwJt.jpg</thumbnail>
-<fanart>https://i.imgur.com/tfdPOT5.jpg</fanart>
- <externallink></externallink>
+ <externallink>https://raw.githubusercontent.com/Cristalazul/Cristalazul.io/main/SERIES/Series.papaya</externallink>
 </item> 
 
 <item>
-<title>[COLOR gold]* [COLOR lightseagreen] TuNovela[/COLOR]</title>
+<title>[COLOR gold]* [COLOR lightseagreen]TuNovela[/COLOR]</title>
 <link>NOLINK</link>
 <thumbnail>https://i.imgur.com/Hea2K46.jpg</thumbnail>
 <fanart>https://i.imgur.com/tfdPOT5.jpg</fanart>
- <externallink></externallink>
+ <externallink>https://raw.githubusercontent.com/Cristalazul/Cristalazul.io/main/SERIES/Tunovela</externallink>
 </item> 
  
  <item>
@@ -1667,7 +1660,7 @@ import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWR
 <link>NOLINK</link>
 <thumbnail>https://i.imgur.com/Hea2K46.jpg</thumbnail>
 <fanart>https://i.imgur.com/tfdPOT5.jpg</fanart>
- <externallink></externallink>
+ <externallink>https://raw.githubusercontent.com/Cristalazul/Cristalazul.io/main/SERIES/Series.Danko</externallink>
 </item> 
 
 
