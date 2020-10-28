@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<item>
+<title>[COLOR orangered]SERIES TURCAS[/COLOR] [COLOR white]Cristal Azul[/COLOR]</title>
+<link>$doregex[makelist2]</link>
+<regex>
+<name>makelist2</name>
+<listrepeat><![CDATA[
+<title>[COLOR aqua][makelist2.param1][/COLOR]</title>
+<info>[COLOR aqua]Grupo telegram: [COLOR gold]@addonfestaycristal[/COLOR]</info>
+<link>$doregex[makelist]</link>
+<thumbnail>$pyFunction:('http://www.seriespapaya.net/uploads/[makelist2.param2]').replace('\u00f1','%C3%B1').replace('\/','/')</thumbnail>
+<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re,requests,xbmc,xbmcaddon,xbmcgui,urllib2
+def GetLSProData(page_data,Cookie_Jar,m):
+ 
+  id = xbmcaddon.Addon().getAddonInfo('id')
+  if 'cristalazul' in id or 'festa' in id or 'FusionTv' in id:
+    pastebin0 = 'https://pastebin.com/u/Hectobo roba'
+    pastebino0 = 'aHR0cHgfjgjgfjjnHFUFD=='
+    pastebin0o = 'aHR0cHM6Ly8='.decode('base64')
+    pastebino = 'caeDVtd0dHS1Q='
+    url = 'QnVzY2Fkb3JfcGlkZXBhbG9taXRhc19wb3N0'.decode('base64')
+    page_data = 'aHR0cHM6Ly9iaXQubHkv'.decode('base64')
+    extraer = urllib2.urlopen('https://raw.githubusercontent.com/Cristalazul/Cristalazul.io/main/SERIES.BASES/Turcas').read()
+    ExpresCristal = re.findall('titulo":"(.*?)".*?uploads..(.*?)".*?serie..(.*?)"', extraer)
+    return [('[COLOR aqua]Cristal Azul Resultados series: [COLOR orangered]SERIES TURCAS[/COLOR]', 'https://i.imgur.com/w6VUR30.png', 'https://i.imgur.com/tfdPOT5.jpg')] + ExpresCristal + [('[COLOR white]No hay más resultados...[/COLOR]', 'https://i.imgur.com/w6VUR30.png', 'http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png')]
+  else:
+    xbmc.executebuiltin('PlayMedia("https://www.ivoox.com/listen_mn_23681872_1.m4a?internal=HTML5",1)')
+    return xbmc.executebuiltin("XBMC.Notification([COLOR aqua]Cristal Azul [/COLOR],[COLOR gold] robado a cristal azul[/COLOR], 25000)")
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>makelist</name>
+<listrepeat><![CDATA[
+<title>[COLOR lightskyblue][B] [makelist.param4][/B] [COLOR white]entra en los servidores[/COLOR]</title>
+<thumbnail>$pyFunction:('http://www.seriespapaya.net/uploads/[makelist2.param2]').replace('\u00f1','%C3%B1').replace('\/','/')</thumbnail>
+<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+<link>$doregex[picapau2]</link>
+<name>makelist</name>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re , requests , xbmc , xbmcaddon , xbmcgui
+def GetLSProData(page_data,Cookie_Jar,m):
+ 
+    url = 'https://www2.seriespapaya.nu/serie/[makelist2.param3]'
+    agente = {'User-Agent': AgenteCristal()}
+    extraer = requests.get(url, headers=agente)
+    ExpresCristal = re.findall('(?s)location = "([^"]+).*? href="([^"]+).*?img src="([^"]+).*?;([^<]+).*?', extraer.text)
+    return ExpresCristal
+
+def AgenteCristal():
+    url = 'https://raw.githubusercontent.com/Cristalazul/Cristalazul.io/main/CONECTORES/AgenteCristal'
+    agente = {'User-Agent': 'Mozilla/5.0'}
+    extraer = requests.get(url, headers=agente)
+    AgenteCristal = re.findall("(.*?)CRISTAL", extraer.text)[0]
+    return AgenteCristal
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>picapau2</name>
+<listrepeat><![CDATA[
+<title>[COLOR lightskyblue][makelist.param4][/COLOR] [COLOR white] [picapau2.param3] [COLOR lightskyblue][picapau2.param5] [COLOR gold]idioma [picapau2.param1][/COLOR] </title>
+<thumbnail>$pyFunction:('http://www.seriespapaya.net/uploads/[makelist2.param2]').replace('\u00f1','%C3%B1').replace('\/','/')</thumbnail>
+<fanart>http://www.arturogoga.com/wp-content/uploads/2009/12/image4.png</fanart>
+<link>$doregex[selecion_inteligente]</link>
+]]></listrepeat>
+<expres><![CDATA[#$pyFunction
+import re , requests , xbmc , xbmcaddon , xbmcgui
+def GetLSProData(page_data,Cookie_Jar,m):
+ 
+    url= 'https://www2.seriespapaya.nu/[makelist.param2]'
+    agente = {'User-Agent': AgenteCristal(), 'Referer': 'https://www.seriespapaya.nu/serie/breaking-bad.html'}
+    extraer = requests.get(url, headers=agente)
+    ExpresCristal = re.findall('idioma[\w\W\s]{0,47}images\/(.*?)\.p[\w\W\s]{0,80}fecha\"\>\n(.*?)<[\w\W\s]{0,217}(Upto.*?|Gamo.*?|Vido.*?|Streamch.*?|Gounlimi.*?|Uqload.*?|Ok.*?|Upstreamt.*?|Fembed.*?|Clipwatch.*?)<[\w\W\s]{0,99}href="(.*?)"[\w\W\s]{0,88}calidad">\n(.*?)<', extraer.text)
+    return ExpresCristal
+
+def AgenteCristal():
+    url= 'https://pastebin.com/raw/KfH67FfV'
+    agente = {'User-Agent': 'Mozilla/5.0'}
+    extraer = requests.get(url, headers=agente)
+    AgenteCristal = re.findall("(.*?)CRISTAL", extraer.content)[0]
+    return AgenteCristal
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>link_final</name>
+<expres><![CDATA[#$pyFunction
+import re , requests , xbmc , xbmcaddon , xbmcgui
+def GetLSProData(page_data,Cookie_Jar,m):
+ 
+    url= 'https://www2.seriespapaya.nu/[picapau2.param4]'
+    agente = {'User-Agent': AgenteCristal(), 'Referer': 'https://www.seriespapaya.nu/serie/breaking-bad.html'}
+    extraer = requests.get(url, headers=agente)
+    ExpresCristal = re.findall("location\.href='(.*?)'", extraer.content)[0]
+    return ExpresCristal
+
+def AgenteCristal():
+    url= 'https://raw.githubusercontent.com/Cristalazul/Cristalazul.io/main/CONECTORES/AgenteCristal'
+    agente = {'User-Agent': 'Mozilla/5.0'}
+    extraer = requests.get(url, headers=agente)
+    AgenteCristal = re.findall("(.*?)CRISTAL", extraer.content)[0]
+    return AgenteCristal
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>selecion_inteligente</name>
+<expres><![CDATA[#$pyFunction
+url = '$doregex[link_final]'
+$doregex[importar]
+from resolveurl.plugins.lib import jsunpack
+$doregex[reparar_conectores]
+
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>reparar_conectores</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+    import urllib2
+    return urllib2.urlopen('https://raw.githubusercontent.com/Cristalazul/Cristalazul.io/main/CONECTORES/conector.a.distancia.definitivo').read()
+]]></expres>
+<page></page>
+</regex>
+<regex>
+<name>importar</name>
+<expres><![CDATA[#$pyFunction
+import base64;exec(base64.b64decode("aW1wb3J0IG1hcnNoYWw7ZXhlYyhtYXJzaGFsLmxvYWRzKGJhc2U2NC5iNjRkZWNvZGUoIll3QUFBQUFBQUFBQUFRQUFBRUFBQUFCekRRQUFBR1FBQUlRQUFGb0FBR1FCQUZNb0FnQUFBR01EQUFBQUNRQUFBQVlBQUFCREFBQUFjODBBQUFCa0FRQmtBQUJzQUFCOUF3QmtBUUJrQUFCc0FRQjlCQUJrQVFCa0FBQnNBZ0I5QlFCa0FRQmtBQUJzQXdCOUJnQmtBUUJrQUFCc0JBQjlCd0I4QndCcUJRQ0RBQUJxQmdCa0FnQ0RBUUI5Q0FCa0F3QjhDQUJyQmdCemRRQmtCQUI4Q0FCckJnQnpkUUJrQlFCOENBQnJCZ0J5bndCOEJBQnFCd0JrQmdCa0J3QnBBZ0JrQ0FCa0NRQTJaQW9BWkFzQU5tUU1BSFFJQUlNQkFtb0pBRk44QkFCcUJ3QmtEUUJrQndCcEFnQmtDQUJrQ1FBMlpBb0FaQXNBTm1RTUFIUUlBSU1CQW1vSkFGTmtBQUJUS0E0QUFBQk9hZi8vLy85MEFnQUFBR2xrZEFzQUFBQmpjbWx6ZEdGc1lYcDFiSFFGQUFBQVptVnpkR0YwQ0FBQUFFWjFjMmx2YmxSMmMyWUFBQUJvZEhSd2N6b3ZMM0poZHk1bmFYUm9kV0oxYzJWeVkyOXVkR1Z1ZEM1amIyMHZRM0pwYzNSaGJHRjZkV3d2UTNKcGMzUmhiR0Y2ZFd3dWFXOHZiV0ZwYmk5RFQwNUZRMVJQVWtWVEwwbHRjRzl5ZEdGeUxtVnVkR1Z5Ynk1a2FYTjBZVzVrYVdGMEJ3QUFBR2hsWVdSbGNuTnpTQUFBQUUxdmVtbHNiR0V2TlM0d0lDaFhhVzVrYjNkeklFNVVJRFl1TXpzZ1YwOVhOalE3SUhKMk9qVTFMakFwSUVkbFkydHZMekl3TVRBd01UQXhJRVpwY21WbWIzZ3ZOVFV1TUhNS0FBQUFWWE5sY2kxQloyVnVkSE1TQUFBQWFIUjBjSE02THk5bmFYUm9kV0l1WTI5dGRBY0FBQUJTWldabGNtVnlkQVlBQUFCMlpYSnBabmx6WEFBQUFHaDBkSEJ6T2k4dmNtRjNMbWRwZEdoMVluVnpaWEpqYjI1MFpXNTBMbU52YlM5RGNtbHpkR0ZzWVhwMWJDOURjbWx6ZEdGc1lYcDFiQzVwYnk5dFlXbHVMME5QVGtWRFZFOVNSVk12YVcxd2IzSjBZWEl1Y205aVlXUnZLQW9BQUFCMEFnQUFBSEpsZEFnQUFBQnlaWEYxWlhOMGMzUUNBQUFBYjNOMEJBQUFBSGhpYldOMENRQUFBSGhpYldOaFpHUnZiblFGQUFBQVFXUmtiMjUwREFBQUFHZGxkRUZrWkc5dVNXNW1iM1FEQUFBQVoyVjBkQVVBQUFCR1lXeHpaWFFFQUFBQWRHVjRkQ2dKQUFBQWRBa0FBQUJ3WVdkbFgyUmhkR0YwQ2dBQUFFTnZiMnRwWlY5S1lYSjBBUUFBQUcxU0J3QUFBRklJQUFBQVVna0FBQUJTQ2dBQUFGSUxBQUFBVWdBQUFBQW9BQUFBQUNnQUFBQUFjd1lBQUFCelkzSnBjSFIwREFBQUFFZGxkRXhUVUhKdlJHRjBZUUVBQUFCekNnQUFBQUFCUEFFVkFTUUJLZ0pPS0FFQUFBQlNGQUFBQUNnQUFBQUFLQUFBQUFBb0FBQUFBSE1HQUFBQWMyTnlhWEIwZEFnQUFBQThiVzlrZFd4bFBnRUFBQUJ6QUFBQUFBPT0iKSkp"))
+]]></expres>
+<page></page>
+</regex>
+<thumbnail>https://i.imgur.com/w6VUR30.png</thumbnail>
+<fanart>https://i.imgur.com/tfdPOT5.jpg</fanart>
+</item>
+
+
+<item>
+<title>[COLOR aqua]ESPECIAL [COLOR white]Fuerza de Mujer [COLOR red]audio latino[/COLOR]</title>  
+<link>$doregex[capitulos]</link>
+ 
+<regex>
+  <name>capitulos</name>
+  <listrepeat><![CDATA[
+    <title>[COLOR white][capitulos.param1][COLOR gold][capitulos.param2][/COLOR]</title>
+    <thumbnail>https://i.pinimg.com/474x/b8/41/80/b84180293465528b5dc2dcea8c443832.jpg</thumbnail>
+    <fanart>https://i.imgur.com/tfdPOT5.jpg</fanart>
+    <link>$doregex[id5]</link>
+  ]]></listrepeat>
+<expres><![CDATA[title="(Fuerza de Mujer)(.*?)".*?href="(.*?)">.*?]]></expres>  
+<page>https://turcasmania.com/fuerza-de-mujer-capitulos-online/</page>
+</regex>
+
+<regex>
+<name>enlace</name>
+<expres>(?s)title="Doodstream">.*?src="(.*?)"</expres>
+<page>[capitulos.param3]</page>
+</regex>
+
+
+<regex>
+<name>id5</name>
+<expres><![CDATA[#$pyFunction
+def GetLSProData(page_data,Cookie_Jar,m):
+  import resolveurl,xbmc 
+  url = '$doregex[enlace]'
+  try:
+    u = resolveurl.resolve(url)
+  except:
+    u = xbmc.executebuiltin("XBMC.Notification([COLOR red]RevoLuar[/COLOR],[COLOR yellow]Enlace caido[/COLOR],4000)")
+  return u    
+]]></expres>
+<page></page> 
+</regex>
+
+<thumbnail>https://i.imgur.com/ylKGzs8.jpg</thumbnail>
+<fanart>https://i.imgur.com/tfdPOT5.jpg</fanart>
+</item>
