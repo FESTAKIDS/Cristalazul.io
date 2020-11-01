@@ -35,7 +35,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
 <item>
 <title>[COLOR gold]* [COLOR lightgreen]Cristal [COLOR gold]Footers[/COLOR]</title>
 <link>https://ignoreme</link>
-<externallink>http://bit.ly/Cristal_Footers</externallink>
+<externallink>http://bit.ly/Cristal_Footers$$LSProEncKey= $$</externallink>
 <thumbnail>https://i.imgur.com/s9vmydi.png</thumbnail>
 <fanart>https://i.imgur.com/sv5yRUU.jpg</fanart>
 </item>
