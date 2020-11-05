@@ -173,7 +173,7 @@ def GetLSProData(page_data,Cookie_Jar,m):
   try:
     u = resolveurl.resolve(url)
   except:
-    u = xbmc.executebuiltin("XBMC.Notification([COLOR red]RevoLuar[/COLOR],[COLOR yellow]Enlace caido[/COLOR],4000)")
+    u = xbmc.executebuiltin("XBMC.Notification([COLOR aqua]Cristal Azul[/COLOR],[COLOR yellow]Enlace caido[/COLOR],4000)")
   return u    
 ]]></expres>
 <page></page> 
